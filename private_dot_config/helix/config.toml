@@ -1,0 +1,54 @@
+#theme = "doom_acario_dark"
+#theme = "bogster"
+#theme = "acme"
+#theme = "curzon"
+#theme = "flexoki_light"
+theme = "catppuccin_mocha"
+#theme = "melange"
+#theme = "papercolor-dark"
+#theme = "yellowed"
+ #theme = "github_light_tritanopia"
+#theme = "gruvbox"
+# theme = "curzon"
+#theme = "modus_operandi_tinted"
+#theme = "modus_vivendi_tinted"
+#theme = "Solarized Osaka"
+#theme = "bogster_light"
+#theme = "serika-light"
+#theme = "kanagawa"
+
+[editor]
+line-number = "relative"
+mouse = true
+auto-save = true
+true-color = true
+bufferline = "always"
+soft-wrap.enable = true
+
+#[keys.normal]
+# !git diff
+#A-g = [ ":run-shell-command git diff" ]
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+left = ["mode", "spinner", "version-control"]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.cursor-shape]
+insert = "block"
+normal = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+

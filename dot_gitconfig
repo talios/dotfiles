@@ -1,0 +1,238 @@
+[user]
+name = Mark Derricutt
+email = mark.derricutt@smxemail.com
+signingkey = BB8FAC31
+
+[protocol]
+version = 2
+
+[difftool]
+prompt = false
+
+[diff]
+algorithm = histogram
+colorMoved = default
+#     tool = sourcetree
+#  tool = Kaleidoscope
+#tool = vscode
+#	tool = diffmerge
+#tool = bcompare
+#  tool = idea
+#	tool = smartsynchronize
+tool = araxis
+submodule = log
+compactionHeuristic = true
+#external = /Users/amrk/.opam/default/bin/patdiff-git-wrapper
+
+[merge]
+conflictstyle = zdiff3
+#      tool = sdiff
+tool = araxis
+#	tool = diffmerge
+#  tool = bcompare
+#	tool = smartsynchronize
+#		tool = idea
+#tool = vscode
+#tool = vimdiff
+#tool = Kaleidoscope
+#summary = true
+
+[color]
+ui = true
+diff = true
+grep = true
+branch = true
+showbranch = true
+status = true
+
+[color "branch"]
+current = yellow reverse
+local = yellow
+remote = green
+
+[color "diff"]
+meta = yellow bold
+frag = magenta bold
+old = red strike
+new = green italic
+
+[color "status"]
+header = normal dim
+added = yellow
+changed = green
+untracked = magenta
+
+[alias]
+#sterilize = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+co = checkout
+undo = reset HEAD~1 --mixed
+#amend = commit -a --amend
+glog = log --pretty=oneline --abbrev-commit --graph --decorate --all
+lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative
+revert-last-commit = reset --soft HEAD^
+lcopy = !git log | tail -n+5 | pbcopy
+fixup = commit -a -e -v --fixup=HEAD
+squash = commit -a -e -v --squash=HEAD
+ri = rebase --interactive --autosquash
+update = !git remote update -p && git merge --ff-only @{u}
+#up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+#     up = !git pull --prune $@ && git submodule update --init --recursive
+cob = checkout -b
+cm = !git add -A && git commit -m
+save = !git add -A && git commit -m 'SAVEPOINT'
+wip = !git add -u && git commit -m WIP
+wdiff = diff
+accept-ours = "!f() { git checkout --ours -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
+accept-theirs = "!f() { git checkout --theirs -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
+
+[branch]
+autosetupmerge = true
+
+[rebase]
+autosquash=true
+autostash=true
+
+[core]
+quotepath = false
+	excludesFile = ~/.config/git/ignore
+autocrlf = input
+pager = delta --line-numbers --dark
+preloadindex = true
+#	editor = atom --new-window --wait
+# editor = kak
+#  editor = micro
+#	editor = code --new-window --wait --verbose
+compression = 9
+# pager = diff-so-fancy | less --tabs=2 -RFX
+# editor = mate -w -l1
+#	editor = mvim -f
+# editor = code -n -w
+editor = hx
+#editor = bbedit --new-window -w
+
+#editor = idea --temp-project -w
+
+[push]
+default = matching
+recurseSubmodules = check
+
+[mergetool "sdiff"]
+path = /usr/bin/sdiff
+
+[difftool "Kaleidoscope"]
+cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "Kaleidoscope"]
+cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+trustExitCode = true
+
+[mergetool]
+prompt = false
+keepBackup = true
+
+[difftool "bcompare"]
+cmd = bcomp \"$LOCAL\" \"$REMOTE\"
+trustExistCode = true
+
+[mergetool "bcompare"]
+cmd = bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+trustExistCode = true
+
+[difftool "idea"]
+cmd = idea diff \"$LOCAL\" \"$REMOTE\"
+
+[difftool "sourcetree"]
+cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+path =
+
+[mergetool "idea"]
+	cmd = idea merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[credential]
+	helper = osxkeychain
+[mergetool "deltawalker"]
+	cmd = '/Applications/DeltaWalker.app/Contents/MacOS/git-merge' $LOCAL $REMOTE $BASE $MERGED
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[status]
+	submodulesummary = 1
+[commit]
+	template = /Users/amrk/Dropbox/_git-commit-template.txt
+	gpgSign = true
+verbose = true
+[log]
+	showSignature = false
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
+[mergetool "araxis"]
+	path = /Applications/Araxis Merge.app/Contents/Utilities/compare
+[difftool "araxis"]
+	path = /Applications/Araxis Merge.app/Contents/Utilities/compare
+[gc]
+	autoDetach = false
+[difftool "diffmerge"]
+	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+[mergetool "diffmerge"]
+	trustExitCode = true
+	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[mergetool "smartsynchronize"]
+cmd = '/Applications/SmartSynchronize.app/Contents/MacOS/SmartSynchronize' --wait-until-exit "$LOCAL" "$REMOTE" "$MERGED"
+trustExitCode = false
+
+[difftool "smartsynchronize"]
+cmd = '/Applications/SmartSynchronize.app/Contents/MacOS/SmartSynchronize' --wait-until-exit "$LOCAL" "$REMOTE"
+trustExitCode = false
+[gui]
+	fontui = -family \".SF NS Text\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family PragmataPro -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+	pruneduringfetch = true
+[fetch]
+	prune = false
+	fsckobjects = true
+[mergetool "vscode"]
+	cmd = code -n --wait $MERGED
+[difftool "vscode"]
+	cmd = code -n --wait --diff $LOCAL $REMOTE
+[checkout]
+	defaultRemote = origin
+[filesystem "Oracle Corporation|1.8.0_181|/dev/disk1s5"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[pager]
+	diff = less
+	show = less
+	log = less
+[pull]
+	rebase = false
+	ff = only
+
+[interactive]
+diffFilter = delta
+
+[delta]
+navigate = true                                  # use n and N to move between diff sections
+features = side-by-side line-numbers decorations
+whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+commit-decoration-style = bold yellow box ul
+file-style = bold yellow ul
+file-decoration-style = none
+[filesystem "Azul Systems, Inc.|1.8.0_282|/dev/disk1s2"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[maintenance]
+	repo = /Users/amrk/IdeaProjects/securemx/smx3/smx3.core
+[smartgit "submodule"]
+	fetchalways = false
+	update = true
+	initializenew = true
+[transfer]
+	fsckobjects = true
+[receive]
+	fsckObjects = true
+[pack]
+	allowPackReuse = multi

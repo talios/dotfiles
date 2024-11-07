@@ -1,0 +1,68 @@
+# fonts
+#font-family = "Victor Mono"
+#font-family = "Cascadia Next JP"
+#font-family = "PragmataPro Mono Liga"
+#font-family = "Consolas"
+#font-family = "Cascadia Code PL"
+#font-family = "MonoLisa"
+#font-family = "GoMono Nerd Font"
+#font-feature=ss07
+#font-family = "CommitMono-talios"
+font-family = "Iosevka"
+#font-family = "Source Code Pro Powerline"
+#font-family = "Roboto Mono"
+#font-family = "Monaspace Radon Var"
+font-feature=ss08
+#font-family = "IBM Plex Mono"
+#font-family = "Jetbrains Mono"
+#font-family = "B612 Mono"
+#font-family = "Berkeley Mono"
+#font-family = "Monaspace Xenon Var"
+
+#font-family = "Monaspace Neon Var"
+#font-family = "Monaspace Krypton Var"
+#font-family = "Monaspace Argon Var"
+
+#font-thicken=true
+font-size = 13
+
+selection-invert-fg-bg=true
+
+mouse-hide-while-typing = false
+
+background-opacity = 0.90
+background-blur-radius = 20
+
+window-inherit-font-size = true
+window-theme = ghostty
+#window-decorations = none
+window-save-state = never
+window-padding-balance =true
+window-padding-x = 5
+window-padding-y = 5
+
+macos-non-native-fullscreen = true
+macos-titlebar-style = tabs
+
+# window-title-font-size=11
+# window-title-font-family=
+
+minimum-contrast=1
+
+cursor-style = block
+
+unfocused-split-opacity = 0.4
+
+#keybind = global:cmd+[=toggle_quick_terminal
+
+adjust-cell-width = 0
+adjust-cell-height = -10%
+
+theme = catppuccin-mocha
+#theme = Adventure
+#theme = Aurora
+#theme = Ayu Mirage
+#theme = tokyonight-storm
+#theme = primary
+
+
