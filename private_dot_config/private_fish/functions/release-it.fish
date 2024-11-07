@@ -1,9 +1,9 @@
 function release-it
     set project $argv[1]
     cd /Users/amrk/IdeaProjects/securemx/smx3/$project
-    if test -f .jj
-         echo "• Repository is managed by Jujutsu, please release $project manually"
-         return
+    if test -d .jj
+        echo "• Repository is managed by Jujutsu, please release $project manually"
+        return
     end
     # if not test (git diff-index --quiet HEAD -- ; and echo "yes")
     #     echo "• Repository dirty, please resolve before releasing $project"
@@ -16,8 +16,6 @@ function release-it
         echo "• Repository dirty after resolving dependencies - releasing $project"
         git-commit-deps
         git clean -fdx
-        git mvnrelease && \
-        echo "• Released $project" && \
-        cd /Users/amrk/IdeaProjects/securemx/smx3/
+        git mvnrelease && echo "• Released $project" && cd /Users/amrk/IdeaProjects/securemx/smx3/
     end
 end
