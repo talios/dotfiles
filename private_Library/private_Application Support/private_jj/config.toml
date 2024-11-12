@@ -1,0 +1,52 @@
+[user]
+name = "Mark Derricutt"
+email = "mark.derricutt@smxemail.com"
+
+[ui]
+#diff-editor = "bcompare"
+#diff-editor = "diffedit3"
+# diff-editor = "ksdiff"
+#default-command = "log"
+default-command = "changes"
+editor = "hx"
+#merge-editor = ["araxisgitmerge", "-wait", "-2", "$left", "$right", "$output"]
+#merge-editor = ["bcompare", "-wait", "$left", "$right", "$base", "$output"]
+log-word-wrap = true
+log-synthetic-elided-nodes = true
+#graph.style = "square"
+#diff.tool = "delta"
+pager = { command = ["less", "-FRX"], env = { LESSCHARSET = "utf-8" } }
+
+[merge-tools.diffedit3]
+# Replace `program` with the full path to the
+# binary if it is not in your PATH.
+program = "diffedit3"
+edit-args = ["$left", "$right", "$output"]
+
+[template]
+aliases.'format_timestamp(timestamp)' = 'timestamp.ago()'
+
+
+[colors]
+"node" = { bold = true }
+"node elided" = { fg = "bright black" }
+"node working_copy" = { fg = "green" }
+"node conflict" = { fg = "red" }
+"node immutable" = { fg = "bright cyan" }
+"node wip" = { fg = "yellow" }
+"node normal" = { bold = false }
+
+"normal change_id" = { bold = true, fg = "magenta" }
+"immutable change_id" = { bold = false, fg = "bright cyan" }
+
+[aliases]
+ll = ["log", "-T", "builtin_log_detailed"]
+ld = ["log", "-T", "builtin_log_oneline", "-r", "develop::"]
+add-changeid = ["--config-toml=ui.editor='.git/hooks/commit-msg'", "commit"]
+changes = ["log", "-T", "builtin_log_oneline"]
+sync = ["rebase", "--skip-emptied", "-s", "all:roots(develop..)", "-d", "develop"]
+sync-features = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"feature*\")", "-d", "develop"]
+sync-main = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"feature*\")", "-d", "main"]
+
+[root]
+bookmark = "develop"

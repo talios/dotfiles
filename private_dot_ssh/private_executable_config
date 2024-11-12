@@ -1,0 +1,53 @@
+Include ~/.orbstack/ssh/config
+
+#GSSAPIAuthentication yes
+UpdateHostkeys yes
+
+Host au3sec01
+    HostName au3sec01
+    User markd
+
+Host sp1sec01
+    HostName sp1sec01
+    User markd
+
+Host localhost
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host *
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+    StrictHostKeyChecking no
+    PubkeyAcceptedAlgorithms +ssh-rsa
+    HostkeyAlgorithms +ssh-rsa
+    User markd
+    LogLevel error
+
+Host github.com
+    AddKeysToAgent yes
+    UpdateHostKeys yes
+    IdentityFile ~/.ssh/github_ed25519
+
+Host gerrit
+    HostName gerrit.smxemail.com
+    Port 29418
+    User markd
+Host gerrit.smxemail.com
+    HostName gerrit.smxemail.com
+    Port 29418
+    User markd
+Host ansible.smxemail.com
+    ForwardAgent yes
+
+Host hudsec01
+    HostName hudsec01
+    User markd
+
+Host hu1sec01
+    HostName hu1sec01
+    User markd
+
+Host sp1acp01
+    User markd
+    IdentityFile ~/.ssh/smxemail_id_rsa
