@@ -1,0 +1,28 @@
+set horizontal-scroll = 33%
+set id-width = 14
+set blame-options = -C -C -C
+set line-graphics = utf-8
+set diff-context = 1
+set show-notes = yes
+set vertical-split = yes
+set split-view-height = 70%
+set tab-size = 2
+set status-show-untracked-dirs = yes
+set ignore-space = some
+
+# Enable both ID and line numbers in the blame view
+set blame-view = date:default author:full file-name:auto id:yes,color \
+                 line-number:yes,interval=5 text
+
+# Change grep view to be similar to `git grep` format
+set grep-view = file-name:yes line-number:yes,interval=1 text
+
+# Show file sizes as units
+set tree-view = line-number:no,interval=5 mode author:full \
+                file-size:units date:default id:no file-name
+
+# Show line numbers for every 10th line in the pager view
+set pager-view = line-number:yes,interval=10 text
+set main-view = line-number:yes,interval=10 id, date, author, commit-title,graph=yes,refs=yes,overflow=yes
+#set main-view = line-number:yes,interval=10 id, date, author, commit-title,graph=yes,refs=no,overflow=yes
+set log-view = line-number:yes,interval=10 text
