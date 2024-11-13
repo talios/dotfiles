@@ -9,6 +9,7 @@
 #font-feature=ss07
 #font-family = "CommitMono-talios"
 font-family = "Iosevka"
+#font-family = "Operator Mono for Powerline"
 #font-family = "Source Code Pro Powerline"
 #font-family = "Roboto Mono"
 #font-family = "Monaspace Radon Var"
