@@ -59,8 +59,8 @@ unfocused-split-opacity = 0.4
 adjust-cell-width = 0
 adjust-cell-height = -10%
 
-theme = catppuccin-mocha
-#theme = Adventure
+#theme = catppuccin-mocha
+theme = Adventure
 #theme = Aurora
 #theme = Ayu Mirage
 #theme = tokyonight-storm
