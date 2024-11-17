@@ -1,0 +1,96 @@
+<settings>
+
+  <mirrors>
+    <mirror>
+      <id>nexus</id>
+      <name>Nexus Public Mirror</name>
+      <url>https://nexus.az1.smxk8s.net/repository/maven-public-group/</url>
+      <mirrorOf>!karaf-repo,!karaf-plugin-repo,!smx-releases,external:*</mirrorOf>
+    </mirror>
+  </mirrors>
+
+  <!-- <url>http://repo1.maven.org/maven2</url>-->
+  <servers>
+    <server>
+      <id>smx-releases</id>
+      <username>markd</username>
+      <password>m68pD3JJ</password>
+    </server>
+    <server>
+      <id>reposilite</id>
+      <username>amrk</username>
+      <password>m68pD3J</password>
+    </server>
+    <server>
+      <id>smx-snapshots</id>
+      <username>markd</username>
+      <password>m68pD3JJ</password>
+    </server>
+    <server>
+      <id>staging</id>
+      <username>admin</username>
+      <password>smxdev</password>
+    </server>
+    <server>
+      <id>youtrack-smx</id>
+      <username>markd</username>
+      <password>m68pD3J</password>
+      <configuration>
+        <url>http://youtrack.smx.co.nz</url>
+      </configuration>
+    </server>
+    <server>
+      <id>devsnapshot</id>
+      <username>markd</username>
+      <password>m68pD3J</password>
+    </server>
+    <!-- oss.sonatype.org repositories -->
+    <server>
+      <id>sonatype-staging</id>
+      <username>1FiYJTvY</username>
+      <password>pFssj2PbHUwGPm5wNo+KufwA1eODyeyvHpEVohEIBa79</password>
+    </server>
+  </servers>
+  <profiles>
+    <profile>
+      <id>sonatype</id>
+      <properties>
+        <gpg.passphrase>4d4cff6e</gpg.passphrase>
+      </properties>
+    </profile>
+    <profile>
+      <id>smx</id>
+      <properties>
+        <!-- <aether.enhancedLocalRepository.split>true</aether.enhancedLocalRepository.split> -->
+        <!-- <aether.enhancedLocalRepository.splitLocal>true</aether.enhancedLocalRepository.splitLocal> -->
+        <!-- <aether.enhancedLocalRepository.splitRemoteRepository>true</aether.enhancedLocalRepository.splitRemoteRepository> -->
+        <!-- <aether.enhancedLocalRepository.snapshotsPrefix>snapshots-${env.FEATURE}</aether.enhancedLocalRepository.snapshotsPrefix> -->
+      </properties>
+      <repositories>
+
+        <!-- <repository>
+          <id>karaf-repo</id>
+          <url>https://repository.apache.org/content/repositories/orgapachekaraf-1182/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository> -->
+
+      </repositories>
+    </profile>
+    <profile>
+      <id>nullaway</id>
+      <properties>
+        <!-- <maven.experimental.buildconsumer>true</maven.experimental.buildconsumer> -->
+        <!-- <errorProneNullAwayLevel>ERROR</errorProneNullAwayLevel> -->
+      </properties>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>nullaway</activeProfile>
+    <activeProfile>smx</activeProfile>
+  </activeProfiles>
+</settings>
