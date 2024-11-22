@@ -11,6 +11,7 @@ default-command = "changes"
 editor = "hx"
 #merge-editor = ["araxisgitmerge", "-wait", "-2", "$left", "$right", "$output"]
 #merge-editor = ["bcompare", "-wait", "$left", "$right", "$base", "$output"]
+merge-editor = ["ksdiff", "--merge", "--output", "$output", "--base", "$base", "$left", "$right"]
 log-word-wrap = true
 log-synthetic-elided-nodes = true
 #graph.style = "square"
