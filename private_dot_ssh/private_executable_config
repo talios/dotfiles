@@ -30,13 +30,17 @@ Host github.com
     IdentityFile ~/.ssh/github_ed25519
 
 Host gerrit
+    AddKeysToAgent yes
     HostName gerrit.smxemail.com
     Port 29418
     User markd
+
 Host gerrit.smxemail.com
+    AddKeysToAgent yes
     HostName gerrit.smxemail.com
     Port 29418
     User markd
+
 Host ansible.smxemail.com
     ForwardAgent yes
 
