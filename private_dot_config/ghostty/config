@@ -4,7 +4,7 @@
 #font-family = "PragmataPro Mono Liga"
 #font-family = "Consolas"
 #font-family = "Cascadia Code PL"
-font-family = "MonoLisa"
+#font-family = "MonoLisa"
 #font-family = "GoMono Nerd Font"
 #font-feature=ss07
 #font-family = "CommitMono-talios"
@@ -16,8 +16,10 @@ font-family = "MonoLisa"
 #font-feature=ss08
 #font-family = "IBM Plex Mono"
 #font-family = "Jetbrains Mono"
+#font-family = JetBrainsMono Nerd Font Mono
+
 #font-family = "B612 Mono"
-#font-family = "Berkeley Mono"
+font-family = "Berkeley Mono"
 #font-family = "Monaspace Xenon Var"
 
 #font-family = "Monaspace Neon Var"
@@ -25,7 +27,8 @@ font-family = "MonoLisa"
 #font-family = "Monaspace Argon Var"
 
 #font-thicken=true
-font-size = 13
+font-size = 12
+
 
 selection-invert-fg-bg=true
 
@@ -52,7 +55,7 @@ minimum-contrast=1
 
 cursor-style = block
 
-unfocused-split-opacity = 0.75
+unfocused-split-opacity = 0.70
 
 #keybind = global:cmd+[=toggle_quick_terminal
 
@@ -63,7 +66,7 @@ adjust-cell-height = -10%
 #theme = Adventure
 #theme = Ciapre
 #theme = Cobalt2
-theme = Tomorrow Night Blue
+#theme = Tomorrow Night Blue
 #theme = GruvboxLight
 #theme = GruvboxDarkHard
 #theme = Django
@@ -74,5 +77,7 @@ theme = Tomorrow Night Blue
 #theme = tokyonight-storm
 #theme = primary
 
+#theme = light:rose-pine-dawn,dark:rose-pine-moon
 #theme = light:catppuccin-latte,dark:catppuccin-mocha
 
+theme = Alabaster
