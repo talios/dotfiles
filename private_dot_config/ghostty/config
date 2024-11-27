@@ -1,7 +1,7 @@
 # fonts
 #font-family = "Victor Mono"
 #font-family = "Cascadia Next JP"
-#font-family = "PragmataPro Mono Liga"
+font-family = "PragmataPro Mono Liga"
 #font-family = "Consolas"
 #font-family = "Cascadia Code PL"
 #font-family = "MonoLisa"
@@ -19,7 +19,7 @@
 #font-family = JetBrainsMono Nerd Font Mono
 
 #font-family = "B612 Mono"
-font-family = "Berkeley Mono"
+#font-family = "Berkeley Mono"
 #font-family = "Monaspace Xenon Var"
 
 #font-family = "Monaspace Neon Var"
@@ -27,7 +27,7 @@ font-family = "Berkeley Mono"
 #font-family = "Monaspace Argon Var"
 
 #font-thicken=true
-font-size = 12
+font-size = 13
 
 
 selection-invert-fg-bg=true
@@ -69,6 +69,7 @@ adjust-cell-height = -10%
 #theme = Tomorrow Night Blue
 #theme = GruvboxLight
 #theme = GruvboxDarkHard
+theme = DjangoSmooth
 #theme = Django
 #theme = MonaLisa
 #theme = Fahrenheit
@@ -80,4 +81,4 @@ adjust-cell-height = -10%
 #theme = light:rose-pine-dawn,dark:rose-pine-moon
 #theme = light:catppuccin-latte,dark:catppuccin-mocha
 
-theme = Alabaster
+#theme = Alabaster
