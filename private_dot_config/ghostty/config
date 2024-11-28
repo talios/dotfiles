@@ -55,7 +55,7 @@ minimum-contrast=1
 
 cursor-style = block
 
-unfocused-split-opacity = 0.70
+unfocused-split-opacity = 0.60
 
 #keybind = global:cmd+[=toggle_quick_terminal
 
