@@ -1,14 +1,14 @@
 # fonts
 #font-family = "Victor Mono"
 #font-family = "Cascadia Next JP"
-font-family = "PragmataPro Mono Liga"
+#font-family = "PragmataPro Mono Liga"
 #font-family = "Consolas"
 #font-family = "Cascadia Code PL"
 #font-family = "MonoLisa"
 #font-family = "GoMono Nerd Font"
 #font-feature=ss07
 #font-family = "CommitMono-talios"
-#font-family = "Iosevka"
+font-family = "Iosevka"
 #font-family = "Operator Mono for Powerline"
 #font-family = "Source Code Pro Powerline"
 #font-family = "Roboto Mono"
@@ -39,7 +39,7 @@ background-blur-radius = 20
 
 window-inherit-font-size = true
 window-theme = ghostty
-#window-decorations = none
+#windows-decoration = none
 window-save-state = never
 window-padding-balance =true
 window-padding-x = 5
@@ -47,6 +47,7 @@ window-padding-y = 5
 
 macos-non-native-fullscreen = true
 macos-titlebar-style = tabs
+macos-window-shadow = false
 
 # window-title-font-size=11
 # window-title-font-family=
@@ -55,7 +56,7 @@ minimum-contrast=1
 
 cursor-style = block
 
-unfocused-split-opacity = 0.60
+unfocused-split-opacity = 0.70
 
 #keybind = global:cmd+[=toggle_quick_terminal
 
@@ -65,11 +66,11 @@ adjust-cell-height = -10%
 #theme = catppuccin-mocha
 #theme = Adventure
 #theme = Ciapre
-#theme = Cobalt2
+theme = Cobalt2
 #theme = Tomorrow Night Blue
 #theme = GruvboxLight
 #theme = GruvboxDarkHard
-theme = DjangoSmooth
+#theme = DjangoSmooth
 #theme = Django
 #theme = MonaLisa
 #theme = Fahrenheit
