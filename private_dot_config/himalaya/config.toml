@@ -1,0 +1,27 @@
+display-name = "Mark Derricutt"
+downloads-dir = "/Users/amrk/Downloads"
+signature-delim = "-- \n"
+signature = """
+Regards,
+"""
+
+[accounts.dads]
+default = true
+display-name = "Gerald"
+email = "gerald@talios.com"
+
+backend.type = "imap"
+backend.host = "imap.gmail.com"
+backend.port = 993
+backend.encryption.type = "tls"
+backend.login = "gerald@talios.com"
+backend.auth.type = "password"
+backend.auth.cmd = "op item get 'Dads Gmail' --fields=password"
+backend.insecure = true
+
+message.send.backend.type = "smtp"
+message.send.backend.host = "smtp.gmail.com"
+message.send.backend.port = 465
+message.send.backend.login = "gerald@talios.com"
+message.send.backend.auth.cmd = "op item get 'Dads Gmail' --fields=password"
+message.send.backend.auth.type = "password"
