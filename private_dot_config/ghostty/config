@@ -63,7 +63,8 @@ unfocused-split-opacity = 0.55
 adjust-cell-width = 0
 adjust-cell-height = -10%
  
-theme = catppuccin-mocha
+#theme = catppuccin-mocha
+theme = Blazer
 #theme = Adventure
 #theme = Ciapre
 #theme = Cobalt2
