@@ -1,0 +1,393 @@
+
+function daily_task_label
+  echo
+  set_color 66BB6A
+  echo -n "  -> "
+  set_color yellow
+  echo -n $argv
+  set_color white
+end
+
+function daily_task_warning
+  echo
+  set_color FF6E40
+  echo -n "  -> "
+  set_color FFD180
+  echo -n $argv
+  set_color white
+end
+
+
+function daily_task
+  set_color white
+  echo -n "."
+  # eval $argv >> /tmp/daily_tasklog ^&1
+  eval $argv >> /tmp/daily_tasklog
+  # eval $argv
+end
+
+function is-git-stale
+  git fetch > /tmp/stale
+  set -l LOCAL (command git rev-parse @)
+  set -l REMOTE (command git rev-parse @\{u\})
+  set -l BASE (command git merge-base @ @\{u\})
+
+  if [ $LOCAL = $REMOTE ]
+      false
+  else if [ $LOCAL = $BASE ]
+      cat /tmp/stale
+      true
+  else if [ $REMOTE = $BASE ]
+      false
+  else
+      false
+  end
+end
+
+function git-status
+  git fetch > /tmp/stale
+  set -l LOCAL (command git rev-parse @ 2> /dev/null)
+  set -l REMOTE (command git rev-parse @\{u\} 2> /dev/null)
+  set -l BASE (command git merge-base @ @\{u\} 2> /dev/null)
+  if not test (git diff-index --quiet HEAD -- ; and echo "yes")
+    echo "dirty"
+  else if [ $LOCAL = $REMOTE ]
+      echo "current"
+  else if [ $LOCAL = $BASE ]
+      echo "stale"
+  else if [ $REMOTE = $BASE ]
+      echo "current"
+  else
+      echo "unknown"
+  end
+end
+
+function daily-cleanup-routine
+  daily_task_label "Cleaning Maven release repository"
+  daily_task rm -rf /tmp/maven-release-repository
+
+ # daily_task_label "Cleaning Maven local repository"
+ # daily_task rm -rf /Users/amrk/.m2/repository
+
+  daily_task_label "Cleaning .ivy2 caches"
+  daily_task rm -rf /Users/amrk/.ivy2
+
+  daily_task_label "Cleaning jenkins build agent data"
+  daily_task rm -rf /Users/amrk/jenkins_build
+
+  daily_task_label "Cleaning gradle cache data"
+  daily_task rm -rf /Users/amrk/.gradle
+
+  daily_task_label "Cleaning sbt cache data"
+  daily_task rm -rf /Users/amrk/.sbt
+
+  daily_task_label "Cleaning npm cache data"
+  daily_task rm -rf /Users/amrk/.npm
+
+  daily_task_label "Cleaning Visual Studio Code Cache"
+  daily_task rm -rf /Users/amrk/Library/Application Support/Code/CachedData
+  daily_task rm -rf /Users/amrk/Library/Application Support/Code/Cached
+  daily_task rm -rf /Users/amrk/Library/Application Support/Code/workspaceStorage
+
+  daily_task_label "Cleaning IntelliJ Logs"
+  daily_task rm -rf /Users/amrk/Library/Logs/JetBrains/IdeaIC*
+  daily_task_label "Cleaning IntelliJ Caches"
+  daily_task rm -rf /Users/amrk/Library/Caches/JetBrains/IdeaIC*
+
+end
+
+function daily-routine
+  #readPasswd "Enter password: " password
+
+  set_color white
+  echo "Running daily tasks..."
+  daily-cleanup-routine
+
+  daily_task_label "Updating homebrew"
+  daily_task brew update
+
+  daily_task_label "Upgrading homebrew packages"
+  daily_task brew upgrade
+
+  daily_task_label "Cleaning old homebrew packages"
+  daily_task brew cleanup --prune 1
+
+  daily_task_label "Updating rust"
+  daily_task rustup update
+
+#  daily_task_label "Reinstalling kakoune"
+#  daily_task brew reinstall --HEAD https://raw.githubusercontent.com/mawww/kakoune/master/contrib/kakoune.rb
+
+#  daily_task_label "Reinstalling emacs"
+#  daily_task brew reinstall emacs --HEAD --use-git-head --srgb --with-cocoa
+
+  daily_task_label "Checking apache maven for stale HEAD"
+  daily_task cd /Users/amrk/IdeaProjects/upstream/maven
+  if is-git-stale
+    daily_task_warning "Rebuilding apache maven from HEAD"
+    daily_task git pull
+    daily_task_label "Replacing installed apache maven HEAD"
+    daily_task rm -rf /Users/amrk/Applications/apache-maven-4.0.x-SNAPSHOT
+    daily_task ~/Applications/apache-maven-3.8.1/bin/mvn -Drat.skip -DdistributionTargetDir="/Users/amrk/Applications/apache-maven-4.0.x-SNAPSHOT" clean package
+  end
+
+#  daily_task_label "Updating mac app store apps"
+#  daily_task mas upgrade
+
+  daily_task_label "Updating gitflow"
+  daily_task cd ~/Dropbox/gitflow-avh
+  daily_task git pull
+
+#  daily_task_label "Updating git-imerge"
+#  daily_task cd ~/Dropbox/git-imerge
+#  daily_task git pull
+
+#  daily_task_label "Checking fish-shell for stale HEAD"
+#  daily_task cd ~/Dropbox/fish-shell
+#  if is-git-stale
+#    #set -x CPATH /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+
+#    daily_task_warning "Rebuilding from HEAD"
+#    daily_task git pull
+#    daily_task cd build
+#    daily_task cmake ..
+#    daily_task make
+#    daily_task sudo make install
+#  end
+
+#  daily_task_label "Cleaning IntelliJ Logs"
+#  daily_task rm -rf /Users/amrk/Library/Logs/IdeaIC*
+#  daily_task_label "Cleaning IntelliJ Caches"
+#  daily_task rm -rf /Users/amrk/Library/Caches/IdeaIC*
+
+  # rebuild-Intellij
+
+  daily_task_label "Daily routine finished!"
+  echo
+end
+
+function rebuild-Intellij
+  daily_task_label "Checking IntelliJ IDEA Community for stale HEAD"
+
+  daily_task cd ~/IdeaProjects/upstream/jetbrains/idea/android/tools-base
+  if is-git-stale
+    daily_task_warning "Pulling Android Tools base from HEAD@master"
+    daily_task git pull
+  end
+
+  daily_task cd ~/IdeaProjects/upstream/jetbrains/idea/android
+  if is-git-stale
+    daily_task_warning "Pulling Android Plugin base from HEAD@master"
+    daily_task git pull
+  end
+
+  daily_task cd ~/IdeaProjects/upstream/jetbrains/idea
+  if is-git-stale
+    daily_task_warning "Pulling Jetbrains IntelliJ IDEA Community from HEAD@master"
+    daily_task git pull
+
+    cd ~/IdeaProjects/upstream/jetbrains/idea
+    daily_task_warning "Rebuilding Jetbrains IntelliJ IDEA Community from HEAD@master"
+    daily_task env JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home ant
+
+    daily_task_label "Archiving existing IntelliJ IDEA Community installation"
+    set -l timestamp (date "+%Y-%m-%d-%H%M%S")
+
+    daily_task mv /Users/amrk/Applications/idea /Users/amrk/Applications/idea-$timestamp
+
+    daily_task_label "Unpacking new IntelliJ IDEA Community build"
+    daily_task mkdir /Users/amrk/Applications/idea
+    daily_task unzip ~/IdeaProjects/upstream/jetbrains/idea/out/idea-ce/artifacts/ideaIC-201.SNAPSHOT.mac.zip -d /Users/amrk/Applications/idea
+
+    daily_task_label "Removing new IntelliJ IDEA Community build artifacts"
+#    daily_task rm -rf ~/IdeaProjects/upstream/jetbrains/idea/out
+#    daily_task rm -rf ~/IdeaProjects/upstream/jetbrains/idea/build/dependencies/build
+
+  end
+end
+
+function prepare-git-commit-message
+  set -l ref (command git symbolic-ref HEAD 2> /dev/null)
+  set -l branch (echo $ref | sed  "s|refs/heads/|-|")
+  set -l branch (echo $branch | sed  "s|-develop||")
+  set -l branch (echo $branch | sed  "s|-feature\/||")
+  set -l branch (echo $branch | sed  "s|-support\/||")
+
+  echo "$branch " > /tmp/.gitcommitmessage
+  echo "" >> /tmp/.gitcommitmessage
+  cat ~/.gitcommittemplate >> /tmp/.gitcommitmessage
+end
+
+function gca
+  prepare-git-commit-message
+  git commit -v -S -a -e
+end
+
+function gc
+  prepare-git-commit-message
+  git commit -v -a -S -e -F
+end
+
+function git-branches-beneath
+  for i in *
+    if test -d "$i/.git"
+      cd $i ; and echo -n "$i  :-> " ; and git rev-parse --abbrev-ref HEAD  ;  cd .. ;
+    end
+  end
+end
+
+function git-status-beneath
+  for i in *
+    if test -d "$i/.git"
+      cd $i ; and echo -n "$i@" ; and echo -n (command git rev-parse --abbrev-ref HEAD ) ; and echo -n " :-> " ; and git-status  ;  cd .. ;
+    end
+  end
+end
+
+function update-maven-sanbox-from-git
+  set -g ref (command git symbolic-ref HEAD 2> /dev/null)
+  set -g branch (echo $ref | sed  "s|refs/heads/||")
+  set -g branch (echo $branch | sed  "s|develop||")
+  set -g branch (echo $branch | sed  "s|imerge/feature\/||")
+  set -g branch (echo $branch | sed  "s|feature\/||")
+  set -g branch (echo $branch | sed  "s|support\/||")
+
+  if test $branch != ""
+    set -g SANDBOX $HOME/.m2/repository-sandbox-$branch
+  else
+    set -g SANDBOX $HOME/.m2/repository-default
+  end
+
+  if test -d $SANDBOX
+    echo "Switching to existing sandbox: $SANDBOX"
+  else
+    mkdir -p $SANDBOX
+    echo "Switching to NEW sandbox: $SANDBOX"
+  end
+
+  ln -sf $SANDBOX $HOME/.m2/repository
+
+end
+
+function mvn-purge
+  mvn dependency:purge-local-repository -DresolutionFuzziness=artifactId
+end
+
+function clang-code-format
+  # cp ~/Dropbox/bin/default-clang-format ./.clang-format
+  find . -name "*.java" -exec clang-format -i -style=file '{}' ';'
+  fd -Ig "*.orig" -x rm "{}" ";"
+end
+
+function clang-code-format-tests
+  # cp ~/Dropbox/bin/default-clang-format ./.clang-format
+  find src/test -name "*.java" -exec clang-format -i -style=file '{}' ';'
+  fd -Ig "*.orig" -x rm "{}" ";"
+end
+
+function clang-code-format-modified
+  git ls-files -m | grep "\.java" | xargs clang-format -i -style=file
+  fd -Ig "*.orig" -x rm "{}" ";"
+end
+
+function clang-code-format-modified-last
+  git diff-tree --no-commit-id --name-only -r HEAD | grep "\.java" | xargs clang-format -i -style=file
+  fd -Ig "*.orig" -x rm "{}" ";"
+end
+
+function mvn-ignore-deps
+  if test -f pom.deps
+    git update-index --assume-unchanged pom.deps
+    find . -name pom.xml -execdir git update-index --assume-unchanged pom.xml ';'
+  else
+    echo "Missing pom.deps file in working directory.."
+  end
+end
+
+function mvn-allow-deps
+  if test -f pom.deps
+    git update-index --no-assume-unchanged pom.deps
+    find . -name pom.xml -execdir git update-index --no-assume-unchanged pom.xml ';'
+  else
+    echo "Missing pom.deps file in working directory.."
+  end
+end
+
+function pull-smx3-databases --description "Copy down the latest SMX3 database set from backups"
+  set backupdir "$HOME/Desktop/DB_backups"
+  echo -n "Resyncing database backups..."
+  echo -n "NZ Procd (nz1sec05)..." ; and rsync -urzP "markd@aklnas03:/backups/APP/nz1sec09/backup.1-DAILY/data/smx/database/DB_backup/smx3.*" $backupdir/nz1sec09
+  and echo -n "CCL (nz5sec02)..." ; and rsync -urzP "markd@aklnas03:/backups/APP/nz5sec02/backup.1-DAILY/smx/database/DB_backup/smx3.*" $backupdir/nz5sec02
+  and echo -n "Revera (nz3sec02)..." ; and rsync -urzP "markd@aklnas03:/backups/APP/nz3sec02/backup.1-DAILY/smx/database/DB_backup/smx3/smx3.*" $backupdir/nz3sec02
+
+end
+
+function check-smx3-version-host --description "Check the SMX3 Version for the given host"
+  set featurefile "/opt/smx/smx3-karaf/etc/smx3.api.Configuration.cfg"
+  echo -n "| $argv[2] | " >> /tmp/smx3-versions ; ssh $argv[1] cat $featurefile | grep smx3.system.version | cut -c 21- >> /tmp/smx3-versions
+
+end
+
+
+function gvm
+  bass source ~/.gvm/scripts/gvm ';' gvm $argv
+end
+
+#set -x MAVEN_HOME "$HOME/Applications/apache-maven"
+set -x FLAGS_GETOPT_CMD "/usr/local/opt/gnu-getopt/bin/getopt"
+#set -x PKG_CONFIG_PATH "$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig"
+
+set -x HOMEBREW_NO_AUTO_UPDATE 1
+
+
+set -x PATH $HOME/Dropbox/gitflow-avh $HOME/Dropbox/git-imerge $HOME/Dropbox/bin $HOME/Applications/bin /usr/local/bin/ $HOME/go/bin $HOME/.cargo/bin /Applications/Araxis\ Merge.app/Contents/Utilities $PATH
+
+ulimit -S -n 2048
+
+alias ll 'exa --all --long --created --modified --group --header --color-scale --git --time-style full-iso'
+
+alias tailscale '/Applications/Tailscale.app/Contents/MacOS/Tailscale'
+alias orb '/Applications/OrbStack.app/Contents/MacOS/bin/orb'
+alias orbctl '/Applications/OrbStack.app/Contents/MacOS/bin/orbctl'
+
+alias greg rg
+
+
+zoxide init fish | source
+direnv hook fish | source
+starship init fish | source
+#tug completion fish | source
+zellij setup --generate-completion fish | source
+dagger completion fish | source
+#jj util completion fish | source
+COMPLETE=fish jj | source
+
+# set -x LS_COLORS (vivid generate one-dark)
+
+#status is-login; and pyenv init --path | source
+#status is-interactive; and pyenv init - | source
+
+#curl -k https://curl.se/ca/cacert.pem -o ~/.cacert.pem
+
+#set -x CURL_CA_BUNDLE ~/.cacert.pem
+
+set -x GIT_CLIFF_CONFIG /Users/amrk/IdeaProjects/securemx/smx3/cliff.toml
+
+
+set -x ZVM_INSTALL $HOME/.zvm/self
+set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
+
+
+
+# $HOME/zig/master/files
+
+#fish_config theme choose "Mono Lace"
+fish_config theme choose "Lava"
+
+# SDKMan Support
+fish_add_path ~/.sdkman/candidates/mcs/current/bin
+fish_add_path ~/.sdkman/candidates/java/current/bin
+fish_add_path ~/.sdkman/candidates/jarviz/current/bin
+fish_add_path ~/.sdkman/candidates/maven/current/bin
+fish_add_path ~/.sdkman/candidates/bld/current/bin
+fish_add_path ~/.sdkman/candidates/jbang/current/bin
