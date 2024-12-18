@@ -29,6 +29,16 @@ edit-args = ["$left", "$right", "$output"]
 
 [template]
 aliases.'format_timestamp(timestamp)' = 'timestamp.ago()'
+draft_commit_description = '''
+		separate("\n",
+			description.remove_suffix("\n"),
+			if(!description.contains(change_id.normal_hex()),
+				"\nChange-Id: " ++ gerrit_change_id(change_id)
+			),
+			"\n",
+			surround("JJ: Changes:\n", "", indent("JJ: \t", diff.summary()))
+		)
+	'''
 
 
 [colors]

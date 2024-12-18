@@ -1,0 +1,7 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+xargs brew install < ~/.config/brew_programs_list.txt
+ 
+{{ end -}}
+

@@ -142,8 +142,8 @@ trustExistCode = true
 cmd = idea diff \"$LOCAL\" \"$REMOTE\"
 
 [difftool "sourcetree"]
-cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-path =
+	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	path = 
 
 [mergetool "idea"]
 	cmd = idea merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
