@@ -333,14 +333,13 @@ function gvm
   bass source ~/.gvm/scripts/gvm ';' gvm $argv
 end
 
-#set -x MAVEN_HOME "$HOME/Applications/apache-maven"
-set -x FLAGS_GETOPT_CMD "/usr/local/opt/gnu-getopt/bin/getopt"
+#set -x FLAGS_GETOPT_CMD "/usr/local/opt/gnu-getopt/bin/getopt"
 #set -x PKG_CONFIG_PATH "$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig"
 
 set -x HOMEBREW_NO_AUTO_UPDATE 1
 
 
-set -x PATH $HOME/Dropbox/gitflow-avh $HOME/Dropbox/git-imerge $HOME/Dropbox/bin $HOME/Applications/bin /usr/local/bin/ $HOME/go/bin $HOME/.cargo/bin /Applications/Araxis\ Merge.app/Contents/Utilities $PATH
+set -x PATH $HOME/Dropbox/gitflow-avh $HOME/Dropbox/git-imerge $HOME/Dropbox/bin $HOME/Applications/bin /usr/local/bin/ $HOME/go/bin $HOME/.cargo/bin /opt/homebrew/bin /Applications/Araxis\ Merge.app/Contents/Utilities $PATH
 
 ulimit -S -n 2048
 

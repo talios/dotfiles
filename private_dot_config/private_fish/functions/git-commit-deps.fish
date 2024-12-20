@@ -3,8 +3,8 @@ function git-commit-deps
         if test -f release.properties
             echo "Found release.properties, aborting..."
         else
-            git clean -fd
             mvn-resolve
+            git clean -fd
             set VERSION (smx-build --show-short-version)
             echo "build(deps): Synced bill-of-materials" >COMMIT_MSG.txt
             echo "" >>COMMIT_MSG.txt

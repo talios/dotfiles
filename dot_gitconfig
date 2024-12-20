@@ -161,7 +161,7 @@ cmd = idea diff \"$LOCAL\" \"$REMOTE\"
 	submodulesummary = 1
 [commit]
 	template = /Users/amrk/Dropbox/_git-commit-template.txt
-	gpgSign = true
+	gpgSign = false
 verbose = true
 [log]
 	showSignature = false

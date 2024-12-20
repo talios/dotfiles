@@ -34,8 +34,8 @@ selection-invert-fg-bg=true
 
 mouse-hide-while-typing = true
 
-#background-opacity = 0.9
-#background-blur-radius = 20
+background-opacity = 0.9
+background-blur-radius = 20
 
 window-inherit-font-size = true
 window-theme = ghostty
@@ -47,12 +47,12 @@ window-padding-y = 5
 
 macos-non-native-fullscreen = true
 macos-titlebar-style = tabs
-macos-window-shadow = false
+macos-window-shadow = true
 
 # window-title-font-size=11
 # window-title-font-family=
 
-minimum-contrast=1
+minimum-contrast=0.5
 
 cursor-style = block
 
@@ -64,8 +64,8 @@ adjust-cell-width = 0
 adjust-cell-height = -10%
  
 #theme = catppuccin-mocha
-theme = Blazer
-#theme = Adventure
+#theme = Blazer
+theme = Adventure
 #theme = Ciapre
 #theme = Cobalt2
 #theme = Tomorrow Night Blue
