@@ -22,7 +22,7 @@ function daily_task
   set_color white
   echo -n "."
   # eval $argv >> /tmp/daily_tasklog ^&1
-  eval $argv >> /tmp/daily_tasklog
+  eval "$argv" >> /tmp/daily_tasklog 2>&1
   # eval $argv
 end
 
@@ -63,26 +63,9 @@ function git-status
 end
 
 function daily-cleanup-routine
-  daily_task_label "Cleaning Maven release repository"
-  daily_task rm -rf /tmp/maven-release-repository
 
  # daily_task_label "Cleaning Maven local repository"
  # daily_task rm -rf /Users/amrk/.m2/repository
-
-  daily_task_label "Cleaning .ivy2 caches"
-  daily_task rm -rf /Users/amrk/.ivy2
-
-  daily_task_label "Cleaning jenkins build agent data"
-  daily_task rm -rf /Users/amrk/jenkins_build
-
-  daily_task_label "Cleaning gradle cache data"
-  daily_task rm -rf /Users/amrk/.gradle
-
-  daily_task_label "Cleaning sbt cache data"
-  daily_task rm -rf /Users/amrk/.sbt
-
-  daily_task_label "Cleaning npm cache data"
-  daily_task rm -rf /Users/amrk/.npm
 
   daily_task_label "Cleaning Visual Studio Code Cache"
   daily_task rm -rf /Users/amrk/Library/Application Support/Code/CachedData
@@ -115,50 +98,32 @@ function daily-routine
   daily_task_label "Updating rust"
   daily_task rustup update
 
-#  daily_task_label "Reinstalling kakoune"
-#  daily_task brew reinstall --HEAD https://raw.githubusercontent.com/mawww/kakoune/master/contrib/kakoune.rb
-
 #  daily_task_label "Reinstalling emacs"
 #  daily_task brew reinstall emacs --HEAD --use-git-head --srgb --with-cocoa
 
-  daily_task_label "Checking apache maven for stale HEAD"
-  daily_task cd /Users/amrk/IdeaProjects/upstream/maven
-  if is-git-stale
-    daily_task_warning "Rebuilding apache maven from HEAD"
-    daily_task git pull
-    daily_task_label "Replacing installed apache maven HEAD"
-    daily_task rm -rf /Users/amrk/Applications/apache-maven-4.0.x-SNAPSHOT
-    daily_task ~/Applications/apache-maven-3.8.1/bin/mvn -Drat.skip -DdistributionTargetDir="/Users/amrk/Applications/apache-maven-4.0.x-SNAPSHOT" clean package
-  end
+  # daily_task_label "Checking apache maven for stale HEAD"
+  # daily_task cd /Users/amrk/IdeaProjects/upstream/maven
+  # if is-git-stale
+  #   daily_task_warning "Rebuilding apache maven from HEAD"
+  #   daily_task git pull
+  #   daily_task_label "Replacing installed apache maven HEAD"
+  #   daily_task rm -rf /Users/amrk/Applications/apache-maven-4.0.x-SNAPSHOT
+  #   daily_task ~/Applications/apache-maven-3.8.1/bin/mvn -Drat.skip -DdistributionTargetDir="/Users/amrk/Applications/apache-maven-4.0.x-SNAPSHOT" clean package
+  # end
 
 #  daily_task_label "Updating mac app store apps"
 #  daily_task mas upgrade
-
-  daily_task_label "Updating gitflow"
-  daily_task cd ~/Dropbox/gitflow-avh
-  daily_task git pull
 
 #  daily_task_label "Updating git-imerge"
 #  daily_task cd ~/Dropbox/git-imerge
 #  daily_task git pull
 
-#  daily_task_label "Checking fish-shell for stale HEAD"
-#  daily_task cd ~/Dropbox/fish-shell
-#  if is-git-stale
-#    #set -x CPATH /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
-
-#    daily_task_warning "Rebuilding from HEAD"
-#    daily_task git pull
-#    daily_task cd build
-#    daily_task cmake ..
-#    daily_task make
-#    daily_task sudo make install
-#  end
-
-#  daily_task_label "Cleaning IntelliJ Logs"
-#  daily_task rm -rf /Users/amrk/Library/Logs/IdeaIC*
-#  daily_task_label "Cleaning IntelliJ Caches"
-#  daily_task rm -rf /Users/amrk/Library/Caches/IdeaIC*
+daily_task_label "Checking fish-shell for stale HEAD"
+daily_task RUSTFLAGS=\'-C target-feature=+crt-static\' cargo install --git https://github.com/fish-shell/fish-shell
+daily_task_label "Cleaning IntelliJ Logs"
+daily_task rm -rf /Users/amrk/Library/Logs/IdeaIC*
+daily_task_label "Cleaning IntelliJ Caches"
+daily_task rm -rf /Users/amrk/Library/Caches/IdeaIC*
 
   # rebuild-Intellij
 
@@ -328,16 +293,10 @@ function check-smx3-version-host --description "Check the SMX3 Version for the g
 
 end
 
-
-function gvm
-  bass source ~/.gvm/scripts/gvm ';' gvm $argv
-end
-
 #set -x FLAGS_GETOPT_CMD "/usr/local/opt/gnu-getopt/bin/getopt"
 #set -x PKG_CONFIG_PATH "$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig"
 
 set -x HOMEBREW_NO_AUTO_UPDATE 1
-
 
 set -x PATH $HOME/Dropbox/gitflow-avh $HOME/Dropbox/git-imerge $HOME/Dropbox/bin $HOME/Applications/bin /usr/local/bin/ $HOME/go/bin $HOME/.cargo/bin /opt/homebrew/bin /Applications/Araxis\ Merge.app/Contents/Utilities $PATH
 
