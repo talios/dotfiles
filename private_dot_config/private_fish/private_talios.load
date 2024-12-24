@@ -111,8 +111,8 @@ function daily-routine
   #   daily_task ~/Applications/apache-maven-3.8.1/bin/mvn -Drat.skip -DdistributionTargetDir="/Users/amrk/Applications/apache-maven-4.0.x-SNAPSHOT" clean package
   # end
 
-#  daily_task_label "Updating mac app store apps"
-#  daily_task mas upgrade
+  daily_task_label "Updating mac app store apps"
+  daily_task mas upgrade
 
 #  daily_task_label "Updating git-imerge"
 #  daily_task cd ~/Dropbox/git-imerge
@@ -120,10 +120,10 @@ function daily-routine
 
 daily_task_label "Checking fish-shell for stale HEAD"
 daily_task RUSTFLAGS=\'-C target-feature=+crt-static\' cargo install --git https://github.com/fish-shell/fish-shell
-daily_task_label "Cleaning IntelliJ Logs"
-daily_task rm -rf /Users/amrk/Library/Logs/IdeaIC*
-daily_task_label "Cleaning IntelliJ Caches"
-daily_task rm -rf /Users/amrk/Library/Caches/IdeaIC*
+#daily_task_label "Cleaning IntelliJ Logs"
+#daily_task rm -rf /Users/amrk/Library/Logs/IdeaIC*
+#daily_task_label "Cleaning IntelliJ Caches"
+#daily_task rm -rf /Users/amrk/Library/Caches/IdeaIC*
 
   # rebuild-Intellij
 
