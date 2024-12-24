@@ -72,10 +72,10 @@ function daily-cleanup-routine
   daily_task rm -rf /Users/amrk/Library/Application Support/Code/Cached
   daily_task rm -rf /Users/amrk/Library/Application Support/Code/workspaceStorage
 
-  daily_task_label "Cleaning IntelliJ Logs"
-  daily_task rm -rf /Users/amrk/Library/Logs/JetBrains/IdeaIC*
-  daily_task_label "Cleaning IntelliJ Caches"
-  daily_task rm -rf /Users/amrk/Library/Caches/JetBrains/IdeaIC*
+#  daily_task_label "Cleaning IntelliJ Logs"
+#  daily_task rm -rf /Users/amrk/Library/Logs/JetBrains/IdeaIC*
+#  daily_task_label "Cleaning IntelliJ Caches"
+#  daily_task rm -rf /Users/amrk/Library/Caches/JetBrains/IdeaIC*
 
 end
 
