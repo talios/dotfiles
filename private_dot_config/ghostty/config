@@ -26,7 +26,7 @@ font-family = "Iosevka"
 #font-family = "Monaspace Krypton Var"
 #font-family = "Monaspace Argon Var"
 
-#font-thicken=true
+font-thicken=true
 font-size = 13
 
 
@@ -73,7 +73,8 @@ adjust-cell-height = -10%
 #theme = Ciapre
 #theme = Cobalt2
 #theme = duckbones
-theme = deep
+#theme = deep
+theme = Aurora
 #theme = Tomorrow Night Blue
 #theme = GruvboxLight
 #theme = GruvboxDarkHard
