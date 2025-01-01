@@ -118,8 +118,17 @@ function daily-routine
 #  daily_task cd ~/Dropbox/git-imerge
 #  daily_task git pull
 
-daily_task_label "Checking fish-shell for stale HEAD"
+daily_task_label "Updating fish-shell from stale HEAD"
 daily_task RUSTFLAGS=\'-C target-feature=+crt-static\' cargo install --git https://github.com/fish-shell/fish-shell
+
+daily_task_label "Updating jujutsu from stale HEAD"
+daily_task "cargo install --git https://github.com/jj-vcs/jj.git --bin jj jj-cli"
+
+daily_task_label "Updating kopia from stale HEAD"
+daily_task cd ~/IdeaProjects/upstream/kopia
+daily_task git pull
+daily_task make install
+
 #daily_task_label "Cleaning IntelliJ Logs"
 #daily_task rm -rf /Users/amrk/Library/Logs/IdeaIC*
 #daily_task_label "Cleaning IntelliJ Caches"
@@ -128,47 +137,8 @@ daily_task RUSTFLAGS=\'-C target-feature=+crt-static\' cargo install --git https
   # rebuild-Intellij
 
   daily_task_label "Daily routine finished!"
+  cd
   echo
-end
-
-function rebuild-Intellij
-  daily_task_label "Checking IntelliJ IDEA Community for stale HEAD"
-
-  daily_task cd ~/IdeaProjects/upstream/jetbrains/idea/android/tools-base
-  if is-git-stale
-    daily_task_warning "Pulling Android Tools base from HEAD@master"
-    daily_task git pull
-  end
-
-  daily_task cd ~/IdeaProjects/upstream/jetbrains/idea/android
-  if is-git-stale
-    daily_task_warning "Pulling Android Plugin base from HEAD@master"
-    daily_task git pull
-  end
-
-  daily_task cd ~/IdeaProjects/upstream/jetbrains/idea
-  if is-git-stale
-    daily_task_warning "Pulling Jetbrains IntelliJ IDEA Community from HEAD@master"
-    daily_task git pull
-
-    cd ~/IdeaProjects/upstream/jetbrains/idea
-    daily_task_warning "Rebuilding Jetbrains IntelliJ IDEA Community from HEAD@master"
-    daily_task env JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home ant
-
-    daily_task_label "Archiving existing IntelliJ IDEA Community installation"
-    set -l timestamp (date "+%Y-%m-%d-%H%M%S")
-
-    daily_task mv /Users/amrk/Applications/idea /Users/amrk/Applications/idea-$timestamp
-
-    daily_task_label "Unpacking new IntelliJ IDEA Community build"
-    daily_task mkdir /Users/amrk/Applications/idea
-    daily_task unzip ~/IdeaProjects/upstream/jetbrains/idea/out/idea-ce/artifacts/ideaIC-201.SNAPSHOT.mac.zip -d /Users/amrk/Applications/idea
-
-    daily_task_label "Removing new IntelliJ IDEA Community build artifacts"
-#    daily_task rm -rf ~/IdeaProjects/upstream/jetbrains/idea/out
-#    daily_task rm -rf ~/IdeaProjects/upstream/jetbrains/idea/build/dependencies/build
-
-  end
 end
 
 function prepare-git-commit-message
@@ -291,6 +261,17 @@ function check-smx3-version-host --description "Check the SMX3 Version for the g
   set featurefile "/opt/smx/smx3-karaf/etc/smx3.api.Configuration.cfg"
   echo -n "| $argv[2] | " >> /tmp/smx3-versions ; ssh $argv[1] cat $featurefile | grep smx3.system.version | cut -c 21- >> /tmp/smx3-versions
 
+end
+
+function fish_vi_cursor --on-variable fish_bind_mode
+    switch $fish_bind_mode
+        case default
+            echo -en "\e[2 q" # block cursor
+        case insert
+            echo -en "\e[6 q" # line cursor
+        case visual
+            echo -en "\e[2 q" # block cursor
+    end
 end
 
 #set -x FLAGS_GETOPT_CMD "/usr/local/opt/gnu-getopt/bin/getopt"
