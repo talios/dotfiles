@@ -43,7 +43,9 @@ window-padding-x = 5
 window-padding-y = 5
 
 macos-non-native-fullscreen = true
-macos-titlebar-style = tabs
+
+# valid values are: native, transparent, tabs, hidden
+macos-titlebar-style = hidden
 macos-window-shadow = true
 
 # window-title-font-size=11
@@ -58,8 +60,13 @@ unfocused-split-opacity = 0.55
 #keybind = global:cmd+[=toggle_quick_terminal
 keybind = unconsumed:page_up=scroll_page_up
 keybind = unconsumed:page_down=scroll_page_down
-#keybind = shift+page_up=write_scrollback_file
+keybind = shift+page_up=write_scrollback_file:open
 #keybind = shift+page_down=jump_to_prompt
+
+#keybind = super+ctrl+h=resize_split:left, 10
+#keybind = super+ctrl+j=resize_split:down, 10
+#keybind = super+ctrl+k=resize_split:up, 10
+#keybind = super+ctrl+l=resize_split:right, 10
 
 adjust-cell-width = 0
 adjust-cell-height = -10%
@@ -68,9 +75,10 @@ cursor-style=block
 shell-integration=fish
 shell-integration-features=no-cursor
  
-#theme = Adventure
-theme = "Blazer"
+theme = Adventure
+#theme = "Blazer"
 #theme = "Chalk"
 
+#theme = "3024 Day"
 #theme = "3024 Night"
 #theme = "Belafonte Night"
