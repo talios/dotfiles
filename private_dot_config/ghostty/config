@@ -22,7 +22,7 @@
 font-family = "TX-02 SemiCondensed"
 #font-family = "TX-02 Medium UltraCondensed"
 
-font-thicken=true
+#font-thicken=true
 font-size = 14
 
 
@@ -30,7 +30,7 @@ selection-invert-fg-bg=true
 
 mouse-hide-while-typing = true
 
-background-opacity = 0.9
+background-opacity = 0.95
 background-blur-radius = 20
 
 window-inherit-font-size = true
