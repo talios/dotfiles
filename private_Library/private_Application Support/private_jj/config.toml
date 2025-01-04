@@ -27,7 +27,7 @@ conflict-marker-style = "git"
 program = "diffedit3"
 edit-args = ["$left", "$right", "$output"]
 
-[template]
+[templates]
 aliases.'format_timestamp(timestamp)' = 'timestamp.ago()'
 draft_commit_description = '''
 concat(
@@ -38,8 +38,9 @@ concat(
   ),
   surround(
     "\nJJ: This commit contains the following changes:\n", "",
-    indent("JJ:     ", diff.summary()),
+    indent("JJ:     ", diff.stat(72)),
   ),
+  surround("\nJJ: Diff:\n", "", indent("JJ:  ", diff.git(4)))
 )
 '''
 
