@@ -27,14 +27,14 @@ compactionHeuristic = true
 [merge]
 conflictstyle = zdiff3
 #      tool = sdiff
-tool = araxis
+#tool = araxis
 #	tool = diffmerge
 #  tool = bcompare
 #	tool = smartsynchronize
 #		tool = idea
 #tool = vscode
 #tool = vimdiff
-#tool = Kaleidoscope
+tool = Kaleidoscope
 #summary = true
 
 [color]
@@ -234,5 +234,5 @@ file-decoration-style = none
 	fsckobjects = true
 [receive]
 	fsckObjects = true
-[pack]
-	allowPackReuse = multi
+#[pack]
+#	allowPackReuse = multi
