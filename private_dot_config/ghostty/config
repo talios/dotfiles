@@ -33,6 +33,7 @@ mouse-hide-while-typing = true
 background-opacity = 0.80
 background-blur-radius = 20
 
+window-colorspace = display-p3
 window-inherit-font-size = true
 window-theme = ghostty
 #windows-decoration = none
