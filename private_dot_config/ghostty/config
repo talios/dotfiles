@@ -76,10 +76,11 @@ cursor-style=block
 shell-integration=fish
 shell-integration-features=no-cursor
  
-theme = Arthur
+#theme = Arthur
 #theme = "Blazer"
 #theme = "Chalk"
 
 #theme = "3024 Day"
 #theme = "3024 Night"
 #theme = "Belafonte Night"
+theme = "rose-pine"
