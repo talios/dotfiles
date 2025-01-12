@@ -10,6 +10,10 @@ true-color = true
 bufferline = "always"
 soft-wrap.enable = true
 rulers = [50, 72, 120]
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "error"
 
 #[keys.normal]
 # !git diff
