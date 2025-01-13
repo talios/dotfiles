@@ -61,7 +61,12 @@ unfocused-split-opacity = 0.55
 #keybind = global:cmd+[=toggle_quick_terminal
 keybind = unconsumed:page_up=scroll_page_up
 keybind = unconsumed:page_down=scroll_page_down
-keybind = shift+page_up=write_scrollback_file:open
+#keybind = shift+page_up=write_scrollback_file:open
+keybind = cmd+f=write_scrollback_file:open
+keybind = cmd+shift+f=write_selection_file:open
+
+scrollback-limit = 20000000
+
 #keybind = shift+page_down=jump_to_prompt
 
 #keybind = super+ctrl+h=resize_split:left, 10
