@@ -78,6 +78,7 @@ adjust-cell-width = 0
 adjust-cell-height = -10%
 
 cursor-style=block
+split-divider-color=red
 shell-integration=fish
 shell-integration-features=no-cursor
  
