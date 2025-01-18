@@ -98,6 +98,9 @@ function daily-routine
   daily_task_label "Updating rust"
   daily_task rustup update
 
+  daily_task_label "Updating zig"
+  daily_task zvm i master
+
 #  daily_task_label "Reinstalling emacs"
 #  daily_task brew reinstall emacs --HEAD --use-git-head --srgb --with-cocoa
 
