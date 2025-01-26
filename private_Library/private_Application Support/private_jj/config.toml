@@ -21,6 +21,9 @@ pager = { command = ["less", "-FRX"], env = { LESSCHARSET = "utf-8" } }
 # Options: diff, snapshot, git
 conflict-marker-style = "git"
 
+[git]
+subprocess = true
+
 [merge-tools.diffedit3]
 # Replace `program` with the full path to the
 # binary if it is not in your PATH.
