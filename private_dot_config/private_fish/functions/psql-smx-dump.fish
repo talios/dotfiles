@@ -65,6 +65,6 @@ function psql-smx-dump
     end
     echo "Connecting to $PGURL"
     mkdir ~/temp/$baseapp-$shorthost-(command date +%s).dump.d
-    pg_dump --verbose --no-privileges --no-owner --compress=9 -j 4 -F d -f ~/temp/$baseapp-$shorthost-(command date +%s).dump.d "$PGURL"
+    pg_dump-17 --verbose --no-privileges --no-owner --compress=9 -j 4 -F d -f ~/temp/$baseapp-$shorthost-(command date +%s).dump.d "$PGURL"
 
 end

@@ -64,5 +64,5 @@ function psql-smx
             set PGURL host=localhost user=smx dbname=smx3
     end
     echo "Connecting to $PGURL"
-    psql --set AUTOCOMMIT=off "$PGURL"
+    psql-17 --set AUTOCOMMIT=off "$PGURL"
 end
