@@ -19,11 +19,12 @@
 #font-family = JetBrainsMono Nerd Font Mono
 
 #font-family = "TX-02 Condensed"
-font-family = "TX-02 Condensed"
+#font-family = "TX-02 Condensed"
 #font-family = "NovaMono"
 #font-family = "TX-02 Medium UltraCondensed"
+font-family = "TX-02 UltraCondensed"
 
-#font-thicken=true
+font-thicken=true
 font-size = 14
 
 
@@ -31,7 +32,7 @@ selection-invert-fg-bg=true
 
 mouse-hide-while-typing = true
 
-background-opacity = 0.85
+background-opacity = 0.88
 background-blur-radius = 20
 
 window-colorspace = display-p3
@@ -84,6 +85,7 @@ shell-integration=fish
 shell-integration-features=no-cursor
  
 #theme = Arthur
+#theme = Seafoam Pastel
 #theme = "Blazer"
 #theme = "Chalk"
 
