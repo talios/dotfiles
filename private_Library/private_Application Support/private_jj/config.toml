@@ -15,7 +15,7 @@ merge-editor = ["ksdiff", "--merge", "--output", "$output", "--base", "$base", "
 log-word-wrap = true
 log-synthetic-elided-nodes = true
 #graph.style = "square"
-#diff.tool = "delta"
+#diff.tool = ["delta", "--dark", "--diff-stat-align-width=80"]
 pager = { command = ["less", "-FRX"], env = { LESSCHARSET = "utf-8" } }
 
 # Options: diff, snapshot, git

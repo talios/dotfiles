@@ -323,8 +323,8 @@ set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 
 # $HOME/zig/master/files
 
-#fish_config theme choose "Mono Lace"
-fish_config theme choose "Lava"
+fish_config theme choose "Mono Lace"
+#fish_config theme choose "Lava"
 
 # SDKMan Support
 fish_add_path ~/.sdkman/candidates/mcs/current/bin

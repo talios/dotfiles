@@ -21,8 +21,8 @@
 #font-family = "TX-02 Condensed"
 #font-family = "TX-02 Condensed"
 #font-family = "NovaMono"
-#font-family = "TX-02 Medium UltraCondensed"
-font-family = "TX-02 UltraCondensed"
+font-family = "TX-02 Medium UltraCondensed"
+#font-family = "TX-02 UltraCondensed"
 
 font-thicken=true
 font-size = 14
@@ -92,4 +92,5 @@ shell-integration-features=no-cursor
 #theme = "3024 Day"
 #theme = "3024 Night"
 #theme = "Belafonte Night"
-theme = "rose-pine"
+#theme = "rose-pine"
+theme = "flexoki-light"
