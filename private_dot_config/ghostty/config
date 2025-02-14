@@ -39,7 +39,7 @@ window-colorspace = display-p3
 window-inherit-font-size = true
 window-theme = ghostty
 #windows-decoration = none
-window-title-font-family = "TX-02 Regular"
+window-title-font-family = "TX-02 UltraCondensed"
 window-save-state = always
 window-padding-balance =true
 window-padding-x = 5
@@ -49,6 +49,7 @@ macos-non-native-fullscreen = true
 
 # valid values are: native, transparent, tabs, hidden
 macos-titlebar-style = transparent
+#macos-titlebar-style = hidden
 macos-window-shadow = true
 
 # window-title-font-size=11
