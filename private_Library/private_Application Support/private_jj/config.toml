@@ -23,7 +23,9 @@ conflict-marker-style = "git"
 
 [git]
 subprocess = true
-
+push-bookmark-prefix = "feature/"
+private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
+ 
 [merge-tools.diffedit3]
 # Replace `program` with the full path to the
 # binary if it is not in your PATH.
@@ -87,6 +89,7 @@ concat(
 "node immutable" = { fg = "bright cyan" }
 "node wip" = { fg = "yellow" }
 "node normal" = { bold = false }
+"commit_id prefix" = { bold = true }
 
 "normal change_id" = { bold = true, fg = "magenta" }
 "immutable change_id" = { bold = false, fg = "bright cyan" }
