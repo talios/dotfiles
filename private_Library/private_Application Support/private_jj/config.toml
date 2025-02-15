@@ -105,7 +105,7 @@ sync-features = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"feature
 sync-main = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"feature*\")", "-d", "main"]
 sync-push = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"push*\")", "-d", "main"]
 bmup = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
-
+#review = ["git", "push", "--remote", "for-review"]
 
 [root]
 bookmark = "develop"
