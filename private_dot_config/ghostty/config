@@ -94,4 +94,7 @@ shell-integration-features=no-cursor
 #theme = "3024 Night"
 #theme = "Belafonte Night"
 #theme = "rose-pine"
-theme = "flexoki-light"
+
+#theme = "flexoki-light"
+theme = "flexoki-dark"
+
