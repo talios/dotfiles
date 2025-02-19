@@ -25,7 +25,7 @@ font-family = "TX-02 Medium UltraCondensed"
 #font-family = "TX-02 UltraCondensed"
 
 font-thicken=true
-font-size = 14
+font-size = 16
 
 
 selection-invert-fg-bg=true
