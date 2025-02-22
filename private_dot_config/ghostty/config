@@ -32,7 +32,7 @@ selection-invert-fg-bg=true
 
 mouse-hide-while-typing = true
 
-background-opacity = 0.88
+background-opacity = 0.80
 background-blur-radius = 20
 
 window-colorspace = display-p3
