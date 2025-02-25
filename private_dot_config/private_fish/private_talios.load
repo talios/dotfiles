@@ -326,6 +326,9 @@ set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 #fish_config theme choose "Mono Lace"
 fish_config theme choose "Lava"
 
+# Determinate Nix
+fish_add_path /nix/var/nix/profiles/default/bin
+
 # SDKMan Support
 fish_add_path ~/.sdkman/candidates/mcs/current/bin
 fish_add_path ~/.sdkman/candidates/java/current/bin

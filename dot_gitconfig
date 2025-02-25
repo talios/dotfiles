@@ -10,8 +10,8 @@ version = 2
 prompt = false
 
 [diff]
-algorithm = histogram
-colorMoved = default
+	algorithm = histogram
+	colorMoved = plain
 #     tool = sourcetree
 tool = Kaleidoscope
 #tool = vscode
@@ -22,10 +22,12 @@ tool = Kaleidoscope
 #tool = araxis
 submodule = log
 compactionHeuristic = true
+	mnemonicPrefix = true
+	renames = true
 #external = /Users/amrk/.opam/default/bin/patdiff-git-wrapper
 
 [merge]
-conflictstyle = zdiff3
+	conflictstyle = zdiff3
 #      tool = sdiff
 #tool = araxis
 #	tool = diffmerge
@@ -162,7 +164,7 @@ cmd = idea diff \"$LOCAL\" \"$REMOTE\"
 [commit]
 	template = /Users/amrk/Dropbox/_git-commit-template.txt
 	gpgSign = false
-verbose = true
+	verbose = true
 [log]
 	showSignature = false
 [gpg]
@@ -190,8 +192,10 @@ trustExitCode = false
 	fontdiff = -family PragmataPro -size 11 -weight normal -slant roman -underline 0 -overstrike 0
 	pruneduringfetch = true
 [fetch]
-	prune = false
+	prune = true
 	fsckobjects = true
+	pruneTags = true
+	all = true
 [mergetool "vscode"]
 	cmd = code -n --wait $MERGED
 [difftool "vscode"]
