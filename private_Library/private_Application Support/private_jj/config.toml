@@ -14,9 +14,13 @@ editor = "hx"
 merge-editor = ["ksdiff", "--merge", "--output", "$output", "--base", "$base", "$left", "$right"]
 log-word-wrap = true
 log-synthetic-elided-nodes = true
-#graph.style = "square"
+graph.style = "square"
 #diff.tool = ["delta", "--dark", "--diff-stat-align-width=80"]
+diff.tool = "difft"
+diff-args = ["--color=always", "$left", "$right"]
+
 pager = { command = ["less", "-FRX"], env = { LESSCHARSET = "utf-8" } }
+
 
 # Options: diff, snapshot, git
 conflict-marker-style = "git"

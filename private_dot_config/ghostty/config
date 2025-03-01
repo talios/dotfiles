@@ -32,7 +32,7 @@ selection-invert-fg-bg=true
 
 mouse-hide-while-typing = true
 
-background-opacity = 0.80
+background-opacity = 0.90
 background-blur-radius = 20
 
 window-colorspace = display-p3
@@ -93,15 +93,21 @@ shell-integration-features=no-cursor
 #theme = "3024 Day"
 #theme = "3024 Night"
 #theme = "Belafonte Night"
-#theme = "rose-pine"
+theme = "rose-pine"
 
 #theme = "flexoki-light"
-theme = "flexoki-dark"
+#theme = "flexoki-dark"
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl
-custom-shader = ghostty-shaders/fireworks.glsl
+#custom-shader = ghostty-shaders/fireworks.glsl
+#custom-shader = ghostty-shaders/gears-and-belts.glsl
+#custom-shader = ghostty-shaders/starfield.glsl
 #custom-shader = ghostty-shaders/galaxy.glsl
 #custom-shader = ghostty-shaders/matrix-hallway.glsl
+#custom-shader = ghostty-shaders/cubes.glsl
 #custom-shader = ghostty-shaders/dither.glsl
 
+#custom-shader = ghostty-shaders/animated-gradient-shader.glsl
+#custom-shader = ghostty-shaders/bettercrt.glsl
+#custom-shader = ghostty-shaders/drunkard.glsl

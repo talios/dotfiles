@@ -319,12 +319,22 @@ set -x GIT_CLIFF_CONFIG /Users/amrk/IdeaProjects/securemx/smx3/cliff.toml
 set -x ZVM_INSTALL $HOME/.zvm/self
 set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 
+# Map Option back to older bindings
+#bind alt-right nextd-or-forward-token
+#bind alt-left prevd-or-backward-token
+
+#bind -e alt-backspace
+#bind -e alt-delete
+#bind alt-backspace backward-kill-token
+#bind alt-delete kill-token
+
 
 
 # $HOME/zig/master/files
 
 #fish_config theme choose "Mono Lace"
-fish_config theme choose "Lava"
+#fish_config theme choose "Lava"
+fish_config theme choose "ayu Mirage"
 
 # Determinate Nix
 fish_add_path /nix/var/nix/profiles/default/bin
