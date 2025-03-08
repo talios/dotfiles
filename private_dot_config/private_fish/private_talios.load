@@ -293,6 +293,7 @@ alias orb '/Applications/OrbStack.app/Contents/MacOS/bin/orb'
 alias orbctl '/Applications/OrbStack.app/Contents/MacOS/bin/orbctl'
 
 alias greg rg
+alias jjt jj_tui
 
 
 zoxide init fish | source
@@ -318,6 +319,7 @@ set -x GIT_CLIFF_CONFIG /Users/amrk/IdeaProjects/securemx/smx3/cliff.toml
 
 set -x ZVM_INSTALL $HOME/.zvm/self
 set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
+#set -x XDG_CONFIG_HOME ~/.config
 
 # Map Option back to older bindings
 #bind alt-right nextd-or-forward-token

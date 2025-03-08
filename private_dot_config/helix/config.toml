@@ -1,7 +1,8 @@
 #theme = "sunset"
 #theme = "rose_pine"
 #theme = "flexoki_light"
-theme = "flexoki_dark"
+#theme = "flexoki_dark"
+theme = "catppuccin_frappe"
 #theme = "flux"
 
 [editor]

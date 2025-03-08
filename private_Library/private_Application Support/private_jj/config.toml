@@ -33,8 +33,14 @@ private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
 [merge-tools.diffedit3]
 # Replace `program` with the full path to the
 # binary if it is not in your PATH.
-program = "diffedit3"
-edit-args = ["$left", "$right", "$output"]
+
+#program = "diffedit3"
+#edit-args = ["$left", "$right", "$output"]
+
+program = "mergiraf"
+merge-args = ["merge", "$base", "$left", "$right", "-o", "$output", "--fast"]
+merge-conflict-exit-codes = [1]
+conflict-marker-style = "git"
 
 [template-aliases]
 custom_log_summary = '''
