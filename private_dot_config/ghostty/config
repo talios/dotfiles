@@ -87,14 +87,14 @@ shell-integration-features=no-cursor
  
 #theme = Arthur
 #theme = Seafoam Pastel
-#theme = "Blazer"
+theme = "Blazer"
 #theme = "Chalk"
 
 #theme = "3024 Day"
 #theme = "3024 Night"
 #theme = "Belafonte Night"
 #theme = "rose-pine"
-theme = "catppuccin-frappe"
+#theme = "catppuccin-frappe"
 
 #theme = "flexoki-light"
 #theme = "flexoki-dark"
