@@ -6,7 +6,6 @@ email = "mark.derricutt@smxemail.com"
 #diff-editor = "bcompare"
 #diff-editor = "diffedit3"
 #diff-editor = "ksdiff"
-#default-command = "log"
 default-command = "ls"
 editor = "hx"
 #merge-editor = ["araxisgitmerge", "-wait", "-2", "$left", "$right", "$output"]
@@ -14,7 +13,7 @@ editor = "hx"
 merge-editor = ["ksdiff", "--merge", "--output", "$output", "--base", "$base", "$left", "$right"]
 log-word-wrap = true
 log-synthetic-elided-nodes = true
-graph.style = "square"
+#graph.style = "square"
 #diff.tool = ["delta", "--dark", "--diff-stat-align-width=80"]
 diff.tool = "difft"
 diff-args = ["--color=always", "$left", "$right"]
@@ -37,6 +36,7 @@ private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
 #program = "diffedit3"
 #edit-args = ["$left", "$right", "$output"]
 
+[merge-tools.mergiraf]
 program = "mergiraf"
 merge-args = ["merge", "$base", "$left", "$right", "-o", "$output", "--fast"]
 merge-conflict-exit-codes = [1]

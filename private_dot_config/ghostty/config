@@ -21,10 +21,11 @@
 #font-family = "TX-02 Condensed"
 #font-family = "TX-02 Condensed"
 #font-family = "NovaMono"
-font-family = "TX-02 Medium UltraCondensed"
+#font-family = "TX-02 Medium UltraCondensed"
+font-family = "TX-02 Condensed"
 #font-family = "TX-02 UltraCondensed"
 
-font-thicken=true
+#font-thicken=true
 font-size = 16
 
 
@@ -81,13 +82,13 @@ adjust-cell-width = 0
 adjust-cell-height = -10%
 
 cursor-style=block
-split-divider-color=red
+split-divider-color=white
 shell-integration=fish
 shell-integration-features=no-cursor
  
 #theme = Arthur
-#theme = Seafoam Pastel
-theme = "Blazer"
+theme = Seafoam Pastel
+#theme = "Blazer"
 #theme = "Chalk"
 
 #theme = "3024 Day"
