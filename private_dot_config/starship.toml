@@ -1,122 +1,166 @@
-#Location: ~/.config/starship.toml
-#What_is_starship: https://starship.rs/
+# Nordic-darker color palette
+#2e3440	user
+#3b4252	dir
+#434c5e	git
+#4c566a	version
+#5e81ac	doc (from dracula color palette)
+#6272a4	time (from dracula color palette)
 
-add_newline = true
-command_timeout = 2000
+# some extra symbols
+# 
+# 
 
-format = """$env_var$os$username$hostname$kubernetes$directory$git_branch$git_status$python
-$character
+#           _     _ 
+#  ______ _(_) __| |
+# |_  / _` | |/ _` |
+#  / / (_| | | (_| |
+# /___\__,_|_|\__,_|	zaid-hassan
+ 
+# ---------------------------------------------------------------
+format = """
+[░▒▓](#2e3440)\
+$os\
+$username\
+[](bg:#3b4252 fg:#2e3440)\
+$directory\
+[](fg:#3b4252 bg:#434c5e)\
+$git_branch\
+$git_status\
+[](fg:#434c5e bg:#4c566a)\
+$c\
+$python\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:#4c566a bg:#5e81ac)\
+$docker_context\
+[](fg:#5e81ac bg:#6272a4)\
+$time\
+[ ](fg:#6272a4)\
+\n
+$cmd_duration\
+$character\
 """
+#add_newline = false
 
-[character]
-success_symbol = "╰⎯"
-error_symbol = "╰⎯"
-# ╭╴ ╰─
-
-[env_var]
-symbol = "╭╴"
-variable = 'SHELL'
-format = "$symbol"
+[line_break]
 disabled = false
 
-
-#warp-Drop ugly default prompt characters
-#success_symbol = ""
-#error_symbol = ""
-
-# ---
+[username]
+show_always = true
+style_user = "bg:#2e3440"
+style_root = "bg:#9A348E"
+format = '[ $user ]($style)'
+disabled = false
 
 [os]
-format = '[$symbol](bold white) '   
-disabled = false
+style = "bg:#9A348E"
+disabled = true # Disabled by default
 
-[os.symbols]
-Windows = ' '
-Arch = '󰣇'
-Ubuntu = ''
-Macos = '󰀵'
-Unknown = '󰠥'
-
-# ---y
-
-# Shows the username
-[username]
-style_user = 'yellow bold'
-style_root = 'black bold'
-format = '[//](black bold) [$user](#2883ff) ' # 2883ff
-disabled = false
-show_always = true
-
-# Shows the hostname
-[hostname]
-ssh_only = false
-format = '[//](black bold) [$hostname](bold blue) '
-disabled = false
-
-# Shows current directory
 [directory]
-truncation_length = 0
-truncation_symbol = '…/'
-home_symbol = '~'
-# read_only_style = '197'
-read_only = '  '
-format = '[//](black bold) [$path]($style)[$read_only]($read_only_style) '
-style = '#7ed1fb' # yellow bold
+style = "bg:#3b4252"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
 
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 
-# Shows current git branch
-[git_branch]
-# symbol = ' '
-symbol = ' '
-format = '[//](black bold) [$symbol\[$branch\]]($style) '
-# truncation_length = 0
-# truncation_symbol = '…/'
-style = 'bold green'
-
-# Shows current git status
-[git_status]
-disabled = true
-format = '[ $all_status $ahead_behind]($style) '
-style = 'bold green'
-conflicted = '🏳'
-up_to_date = ''
-untracked = ' '
-ahead = '⇡${count}'
-diverged = '⇕⇡${ahead_count}⇣${behind_count}'
-behind = '⇣${count}'
-stashed = ' '
-modified = ' '
-staged = '[++\($count\)](green)'
-renamed = '襁 '
-deleted = ' '
-
-# Shows kubernetes context and namespace
-[kubernetes]
-format = 'via [󱃾 $context\($namespace\)](bold purple) '
-disabled = false
-
-# ---
-
-[vagrant]
-disabled = true
-
-[docker_context]
-disabled = true
-
-[helm]
-disabled = true
+[c]
+symbol = " "
+style = "bg:#4c566a"
+format = '[ $symbol ($version) ]($style)'
 
 [python]
-symbol = '󰌠'
-python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
-format = '[//](black bold) [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
+symbol = " "
+style = "bg:#4c566a"
+format = '[ $symbol ($version) ]($style)'
 
+[docker_context]
+symbol = " "
+style = "bg:#5e81ac"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#434c5e"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#434c5e"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
-disabled = true
+symbol = ""
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
-[ruby]
-disabled = true
+[nim]
+symbol = " "
+style = "bg:##434c5e"
+format = '[ $symbol ($version) ]($style)'
 
-[terraform]
-disabled = true
+[rust]
+symbol = ""
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#6272a4"
+format = '[  $time ]($style)'
+	
+[character]
+success_symbol = '[ ➜](#6272a4)'
+error_symbol = '[ ➜](bold red)'
+#style = "bg:#6272a4"
+
+[cmd_duration]
+min_time = 500
+format = ' [$duration](#6272a4)'

@@ -11,10 +11,11 @@ editor = "hx"
 #merge-editor = ["araxisgitmerge", "-wait", "-2", "$left", "$right", "$output"]
 #merge-editor = ["bcompare", "-wait", "$left", "$right", "$base", "$output"]
 merge-editor = ["ksdiff", "--merge", "--output", "$output", "--base", "$base", "$left", "$right"]
+#merge-editor =  ["mergiraf", "merge", "$base", "$left", "$right", "-o", "$output", "--fast"]
 log-word-wrap = true
 log-synthetic-elided-nodes = true
 #graph.style = "square"
-#diff.tool = ["delta", "--dark", "--diff-stat-align-width=80"]
+#diff.tool = ["delta", "--dark", "--diff-stat-align-width=80"] 
 diff.tool = "difft"
 diff-args = ["--color=always", "$left", "$right"]
 
@@ -104,6 +105,9 @@ concat(
 "normal change_id" = { bold = true, fg = "magenta" }
 "immutable change_id" = { bold = false, fg = "bright cyan" }
 
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'closest_pushable(to)' = 'heads(::to & ~description(exact:"") & (~empty() | merges()))'
+
 [aliases]
 ls = ["log", "-T", "custom_log_summary"]
 ll = ["log", "-T", "builtin_log_detailed"]
@@ -114,7 +118,7 @@ sync = ["rebase", "--skip-emptied", "-s", "all:roots(develop..)", "-d", "develop
 sync-features = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"feature*\")", "-d", "develop"]
 sync-main = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"feature*\")", "-d", "main"]
 sync-push = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"push*\")", "-d", "main"]
-bmup = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closet_pushable(@)"]
 #review = ["git", "push", "--remote", "for-review"]
 
 [root]
