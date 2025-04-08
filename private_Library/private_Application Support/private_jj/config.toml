@@ -26,7 +26,6 @@ pager = { command = ["less", "-FRX"], env = { LESSCHARSET = "utf-8" } }
 conflict-marker-style = "git"
 
 [git]
-subprocess = true
 push-bookmark-prefix = "feature/"
 private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
  
