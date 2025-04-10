@@ -1,34 +1,8 @@
 # fonts
-#font-family = "Victor Mono"
-#font-family = "Cascadia Next JP"
-#font-family = "PragmataPro Mono Liga"
-#font-family = "Consolas"
-#font-family = "Cascadia Code PL"
-#font-family = "MonoLisa"
-#font-family = "GoMono Nerd Font"
-#font-feature=ss08
-#font-family = "CommitMono-talios"
-#font-family = "Iosevka"
-#font-family = "Operator Mono for Powerline"
-#font-family = "Source Code Pro Powerline"
-#font-family = "Roboto Mono"
-#font-family = "Monaspace Radon Var"
-#font-feature=ss08
-#font-family = "IBM Plex Mono"
-#font-family = "Jetbrains Mono"
-#font-family = JetBrainsMono Nerd Font Mono
-
-#font-family = "TX-02 Condensed"
-#font-family = "TX-02 Condensed"
-#font-family = "NovaMono"
-#font-family = "TX-02 Medium UltraCondensed"
-#font-family = "TX-02 Condensed"
-#font-family = "TX-02 UltraCondensed"
 font-family = "TX-02 UltraCondensed"
 
 font-thicken=true
-font-size = 16
-
+font-size = 14
 
 selection-invert-fg-bg=true
 
@@ -39,13 +13,13 @@ background-blur-radius = 20
 
 window-colorspace = display-p3
 window-inherit-font-size = true
-window-theme = ghostty
-#windows-decoration = none
+#window-theme = ghostty
+#window-decoration = none
 window-title-font-family = "TX-02 UltraCondensed"
 window-save-state = always
 window-padding-balance =true
-window-padding-x = 5
-window-padding-y = 5
+window-padding-x = 8
+window-padding-y = 8
 
 macos-non-native-fullscreen = true
 
