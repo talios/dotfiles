@@ -24,7 +24,7 @@
 #font-family = "TX-02 Medium UltraCondensed"
 #font-family = "TX-02 Condensed"
 #font-family = "TX-02 UltraCondensed"
-font-family = "TX-02 ExtraCondensed"
+font-family = "TX-02 UltraCondensed"
 
 font-thicken=true
 font-size = 16
@@ -87,22 +87,7 @@ split-divider-color=white
 shell-integration=fish
 shell-integration-features=no-cursor
  
-#theme = Arthur
-#theme = Seafoam Pastel
-#theme = "Blazer"
-theme = "0x96f"
-#theme = "Argonaut"
-#theme = "ayu"
-#theme = "Chalk"
-
-#theme = "3024 Day"
-#theme = "3024 Night"
-#theme = "Belafonte Night"
-#theme = "rose-pine"
-#theme = "catppuccin-frappe"
-
-#theme = "flexoki-light"
-#theme = "flexoki-dark"
+theme = "Ayu Mirage"
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl
