@@ -15,7 +15,7 @@ merge-editor = ["ksdiff", "--merge", "--output", "$output", "--base", "$base", "
 log-word-wrap = true
 log-synthetic-elided-nodes = true
 #graph.style = "square"
-#diff.tool = ["delta", "--dark", "--diff-stat-align-width=80"] 
+#diff.tool = ["delta", "--dark", "--diff-stat-align-width=80"]
 diff.tool = "difft"
 diff-args = ["--color=always", "$left", "$right"]
 
@@ -28,7 +28,7 @@ conflict-marker-style = "git"
 [git]
 push-bookmark-prefix = "feature/"
 private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
- 
+
 [merge-tools.diffedit3]
 # Replace `program` with the full path to the
 # binary if it is not in your PATH.
@@ -120,6 +120,8 @@ sync-main = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"feature*\")
 sync-push = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"push*\")", "-d", "main"]
 tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_pushable(@)"]
 #review = ["git", "push", "--remote", "for-review"]
+base = ["bookmark", "list", "-r", "@-", "-T", "self.name()"]
+
 
 [root]
 bookmark = "develop"

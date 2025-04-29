@@ -158,7 +158,7 @@ end
 
 function gca
   prepare-git-commit-message
-  git commit -v -S -a -e
+  git commit -v -a -e
 end
 
 function gc
