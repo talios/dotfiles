@@ -2,8 +2,8 @@ function release-it
     set project $argv[1]
     cd /Users/amrk/IdeaProjects/securemx/smx3/$project
     if test -d .jj
-        set base (command jj base)
-        if not string match develop $base
+        set base (string split " " (command jj baseb))
+        if not string match -r develop $base
             echo "• Repository is managed by Jujutsu, and working copy is not develop, please release $project manually"
             return
         end

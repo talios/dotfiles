@@ -120,8 +120,7 @@ sync-main = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"feature*\")
 sync-push = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"push*\")", "-d", "main"]
 tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_pushable(@)"]
 #review = ["git", "push", "--remote", "for-review"]
-base = ["bookmark", "list", "-r", "@-", "-T", "self.name()"]
-
+baseb = ["log", "--no-graph", "-r@-", "-Tlocal_bookmarks"]
 
 [root]
 bookmark = "develop"
