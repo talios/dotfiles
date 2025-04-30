@@ -2,8 +2,11 @@ function release-it
     set project $argv[1]
     cd /Users/amrk/IdeaProjects/securemx/smx3/$project
     if test -d .jj
-        echo "• Repository is managed by Jujutsu, please release $project manually"
-        return
+        set base (command jj base)
+        if not string match develop $base
+            echo "• Repository is managed by Jujutsu, and working copy is not develop, please release $project manually"
+            return
+        end
     end
     # if not test (git diff-index --quiet HEAD -- ; and echo "yes")
     #     echo "• Repository dirty, please resolve before releasing $project"

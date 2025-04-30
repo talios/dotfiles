@@ -350,3 +350,4 @@ fish_add_path ~/.sdkman/candidates/jarviz/current/bin
 fish_add_path ~/.sdkman/candidates/maven/current/bin
 fish_add_path ~/.sdkman/candidates/bld/current/bin
 fish_add_path ~/.sdkman/candidates/jbang/current/bin
+fish_add_path /opt/homebrew/opt/gnu-getopt/bin
