@@ -1,6 +1,6 @@
 # fonts
-#font-family = "TX-02 Condensed"
-font-family = "PragmataPro Mono Liga"
+font-family = "TX-02 Condensed"
+# font-family = "PragmataPro Mono Liga"
 
 font-thicken=true
 font-size = 14
@@ -21,8 +21,8 @@ window-title-font-family = "PragmataPro Mono"
 
 window-save-state = always
 window-padding-balance =true
-window-padding-x = 8
-window-padding-y = 8
+window-padding-x = 10
+window-padding-y = 10
 
 macos-non-native-fullscreen = true
 
