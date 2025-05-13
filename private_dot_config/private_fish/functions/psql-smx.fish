@@ -3,6 +3,11 @@ function psql-smx
     set shorthost $argv[2]
 
     switch $baseapp-$shorthost
+
+        case ident-xms
+            set DBHOST psql-smx3idnt-ae-stg-spe.postgres.database.azure.com
+            set DBNAME postgres
+
         case smx-aud
             set DBHOST aud-portal-pgsf.postgres.database.azure.com
             set DBNAME aud-portal-smx3
