@@ -121,16 +121,19 @@ function daily-routine
 #  daily_task cd ~/Dropbox/git-imerge
 #  daily_task git pull
 
-daily_task_label "Updating fish-shell from stale HEAD"
-daily_task RUSTFLAGS=\'-C target-feature=+crt-static\' cargo install --git https://github.com/fish-shell/fish-shell
+  daily_task_label "Updating fish-shell from stale HEAD"
+  daily_task RUSTFLAGS=\'-C target-feature=+crt-static\' cargo install --git https://github.com/fish-shell/fish-shell
 
-daily_task_label "Updating jujutsu from stale HEAD"
-daily_task "cargo install --git https://github.com/jj-vcs/jj.git --bin jj jj-cli"
+  daily_task_label "Updating jujutsu from stale HEAD"
+  daily_task "cargo install --git https://github.com/jj-vcs/jj.git --bin jj jj-cli"
 
-daily_task_label "Updating kopia from stale HEAD"
-daily_task cd ~/IdeaProjects/upstream/kopia
-daily_task git pull
-daily_task make install
+  daily_task_label "Updating kopia from stale HEAD"
+  daily_task cd ~/IdeaProjects/upstream/kopia
+  daily_task git pull
+  daily_task make install
+
+  daily_task_label "Running kopia backup"
+  daily_task ~/go/bin/kopia snapshot create --all
 
 #daily_task_label "Cleaning IntelliJ Logs"
 #daily_task rm -rf /Users/amrk/Library/Logs/IdeaIC*

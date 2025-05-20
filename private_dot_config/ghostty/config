@@ -1,5 +1,5 @@
 # fonts
-font-family = "TX-02 Condensed"
+font-family = "TX-02 UltraCondensed"
 # font-family = "PragmataPro Mono Liga"
 
 font-thicken=true
@@ -9,7 +9,7 @@ selection-invert-fg-bg=true
 
 mouse-hide-while-typing = true
 
-background-opacity = 0.90
+background-opacity = 0.98
 background-blur-radius = 20
 
 window-colorspace = display-p3
@@ -64,8 +64,8 @@ cursor-style=block
 split-divider-color=white
 shell-integration=fish
 shell-integration-features=no-cursor
- 
-theme = "Ayu Mirage"
+
+theme = "Desert"
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl
