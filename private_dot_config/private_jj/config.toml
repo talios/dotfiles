@@ -8,9 +8,19 @@ email = "mark.derricutt@smxemail.com"
 #diff-editor = "ksdiff"
 default-command = "ls"
 editor = "hx"
+#editor = "zed -n -w"
 #merge-editor = ["araxisgitmerge", "-wait", "-2", "$left", "$right", "$output"]
 #merge-editor = ["bcompare", "-wait", "$left", "$right", "$base", "$output"]
-merge-editor = ["ksdiff", "--merge", "--output", "$output", "--base", "$base", "$left", "$right"]
+merge-editor = [
+    "ksdiff",
+    "--merge",
+    "--output",
+    "$output",
+    "--base",
+    "$base",
+    "$left",
+    "$right",
+]
 #merge-editor =  ["mergiraf", "merge", "$base", "$left", "$right", "-o", "$output", "--fast"]
 log-word-wrap = true
 log-synthetic-elided-nodes = true
@@ -27,7 +37,7 @@ conflict-marker-style = "git"
 [git]
 push-bookmark-prefix = "feature/"
 private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
-write-change-id-header=true
+write-change-id-header = true
 
 [merge-tools.diffedit3]
 # Replace `program` with the full path to the
@@ -117,11 +127,46 @@ ll = ["log", "-T", "builtin_log_detailed"]
 ld = ["log", "-T", "custom_log_summary", "-r", "develop::"]
 add-changeid = ["--config-toml=ui.editor='.git/hooks/commit-msg'", "commit"]
 changes = ["log", "-T", "custom_log_summary"]
-sync = ["rebase", "--skip-emptied", "-s", "all:roots(develop..)", "-d", "develop"]
-sync-features = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"feature*\")", "-d", "develop"]
-sync-main = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"feature*\")", "-d", "main"]
-sync-push = ["rebase", "--skip-emptied", "-b", "all:bookmarks(glob:\"push*\")", "-d", "main"]
-tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_pushable(@)"]
+sync = [
+    "rebase",
+    "--skip-emptied",
+    "-s",
+    "all:roots(develop..)",
+    "-d",
+    "develop",
+]
+sync-features = [
+    "rebase",
+    "--skip-emptied",
+    "-b",
+    "all:bookmarks(glob:\"feature*\")",
+    "-d",
+    "develop",
+]
+sync-main = [
+    "rebase",
+    "--skip-emptied",
+    "-b",
+    "all:bookmarks(glob:\"feature*\")",
+    "-d",
+    "main",
+]
+sync-push = [
+    "rebase",
+    "--skip-emptied",
+    "-b",
+    "all:bookmarks(glob:\"push*\")",
+    "-d",
+    "main",
+]
+tug = [
+    "bookmark",
+    "move",
+    "--from",
+    "closest_bookmark(@)",
+    "--to",
+    "closest_pushable(@)",
+]
 #review = ["git", "push", "--remote", "for-review"]
 baseb = ["log", "--no-graph", "-r@-", "-Tlocal_bookmarks"]
 

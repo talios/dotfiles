@@ -294,6 +294,8 @@ alias ll 'exa --all --long --created --modified --group --header --color-scale -
 alias tailscale '/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 alias orb '/Applications/OrbStack.app/Contents/MacOS/bin/orb'
 alias orbctl '/Applications/OrbStack.app/Contents/MacOS/bin/orbctl'
+alias pricepatch 'java -jar ~/.m2/repository/smx3/pricingpatcher/smx3.pricingpatcher/1.0.1-SNAPSHOT/smx3.pricingpatcher-1.0.1-SNAPSHOT-jar-with-dependencies.jar'
+
 
 alias greg rg
 alias jjt jj_tui
