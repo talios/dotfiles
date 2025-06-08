@@ -342,8 +342,10 @@ set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 # $HOME/zig/master/files
 
 #fish_config theme choose "Mono Lace"
-#fish_config theme choose "Lava"
-fish_config theme choose "ayu Mirage"
+fish_config theme choose "Lava"
+#fish_config theme choose "ayu Mirage"
+
+set -x LS_COLORS $(vivid generate lava)
 
 # Determinate Nix
 fish_add_path /nix/var/nix/profiles/default/bin
