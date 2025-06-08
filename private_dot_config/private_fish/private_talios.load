@@ -289,7 +289,7 @@ set -x PATH $HOME/Dropbox/gitflow-avh $HOME/Dropbox/git-imerge $HOME/Dropbox/bin
 
 ulimit -S -n 2048
 
-alias ll 'exa --all --long --created --modified --group --header --color-scale --git --time-style full-iso'
+alias ll 'eza --all --long --created --modified --group --header --color-scale --git --time-style full-iso'
 
 alias tailscale '/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 alias orb '/Applications/OrbStack.app/Contents/MacOS/bin/orb'

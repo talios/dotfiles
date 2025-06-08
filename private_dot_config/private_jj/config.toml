@@ -37,7 +37,6 @@ conflict-marker-style = "git"
 [git]
 push-bookmark-prefix = "feature/"
 private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
-write-change-id-header = true
 
 [merge-tools.diffedit3]
 # Replace `program` with the full path to the
