@@ -194,7 +194,7 @@ trustExitCode = false
 [fetch]
 	prune = true
 	fsckobjects = true
-	pruneTags = true
+	pruneTags = false
 	all = true
 [mergetool "vscode"]
 	cmd = code -n --wait $MERGED
