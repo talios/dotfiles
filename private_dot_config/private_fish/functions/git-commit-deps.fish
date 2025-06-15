@@ -5,7 +5,6 @@ function git-commit-deps
         else
             mvn-resolve
             git clean -fd
-            set VERSION (smx-build --show-short-version)
             echo "build(deps): Synced bill-of-materials" >COMMIT_MSG.txt
             echo "" >>COMMIT_MSG.txt
             grep resolved pom.deps >>COMMIT_MSG.txt

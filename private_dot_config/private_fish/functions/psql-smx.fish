@@ -44,6 +44,9 @@ function psql-smx
         case drm-xm1
             set DBHOST xm-ae-prod-hst-drmgr-pgsf.postgres.database.azure.com
             set DBNAME disaster-recovery
+        case drm-sp1
+            set DBHOST psql-drmgmt-nzn-prd-dr.postgres.database.azure.com
+            set DBNAME disaster-recovery
 
         case mr-xmd
             set DBHOST xm-ae-dev-hst-remediationmgr-pgsf.postgres.database.azure.com
@@ -61,7 +64,7 @@ function psql-smx
     end
 
     switch $shorthost
-        case aud aus aut au3 xms xm1
+        case aud aus aut au3 xms xm1 sp1
             echo "Looking up credentials from Azure"
             set -x PGPASSWORD (az account get-access-token --resource-type oss-rdbms --query "[accessToken]" -o tsv)
             set PGURL host=$DBHOST user=Developers dbname=$DBNAME sslmode=require
