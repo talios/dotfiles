@@ -64,10 +64,17 @@ function psql-smx
     end
 
     switch $shorthost
-        case aud aus aut au3 xms xm1 sp1
+        case aud aus aut au3 xms xm1
             echo "Looking up credentials from Azure"
             set -x PGPASSWORD (az account get-access-token --resource-type oss-rdbms --query "[accessToken]" -o tsv)
             set PGURL host=$DBHOST user=Developers dbname=$DBNAME sslmode=require
+        case sp1
+            echo "Looking up prod credentials from Azure"
+            # pgsql:drmanager@psql-drmgmt-nzn-prd-dr
+            set -x PGPASSWORD (az account get-access-token --resource-type oss-rdbms --query "[accessToken]" -o tsv)
+            # set -x PGPASSWORD (op item get "pgsql:drmanager@psql-drmgmt-nzn-prd-dr" --fields=password)
+            # echo $PGPASSWORD
+            set PGURL host=$DBHOST user=Usergroup-Developers dbname=$DBNAME sslmode=require
         case '*'
             set PGURL host=localhost user=smx dbname=smx3
     end

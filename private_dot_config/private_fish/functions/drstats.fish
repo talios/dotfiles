@@ -9,22 +9,14 @@ function drstats
         echo "" >> /tmp/drstats.txt
     end
 
-    freeze --config user --output /tmp/drstats.png /tmp/drstats.txt
-    
-    # freeze \
-    #     --margin 10 \
-    #     --padding 5 \
-    #     # --window \
-    #     --theme "igor" \
-    #     --language txt \
-    #     --border.width 1 --border.color "#515151" --border.radius 8 \
-    #     --shadow.blur 20 \
-    #     --shadow.x 0 \
-    #     --shadow.y 10 \
-    #     # --font.family "PragmataPro Mono Liga" \
-    #     --font.size 8 \
-    #     # --font.ligatures \
-    #     --output /tmp/drstats.png /tmp/drstats.txt    
-    
-    ~/Downloads/arm64/imgcopy /tmp/drstats.png
+    set timestamp (date +"%s")
+    set drstatsfile ~/temp/drstats-$timestamp
+
+    freeze --config user --output $drstatsfile.jpg /tmp/drstats.txt
+    freeze --config user --output $drstatsfile.png /tmp/drstats.txt
+    echo $drstatsfile
+
+    ~/Downloads/arm64/imgcopy $drstatsfile.png
+
+    # ffmpeg -framerate 1 -pattern_type glob -i "/temp/drstats-*.jpg" -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p /temp/drstats.mp4
 end

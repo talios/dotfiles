@@ -1,6 +1,7 @@
 # fonts
 #font-family = "Recursive Mono Linear Static"
-font-family = "TX-02 UltraCondensed"
+#font-family = "TX-02 UltraCondensed"
+font-family = "Jetbrains Mono"
 # font-family = "PragmataPro Mono Liga"
 
 font-thicken=true
