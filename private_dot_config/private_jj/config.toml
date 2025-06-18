@@ -112,7 +112,7 @@ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))''
 "node wip" = { fg = "yellow" }
 "node normal" = { bold = false }
 "commit_id prefix" = { bold = true }
-
+"tags" = { fg = "green" }
 "normal change_id" = { bold = true, fg = "magenta" }
 "immutable change_id" = { bold = false, fg = "bright cyan" }
 
