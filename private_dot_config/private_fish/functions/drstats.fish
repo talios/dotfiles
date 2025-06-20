@@ -5,7 +5,7 @@ function drstats
         echo "" >> /tmp/drstats.txt
         curl -sn https://disaster-manager-app.$host.smxemail.com/reports/summary | \
             jq -r '. | to_entries | sort_by(.key)' | \
-            jp -type bar -x ..key -y ..value -height 10 -width 80 >> /tmp/drstats.txt
+            jp -type bar -x ..key -y ..value -height 10 >> /tmp/drstats.txt
         echo "" >> /tmp/drstats.txt
     end
 
@@ -14,7 +14,7 @@ function drstats
 
     freeze --config user --output $drstatsfile.jpg /tmp/drstats.txt
     freeze --config user --output $drstatsfile.png /tmp/drstats.txt
-    echo $drstatsfile
+    cat /tmp/drstats.txt
 
     ~/Downloads/arm64/imgcopy $drstatsfile.png
 
