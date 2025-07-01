@@ -71,7 +71,8 @@ function psql-smx
         case sp1
             echo "Looking up prod credentials from Azure"
             set -x PGPASSWORD (az account get-access-token --resource-type oss-rdbms --query "[accessToken]" -o tsv)
-            set PGURL host=$DBHOST user=UserGroup-Rgs-hst-prd-Postgres-DatabaseReader dbname=$DBNAME sslmode=require
+            # set PGURL host=$DBHOST user=UserGroup-Rgs-hst-prd-Postgres-DatabaseReader dbname=$DBNAME sslmode=require
+            set PGURL host=$DBHOST user=UserGroup-Rgs-hst-prd-Postgres-DatabaseContributor dbname=$DBNAME sslmode=require
         case '*'
             set PGURL host=localhost user=smx dbname=smx3
     end

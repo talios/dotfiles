@@ -1,7 +1,7 @@
 # fonts
 #font-family = "Recursive Mono Linear Static"
-#font-family = "TX-02 UltraCondensed"
-font-family = "TX-02 Condensed"
+font-family = "TX-02 UltraCondensed"
+#font-family = "TX-02 Condensed"
 #font-family = "Jetbrains Mono"
 # font-family = "PragmataPro Mono Liga"
 
@@ -21,8 +21,8 @@ window-colorspace = display-p3
 window-inherit-font-size = true
 #window-theme = ghostty
 #window-decoration = none
-#window-title-font-family = "TX-02 UltraCondensed"
-window-title-font-family = "PragmataPro Mono"
+window-title-font-family = "TX-02 UltraCondensed"
+#window-title-font-family = "PragmataPro Mono"
 
 window-save-state = always
 window-padding-balance = true
@@ -32,16 +32,19 @@ window-padding-y = 5
 macos-non-native-fullscreen = true
 
 # valid values are: native, transparent, tabs, hidden
-macos-titlebar-style = transparent
+macos-titlebar-style = tabs
 #macos-titlebar-style = hidden
 macos-window-shadow = true
 
 # window-title-font-size=15
 # window-title-font-family=
 
-minimum-contrast=0.6
-
+bold-is-bright = true
+minimum-contrast=2
 cursor-style = block
+cursor-style-blink = true
+cursor-invert-fg-bg = true
+cursor-opacity = .8
 
 unfocused-split-opacity = 0.55
 
@@ -65,8 +68,8 @@ scrollback-limit = 20000000
 adjust-cell-width = 0
 adjust-cell-height = -10%
 
-cursor-style=block
-split-divider-color=white
+split-divider-color=#EFEF43
+
 shell-integration=fish
 shell-integration-features=no-cursor
 
@@ -75,8 +78,8 @@ shell-integration-features=no-cursor
 #theme = "catppuccin-mocha"
 #theme = "ayu Mirage"
 #theme = "carbonfox"
-#theme = "xcodedarkhc"
-theme = "xcodelighthc"
+theme = "xcodedarkhc"
+#theme = "xcodelighthc"
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl
