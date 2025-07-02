@@ -350,6 +350,9 @@ set -x LS_COLORS $(vivid generate lava)
 # Determinate Nix
 fish_add_path /nix/var/nix/profiles/default/bin
 
+# git-subrepo
+source /Users/amrk/Applications/git-subrepo/.fish.rc
+
 # SDKMan Support
 fish_add_path ~/.sdkman/candidates/mcs/current/bin
 fish_add_path ~/.sdkman/candidates/java/current/bin

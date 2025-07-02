@@ -3,7 +3,7 @@
 font-family = "TX-02 UltraCondensed"
 #font-family = "TX-02 Condensed"
 #font-family = "Jetbrains Mono"
-# font-family = "PragmataPro Mono Liga"
+#font-family = "PragmataPro Mono Liga"
 
 font-thicken=true
 font-size = 14
