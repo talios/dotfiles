@@ -5,7 +5,8 @@
       <id>nexus</id>
       <name>Nexus Public Mirror</name>
       <url>https://nexus.az1.smxk8s.net/repository/maven-public-group/</url>
-      <mirrorOf>!karaf-repo,!karaf-plugin-repo,!smx-releases,external:*</mirrorOf>
+      <mirrorOf
+            >!karaf-repo,!karaf-plugin-repo,!smx-releases,external:*</mirrorOf>
     </mirror>
   </mirrors>
 
@@ -100,6 +101,6 @@
   <activeProfiles>
     <activeProfile>nullaway</activeProfile>
     <activeProfile>smx</activeProfile>
-    <activeProfile>ossindex</activeProfile>
+    <!-- <activeProfile>ossindex</activeProfile> -->
   </activeProfiles>
 </settings>
