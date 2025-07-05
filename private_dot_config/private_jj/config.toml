@@ -1,26 +1,34 @@
+protected_bookmarks = ["develop","main","master"]
+
 [user]
 name = "Mark Derricutt"
 email = "mark.derricutt@smxemail.com"
 
+# override user.email for personal projects
+[[--scope]]
+--when.repositories = ["~/IdeaProjects/upstream/"]
+[--scope.user]
+email = "mark@talios.com"
+
 [ui]
-#diff-editor = "bcompare"
+diff-editor = ["bcomp", "$left", "$right"]
 #diff-editor = "diffedit3"
 #diff-editor = "ksdiff"
 default-command = "ls"
 editor = "hx"
 #editor = "zed -n -w"
-#merge-editor = ["araxisgitmerge", "-wait", "-2", "$left", "$right", "$output"]
-#merge-editor = ["bcompare", "-wait", "$left", "$right", "$base", "$output"]
-merge-editor = [
-    "ksdiff",
-    "--merge",
-    "--output",
-    "$output",
-    "--base",
-    "$base",
-    "$left",
-    "$right",
-]
+merge-editor = "bcomp"
+
+# merge-editor = [
+#     "ksdiff",
+#     "--merge",
+#     "--output",
+#     "$output",
+#     "--base",
+#     "$base",
+#     "$left",
+#     "$right",
+# ]
 #merge-editor =  ["mergiraf", "merge", "$base", "$left", "$right", "-o", "$output", "--fast"]
 log-word-wrap = true
 log-synthetic-elided-nodes = true
@@ -34,12 +42,21 @@ pager = { command = ["less", "-FRX"], env = { LESSCHARSET = "utf-8" } }
 # Options: diff, snapshot, git
 conflict-marker-style = "git"
 
+# https://github.com/jj-vcs/jj/pull/3129
+[experimental-advance-branches]
+enabled-branches = ["glob:*"]
+disabled-branches = ["main", "master", "develop"]
+
 [git]
 private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
 
+[merge-tools.bcomp]
+program = "bcomp"
+merge-args = ["-automerge", "-reviewconflicts", "$left", "$right", "$base", "$output"]
+
 [merge-tools.diffedit3]
-#program = "diffedit3"
-#edit-args = ["$left", "$right", "$output"]
+program = "diffedit3"
+edit-args = ["$left", "$right", "$output"]
 
 [merge-tools.mergiraf]
 program = "mergiraf"
@@ -67,7 +84,9 @@ if(root,
             if(empty, "empty"),
             description_placeholder ++ "\n" ++ self.diff().summary()),
         ),
-        bookmarks,
+        bookmarks.map(|b|
+          if(config("protected_bookmarks").as_string_list().filter(|s| s.contains(b.name())),
+            label("protected_bookmark", b), b)),
         tags,
         working_copies,
         if(git_head, label("git_head", "git_head()")),
@@ -110,8 +129,11 @@ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))''
 "node normal" = { bold = false }
 "commit_id prefix" = { bold = true }
 "tags" = { fg = "green" }
+"bookmarks" = { fg = "blue" }
 "normal change_id" = { bold = true, fg = "magenta" }
 "immutable change_id" = { bold = false, fg = "bright cyan" }
+
+"protected_bookmark" = { bold = true, fg = "bright yellow" }
 
 [revset-aliases]
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
