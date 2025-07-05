@@ -117,7 +117,8 @@ git_push_bookmark = '"feature/" ++ change_id.short()'
 #'''
 
 commit_trailers = '''
-if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))'''
+if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
+'''
 
 [colors]
 "node" = { bold = true }
