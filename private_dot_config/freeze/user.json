@@ -1,0 +1,22 @@
+{
+  "background": "#070F43",
+  "margin": [10, 10, 10, 10],
+  "padding": [10, 10, 10, 10],
+  "window": false,
+  "width": 0,
+  "height": 0,
+  "version": false,
+  "config": "default",
+  "theme": "murphy",
+  "wrap": 0,
+  "border": { "radius": 5, "width": 5, "color": "#F00F58" },
+  "shadow": { "blur": 23, "x": 10, "y": 10 },
+  "font": {
+    "family": "PragmataPro Mono Liga",
+    "file": "/Users/amrk/Library/Fonts/PragmataPro_Mono_B_liga_09.ttf",
+    "size": 8,
+    "ligatures": true
+  },
+  "line_height": 1,
+  "show_line_numbers": false
+}
