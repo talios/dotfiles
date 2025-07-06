@@ -12,7 +12,6 @@ function drstats
     set timestamp (date +"%s")
     set drstatsfile ~/temp/drstats-$timestamp
 
-    freeze --config user --output $drstatsfile.jpg /tmp/drstats.txt
     freeze --config user --output $drstatsfile.png /tmp/drstats.txt
     cat /tmp/drstats.txt
 
