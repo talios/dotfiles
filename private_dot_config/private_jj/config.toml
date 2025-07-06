@@ -1,3 +1,4 @@
+[talios]
 protected_bookmarks = ["develop","main","master"]
 
 [user]
@@ -85,7 +86,7 @@ if(root,
             description_placeholder ++ "\n" ++ self.diff().summary()),
         ),
         bookmarks.map(|b|
-          if(config("protected_bookmarks").as_string_list().filter(|s| s.contains(b.name())),
+          if(config("talios.protected_bookmarks").as_string_list().filter(|s| s.contains(b.name())),
             label("protected_bookmark", b), b)),
         tags,
         working_copies,

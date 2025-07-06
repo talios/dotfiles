@@ -86,6 +86,9 @@ function daily-routine
   echo "Running daily tasks..."
   daily-cleanup-routine
 
+  daily_task_label "Cleaning syncthing log"
+  daily_task rm /opt/homebrew/var/log/syncthing.log
+
   daily_task_label "Updating homebrew"
   daily_task brew update
 
