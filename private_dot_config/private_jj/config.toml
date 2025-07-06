@@ -1,5 +1,5 @@
 [talios]
-protected_bookmarks = ["develop","main","master"]
+protected_bookmarks = ["develop","main","master","tip"]
 
 [user]
 name = "Mark Derricutt"
