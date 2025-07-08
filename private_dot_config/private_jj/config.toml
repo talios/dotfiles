@@ -12,7 +12,7 @@ email = "mark.derricutt@smxemail.com"
 email = "mark@talios.com"
 
 [ui]
-diff-editor = ["bcomp", "$left", "$right"]
+#diff-editor = ["bcomp", "$left", "$right"]
 #diff-editor = "diffedit3"
 #diff-editor = "ksdiff"
 default-command = "ls"
@@ -99,7 +99,6 @@ if(root,
 '''
 
 [templates]
-aliases.'format_timestamp(timestamp)' = 'timestamp.ago()'
 git_push_bookmark = '"feature/" ++ change_id.short()'
 
 #draft_commit_description = '''
@@ -134,7 +133,6 @@ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
 "bookmarks" = { fg = "blue" }
 "normal change_id" = { bold = true, fg = "magenta" }
 "immutable change_id" = { bold = false, fg = "bright cyan" }
-
 "protected_bookmark" = { bold = true, fg = "bright yellow" }
 
 [revset-aliases]
@@ -195,6 +193,7 @@ bookmark = "develop"
 
 [revsets]
 log = "present(@) | ancestors(immutable_heads().., 3) | present(trunk())"
+# log-graph-prioritize = "present(@)"
 
 [gg.queries]
 # Number of commits to load per call
@@ -210,6 +209,10 @@ large-repo-heuristic = 100000
 [gg.ui]
 # Stores a list of recently opened directories for shell integration
 recent-workspaces = []
+
+# [fix.tools.spotless]
+# command = ["mvn","spotless:apply","-DreformatJavadoc", "-DratchetFrom=NONE", "-DspotlessFiles==$path"]
+# patterns = ["glob:'**/*.java'"]
 
 # When set, bookmarks that are local-only or remote-only will be visually indicated.
 mark-unpushed-bookmarks = true
