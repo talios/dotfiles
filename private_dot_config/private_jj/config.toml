@@ -66,6 +66,21 @@ merge-conflict-exit-codes = [1]
 conflict-marker-style = "git"
 
 [template-aliases]
+'render_bookmarks(bookmarks)' = '''
+bookmarks.map(|b|
+  if(config("talios.protected_bookmarks").as_string_list().filter(|s| s.contains(b.name())),
+  label("protected_bookmark", b), b))
+'''
+
+'describe_with_diff(commit, description)' = '''
+if(description,
+  description.first_line(),
+  label(
+    if(empty, "empty"),
+    description_placeholder ++ "\n" ++ commit.diff().summary())
+)
+'''
+
 custom_log_summary = '''
 if(root,
   format_root_commit(self),
@@ -79,15 +94,10 @@ if(root,
         if(config("ui.show-cryptographic-signatures").as_boolean(),
           format_short_cryptographic_signature(signature)),
         if(empty, label("empty", "(empty)")),
-        if(description,
-          description.first_line(),
-          label(
-            if(empty, "empty"),
-            description_placeholder ++ "\n" ++ self.diff().summary()),
-        ),
-        bookmarks.map(|b|
-          if(config("talios.protected_bookmarks").as_string_list().filter(|s| s.contains(b.name())),
-            label("protected_bookmark", b), b)),
+
+        describe_with_diff(self, description),
+        render_bookmarks(bookmarks),
+
         tags,
         working_copies,
         if(git_head, label("git_head", "git_head()")),
