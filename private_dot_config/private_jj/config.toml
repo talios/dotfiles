@@ -156,6 +156,14 @@ ll = ["log", "-T", "builtin_log_detailed"]
 ld = ["log", "-T", "custom_log_summary", "-r", "develop::"]
 add-changeid = ["--config-toml=ui.editor='.git/hooks/commit-msg'", "commit"]
 changes = ["log", "-T", "custom_log_summary"]
+sync-trunk = [
+    "rebase",
+    "--skip-emptied",
+    "-s",
+    "all:roots(trunk()..)",
+    "-d",
+    "trunk()",
+]
 sync = [
     "rebase",
     "--skip-emptied",
