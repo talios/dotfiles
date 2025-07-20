@@ -292,7 +292,8 @@ set -x PATH $HOME/Dropbox/gitflow-avh $HOME/Dropbox/git-imerge $HOME/Dropbox/bin
 
 ulimit -S -n 2048
 
-alias ll 'eza --all --long --created --modified --group --header --color-scale --git --time-style full-iso'
+#alias ll 'eza --all --long --created --modified --group --header --color-scale --git --time-style full-iso'
+alias ll 'eza --long --group --header --color-scale --git --time-style full-iso'
 
 alias tailscale '/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 alias orb '/Applications/OrbStack.app/Contents/MacOS/bin/orb'
@@ -302,7 +303,6 @@ alias pricepatch 'java -jar ~/.m2/repository/smx3/pricingpatcher/smx3.pricingpat
 
 alias greg rg
 alias jjt jj_tui
-
 
 zoxide init fish | source
 direnv hook fish | source
@@ -348,7 +348,7 @@ set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 #fish_config theme choose "Lava"
 fish_config theme choose "Bay Cruise"
 
-set -x LS_COLORS $(vivid generate lava)
+set -x LS_COLORS $(vivid generate snazzy)
 
 # Determinate Nix
 fish_add_path /nix/var/nix/profiles/default/bin
@@ -358,6 +358,7 @@ source /Users/amrk/Applications/git-subrepo/.fish.rc
 
 # SDKMan Support
 fish_add_path ~/.sdkman/candidates/mcs/current/bin
+fish_add_path ~/.sdkman/candidates/mvnd/current/bin
 fish_add_path ~/.sdkman/candidates/java/current/bin
 fish_add_path ~/.sdkman/candidates/jarviz/current/bin
 #fish_add_path ~/.sdkman/candidates/maven/current/bin

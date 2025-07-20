@@ -12,7 +12,6 @@ email = "mark.derricutt@smxemail.com"
 email = "mark@talios.com"
 
 [ui]
-#diff-editor = ["bcomp", "$left", "$right"]
 #diff-editor = "diffedit3"
 #diff-editor = "ksdiff"
 default-command = "ls"
@@ -31,7 +30,7 @@ merge-editor = "bcomp"
 #     "$right",
 # ]
 #merge-editor =  ["mergiraf", "merge", "$base", "$left", "$right", "-o", "$output", "--fast"]
-log-word-wrap = true
+log-word-wrap = false
 log-synthetic-elided-nodes = true
 #graph.style = "square"
 #diff.tool = ["delta", "--dark", "--diff-stat-align-width=80"]
@@ -109,22 +108,34 @@ if(root,
 '''
 
 [templates]
-git_push_bookmark = '"feature/" ++ change_id.short()'
+# git_push_bookmark = '"feature/" ++ change_id.short()'
 
-#draft_commit_description = '''
-#concat(
-#  description,
-#  if(
-#    !description.contains("Change-Id: I"),
-#    "\n\n" ++ "Change-Id: I6a6a636c" ++ change_id.normal_hex() ++ "\n",
-#  ),
-#  surround(
-#    "\nJJ: This commit contains the following changes:\n", "",
-#    indent("JJ:     ", diff.stat(72)),
-#  ),
-#  surround("\nJJ: Diff:\n", "", indent("JJ:  ", diff.git(4)))
-#)
-#'''
+git_push_bookmark = '''
+if(
+  trailers.filter(|t| t.key() == "Closes").len() != 1,
+  "feature/" ++ change_id.short(),
+  concat("feature/", trailers.filter(|t| t.key() == "Closes").map(|t| t.value()).join(""), "-", change_id.shortest(4))
+)
+'''
+
+# if(config("issue").as_string(), config("issue").as_string() ++ " "),
+draft_commit_description = '''
+concat(
+   description,
+   surround(
+     "\nJJ: This commit contains the following changes:\n", "",
+     indent("JJ:     ", diff.stat(200)),
+   ),
+   surround("\nJJ: Diff:\n", "", indent("JJ:  ", diff.git(4)))
+)
+'''
+
+# commit_trailers = '''
+# concat(
+#   if(config("issue").as_string(), "Issue: " ++ config("issue").as_string() ++ "\n"),
+#   if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
+# )
+# '''
 
 commit_trailers = '''
 if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
@@ -151,10 +162,12 @@ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
 'undescribed()' = 'mutable() & mine() & description(exact:"")'
 
 [aliases]
+# jj run - https://github.com/neongreen/jj-run
+x = ["util", "exec", "--", "uvx", "git+https://github.com/neongreen/jj-run.git"]
+
 ls = ["log", "-T", "custom_log_summary"]
 ll = ["log", "-T", "builtin_log_detailed"]
 ld = ["log", "-T", "custom_log_summary", "-r", "develop::"]
-add-changeid = ["--config-toml=ui.editor='.git/hooks/commit-msg'", "commit"]
 changes = ["log", "-T", "custom_log_summary"]
 sync-trunk = [
     "rebase",
@@ -229,9 +242,9 @@ large-repo-heuristic = 100000
 # Stores a list of recently opened directories for shell integration
 recent-workspaces = []
 
-# [fix.tools.spotless]
-# command = ["mvn","spotless:apply","-DreformatJavadoc", "-DratchetFrom=NONE", "-DspotlessFiles==$path"]
-# patterns = ["glob:'**/*.java'"]
+[fix.tools.spotless]
+command = ["spotless-file", "$path"]
+patterns = ["glob:'**/*.java'"]
 
 # When set, bookmarks that are local-only or remote-only will be visually indicated.
 mark-unpushed-bookmarks = true
