@@ -348,7 +348,7 @@ set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 #fish_config theme choose "Lava"
 fish_config theme choose "Bay Cruise"
 
-set -x LS_COLORS $(vivid generate snazzy)
+set -x LS_COLORS $(vivid generate zenburn)
 
 # Determinate Nix
 fish_add_path /nix/var/nix/profiles/default/bin
