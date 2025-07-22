@@ -1,3 +1,7 @@
+function update-keystore
+  daily_task_label "Updating Java keystore"
+  daily_task keytool -import -trustcacerts -keystore /Users/amrk/.sdkman/candidates/java/current/lib/security/cacerts -alias Root2  -storepass changeit -file ~/Downloads/Desktop/smx-root-ca2.pem
+end
 
 function daily_task_label
   echo
