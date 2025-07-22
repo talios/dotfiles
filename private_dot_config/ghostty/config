@@ -46,6 +46,7 @@ cursor-style-blink = true
 cursor-invert-fg-bg = true
 cursor-opacity = 0.8
 
+focus-follows-mouse = true
 unfocused-split-opacity = 0.55
 
 #keybind = global:cmd+[=toggle_quick_terminal
