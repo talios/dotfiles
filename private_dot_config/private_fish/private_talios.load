@@ -93,6 +93,12 @@ function daily-routine
   daily_task_label "Cleaning syncthing log"
   daily_task rm /opt/homebrew/var/log/syncthing.log
 
+  daily_task_label "Cleaning docker buildx cache"
+  daily_task docker buildx prune --all --force
+
+  daily_task_label "Cleaning docker images"
+  daily_task docker image prune --all --force
+
   daily_task_label "Updating homebrew"
   daily_task brew update
 

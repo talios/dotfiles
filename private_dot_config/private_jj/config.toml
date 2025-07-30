@@ -50,6 +50,14 @@ disabled-branches = ["main", "master", "develop"]
 [git]
 private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
 
+[snapshot]
+auto-update-stale = true
+
+[gerrit]
+enabled = true
+url = 'https://gerrit.smxemail.com'
+
+
 [merge-tools.bcomp]
 program = "bcomp"
 merge-args = ["-automerge", "-reviewconflicts", "$left", "$right", "$base", "$output"]
@@ -87,8 +95,8 @@ if(root,
     concat(
       separate(" ",
         format_short_change_id_with_hidden_and_divergent_info(self),
-        if(author.email(), author.email().local(), email_placeholder),
         format_short_commit_id(commit_id),
+        if(author.email(), author.email().local(), email_placeholder),
         if(conflict, label("conflict", "conflict")),
         if(config("ui.show-cryptographic-signatures").as_boolean(),
           format_short_cryptographic_signature(signature)),
@@ -108,15 +116,15 @@ if(root,
 '''
 
 [templates]
-# git_push_bookmark = '"feature/" ++ change_id.short()'
+git_push_bookmark = '"feature/" ++ change_id.short()'
 
-git_push_bookmark = '''
-if(
-  trailers.filter(|t| t.key() == "Closes").len() != 1,
-  "feature/" ++ change_id.short(),
-  concat("feature/", trailers.filter(|t| t.key() == "Closes").map(|t| t.value()).join(""), "-", change_id.shortest(4))
-)
-'''
+# git_push_bookmark = '''
+# if(
+#   trailers.filter(|t| t.key() == "Closes").len() != 1,
+#   "feature/" ++ change_id.short(),
+#   concat("feature/", trailers.filter(|t| t.key() == "Closes").map(|t| t.value()).join(""), "-", change_id.shortest(4))
+# )
+# '''
 
 # if(config("issue").as_string(), config("issue").as_string() ++ " "),
 draft_commit_description = '''
@@ -156,11 +164,6 @@ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
 "immutable change_id" = { bold = false, fg = "bright cyan" }
 "protected_bookmark" = { bold = true, fg = "bright yellow" }
 
-[revset-aliases]
-'closest_bookmark(to)' = 'heads(::to & bookmarks())'
-'closest_pushable(to)' = 'heads(::to & ~description(exact:"") & (~empty() | merges()))'
-'undescribed()' = 'mutable() & mine() & description(exact:"")'
-
 [aliases]
 # jj run - https://github.com/neongreen/jj-run
 x = ["util", "exec", "--", "uvx", "git+https://github.com/neongreen/jj-run.git"]
@@ -168,12 +171,17 @@ x = ["util", "exec", "--", "uvx", "git+https://github.com/neongreen/jj-run.git"]
 ls = ["log", "-T", "custom_log_summary"]
 ll = ["log", "-T", "builtin_log_detailed"]
 ld = ["log", "-T", "custom_log_summary", "-r", "develop::"]
+le = ["log", "-T", "custom_log_summary", "-r", "undescribed()"]
+
+# Get all open stacks of work
+open = ["log", "-r", "open()"]
+
 changes = ["log", "-T", "custom_log_summary"]
 sync-trunk = [
     "rebase",
     "--skip-emptied",
     "-s",
-    "all:roots(trunk()..)",
+    "roots(trunk()..)",
     "-d",
     "trunk()",
 ]
@@ -181,7 +189,7 @@ sync = [
     "rebase",
     "--skip-emptied",
     "-s",
-    "all:roots(develop..)",
+    "roots(develop..)",
     "-d",
     "develop",
 ]
@@ -189,7 +197,7 @@ sync-features = [
     "rebase",
     "--skip-emptied",
     "-b",
-    "all:bookmarks(glob:\"feature*\")",
+    "bookmarks(glob:\"feature*\")",
     "-d",
     "develop",
 ]
@@ -197,15 +205,7 @@ sync-main = [
     "rebase",
     "--skip-emptied",
     "-b",
-    "all:bookmarks(glob:\"feature*\")",
-    "-d",
-    "main",
-]
-sync-push = [
-    "rebase",
-    "--skip-emptied",
-    "-b",
-    "all:bookmarks(glob:\"push*\")",
+    "bookmarks(glob:\"feature*\")",
     "-d",
     "main",
 ]
@@ -226,6 +226,58 @@ bookmark = "develop"
 [revsets]
 log = "present(@) | ancestors(immutable_heads().., 3) | present(trunk())"
 # log-graph-prioritize = "present(@)"
+log-graph-prioritize = 'coalesce(megamerge(), trunk())'
+
+[revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'closest_pushable(to)' = 'heads(::to & ~description(exact:"") & (~empty() | merges()))'
+'undescribed()' = 'mutable() & mine() & description(exact:"")'
+
+'user(x)' = 'author(x) | committer(x)'
+
+'mine()' = 'user("mark.derricutt@smxemail.com") | user("mark@talios.com")'
+
+# stack(x, n) is the set of mutable commits reachable from 'x', with 'n'
+# parents. 'n' is often useful to customize the display and return set for
+# certain operations. 'x' can be used to target the set of 'roots' to traverse,
+# e.g. @ is the current stack.
+'stack()' = 'stack(@)'
+'stack(x)' = 'stack(x, 2)'
+'stack(x, n)' = 'ancestors(reachable(x, mutable()), n)'
+
+# The current set of "open" works. It is defined as: all stacks that are
+# reachable from my working copy, or any other commit I wrote.
+# n = 1, meaning that nothing from `trunk()` is included, so all resulting
+# commits are mutable by definition.
+'open()' = 'stack(mine() | @, 1)'
+
+# Find the megamerge. Mostly useful in combination with other aliases, primarily
+# 'sandwich'. Normally when there's only one megamerge, sandwich works perfectly
+# fine and is basically "magic". However, there are more complex cases; consider
+# something like this which represents a forked repository of an upstream:
+#
+#
+#    ----> P1 ... Pn -----------\
+#   /                            \
+#  /---> X --\           (main)   \
+# B          M1 --> T1 ... Tn --> M2 --> @
+#  \---> Y --/
+#
+# X and Y are typical features on top of base B, combined inside megamerge M1.
+# However, we may want changes T1...Tn to go on top of M1, because (in my case)
+# they're custom and will never go upstream, but are correctly published as part
+# of the fork; Tn is where the main bookmark points. Finally, we have changes P1
+# ... Pn which are private and should never be pushed upstream at all.
+#
+# In this case, sandwich will work poorly because 'reachable(stack(), merges())'
+# will resolve to {M1, M2}, which is not what we want for 'rebase -B'. So to
+# handle that case, we allow the user to specify the merge via literal tag
+# "megamerge". In this case if we 'bookmark set megamerge -r M1' then sandwich
+# will always work correctly.
+#
+# From: https://github.com/thoughtpolice/a/blob/canon/tilde/aseipp/dotfiles/jj/config.toml
+'megamerge()' = 'coalesce(present(megamerge), reachable(stack(), merges()))'
+
 
 [gg.queries]
 # Number of commits to load per call
@@ -248,6 +300,10 @@ patterns = ["glob:'**/*.java'"]
 
 # When set, bookmarks that are local-only or remote-only will be visually indicated.
 mark-unpushed-bookmarks = true
+
+[vizjj.ui]
+recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/smx3-ui", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.invoicing"]
+font-size = 10
 
 # "light" or "dark". If not set, your OS settings will be used.
 # theme-override = "light"
