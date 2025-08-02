@@ -7,16 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:latest"
+    }
+  },
   "wrap_guides": [50, 78, 120],
   "remove_trailing_whitespace_on_save": true,
   "when_closing_with_no_tabs": "close_window",
   "ui_font_size": 12,
   "buffer_font_size": 13.0,
-  "buffer_font_family": "TX-02 Condensed",
+  "buffer_font_family": "Google Sans Code",
+  // "buffer_font_family": "TX-02 Condensed",
   "autosave": "on_focus_change",
   "theme": {
     "mode": "system",
     "light": "Atelier Sulphurpool Light",
-    "dark": "Gruvbox Light Hard"
+    "dark": "Carbonfox"
   }
 }
