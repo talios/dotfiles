@@ -90,8 +90,8 @@ shell-integration-features=no-cursor
 #theme = "xcodelighthc"
 #theme = "kanagawabones"
 #theme = "Zenburn"
-#theme = "zenwritten_light"
-theme = "selenized-light"
+theme = "zenwritten_light"
+#theme = "selenized-light"
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl
