@@ -17,14 +17,21 @@
   "wrap_guides": [50, 78, 120],
   "remove_trailing_whitespace_on_save": true,
   "when_closing_with_no_tabs": "close_window",
-  "ui_font_size": 12,
+  "ui_font_size": 13,
   "buffer_font_size": 13.0,
-  "buffer_font_family": "Google Sans Code",
+  "buffer_font_family": "Zed Plex Mono",
   // "buffer_font_family": "TX-02 Condensed",
+  "preferred_line_length": 120,
   "autosave": "on_focus_change",
   "theme": {
-    "mode": "system",
-    "light": "Atelier Sulphurpool Light",
-    "dark": "Carbonfox"
+    "mode": "light",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha"
+  },
+  "terminal": {
+    "dock": "right",
+    "font_size": 13,
+    "line_height": "comfortable",
+    "font_family": "Zed Plex Mono"
   }
 }
