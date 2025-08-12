@@ -18,7 +18,7 @@
   "remove_trailing_whitespace_on_save": true,
   "when_closing_with_no_tabs": "close_window",
   "ui_font_size": 13,
-  "buffer_font_size": 13.0,
+  "buffer_font_size": 11.0,
   "buffer_font_family": "Zed Plex Mono",
   // "buffer_font_family": "TX-02 Condensed",
   "preferred_line_length": 120,
@@ -30,7 +30,7 @@
   },
   "terminal": {
     "dock": "right",
-    "font_size": 13,
+    "font_size": 11,
     "line_height": "comfortable",
     "font_family": "Zed Plex Mono"
   }
