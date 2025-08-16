@@ -25,7 +25,7 @@
   "autosave": "on_focus_change",
   "theme": {
     "mode": "light",
-    "light": "Catppuccin Latte",
+    "light": "Gruvbox Light Hard",
     "dark": "Catppuccin Mocha"
   },
   "terminal": {
@@ -33,5 +33,15 @@
     "font_size": 11,
     "line_height": "comfortable",
     "font_family": "Zed Plex Mono"
+  },
+  "languages": {
+    "SQL": {
+      "formatter": {
+        "external": {
+          "command": "sqruff",
+          "arguments": ["--config", "/Users/amrk/.sqruff", "fix"]
+        }
+      }
+    }
   }
 }

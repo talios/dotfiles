@@ -8,7 +8,7 @@ font-family = "Zed Mono"
 #font-family = "Google Sans Code Regular Light"
 
 font-thicken=true
-font-size = 13
+font-size = 12
 
 selection-invert-fg-bg=true
 
@@ -80,7 +80,7 @@ shell-integration-features=no-cursor
 #theme = "ayu"
 #theme = "catppuccin-mocha"
 #theme = "Banana Blueberry"
-#theme = "GruvboxLight"
+theme = "GruvboxLightHard"
 #theme = "GruvboxDark"
 #theme = "catppuccin-latte"
 #theme = "CLRS"
@@ -89,7 +89,7 @@ shell-integration-features=no-cursor
 #theme = "carbonfox"
 #theme = "xcodedarkhc"
 #theme = "xcodelighthc"
-theme = "kanagawabones"
+#theme = "kanagawabones"
 #theme = "Zenburn"
 #theme = "zenwritten_light"
 #theme = "selenized-light"

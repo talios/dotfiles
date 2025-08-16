@@ -12,6 +12,7 @@ email = "mark.derricutt@smxemail.com"
 email = "mark@talios.com"
 
 [ui]
+#diff-editor = "diffpatch"
 #diff-editor = "diffedit3"
 #diff-editor = "ksdiff"
 default-command = "ls"
@@ -302,7 +303,7 @@ patterns = ["glob:'**/*.java'"]
 mark-unpushed-bookmarks = true
 
 [vizjj.ui]
-recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/smx3-ui", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.invoicing"]
+recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/selfrelease/selfrelease-java-func", "/Users/amrk/IdeaProjects/securemx/smx3/smx3-ui", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.invoicing"]
 font-size = 10
 
 # "light" or "dark". If not set, your OS settings will be used.
