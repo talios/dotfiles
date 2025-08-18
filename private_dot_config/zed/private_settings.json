@@ -24,9 +24,9 @@
   "preferred_line_length": 120,
   "autosave": "on_focus_change",
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Gruvbox Light Hard",
-    "dark": "Catppuccin Mocha"
+    "dark": "Gruvbox Dark Hard"
   },
   "terminal": {
     "dock": "right",
