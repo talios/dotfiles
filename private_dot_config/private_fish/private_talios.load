@@ -138,7 +138,10 @@ function daily-routine
   daily_task RUSTFLAGS=\'-C target-feature=+crt-static\' cargo install --git https://github.com/fish-shell/fish-shell
 
   daily_task_label "Updating jujutsu from stale HEAD"
-  daily_task "cargo install --git https://github.com/jj-vcs/jj.git --bin jj jj-cli"
+  # daily_task "cargo install --git https://github.com/jj-vcs/jj.git --bin jj jj-cli"
+  daily_task cd /Users/amrk/IdeaProjects/upstream/jj
+  daily_task jj git fetch
+  daily_task cargo install --path cli --force
 
   daily_task_label "Updating kopia from stale HEAD"
   daily_task cd ~/IdeaProjects/upstream/kopia
@@ -303,13 +306,14 @@ set -x PATH $HOME/Dropbox/gitflow-avh $HOME/Dropbox/git-imerge $HOME/Dropbox/bin
 ulimit -S -n 2048
 
 #alias ll 'eza --all --long --created --modified --group --header --color-scale --git --time-style full-iso'
-alias ll 'eza --long --group --header --color-scale --git --time-style full-iso'
+alias ll 'eza --all --long --group --header --color-scale --git --time-style full-iso'
 
 alias tailscale '/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 alias orb '/Applications/OrbStack.app/Contents/MacOS/bin/orb'
 alias orbctl '/Applications/OrbStack.app/Contents/MacOS/bin/orbctl'
 alias pricepatch 'java -jar ~/.m2/repository/smx3/pricingpatcher/smx3.pricingpatcher/1.0.1-SNAPSHOT/smx3.pricingpatcher-1.0.1-SNAPSHOT-jar-with-dependencies.jar'
 
+alias jjg '/Users/amrk/IdeaProjects/upstream/jj/result/bin/jj'
 
 alias greg rg
 alias jjt jj_tui
@@ -336,6 +340,7 @@ set -x GIT_CLIFF_CONFIG /Users/amrk/IdeaProjects/securemx/smx3/cliff.toml
 
 set -x KRB5_CONFIG ~/.config/krb5.conf
 
+set -x JAVA_HOME $HOME/.sdkman/candidates/java/current/
 set -x ZVM_INSTALL $HOME/.zvm/self
 set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 #set -x XDG_CONFIG_HOME ~/.config
@@ -355,10 +360,10 @@ set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 # $HOME/zig/master/files
 
 #fish_config theme choose "Snow Day"
-#fish_config theme choose "Lava"
-fish_config theme choose "Bay Cruise"
+fish_config theme choose "Lava"
+#fish_config theme choose "Bay Cruise"
 
-set -x LS_COLORS $(vivid generate zenburn)
+set -x LS_COLORS $(vivid generate gruvbox-dark-hard)
 
 # Determinate Nix
 fish_add_path /nix/var/nix/profiles/default/bin
@@ -371,8 +376,7 @@ fish_add_path ~/.sdkman/candidates/mcs/current/bin
 fish_add_path ~/.sdkman/candidates/mvnd/current/bin
 fish_add_path ~/.sdkman/candidates/java/current/bin
 fish_add_path ~/.sdkman/candidates/jarviz/current/bin
-#fish_add_path ~/.sdkman/candidates/maven/current/bin
-fish_add_path ~/Applications/apache-maven-3.9.x-SNAPSHOT/bin/
+fish_add_path ~/.sdkman/candidates/maven/current/bin
 fish_add_path ~/.sdkman/candidates/bld/current/bin
 fish_add_path ~/.sdkman/candidates/jbang/current/bin
 fish_add_path /opt/homebrew/opt/gnu-getopt/bin

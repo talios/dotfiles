@@ -56,7 +56,8 @@ auto-update-stale = true
 
 [gerrit]
 enabled = true
-url = 'https://gerrit.smxemail.com'
+default-remote = 'gerrit'
+default-remote-branch = "develop"
 
 
 [merge-tools.bcomp]
@@ -146,9 +147,9 @@ concat(
 # )
 # '''
 
-commit_trailers = '''
-if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
-'''
+#commit_trailers = '''
+#if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
+#'''
 
 [colors]
 "node" = { bold = true }
@@ -303,8 +304,8 @@ patterns = ["glob:'**/*.java'"]
 mark-unpushed-bookmarks = true
 
 [vizjj.ui]
-recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/selfrelease/selfrelease-java-func", "/Users/amrk/IdeaProjects/securemx/smx3/smx3-ui", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.invoicing"]
-font-size = 10
+recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx-migration-web", "/Users/amrk/IdeaProjects/securemx/smx3/selfrelease/selfrelease-java-func", "/Users/amrk/IdeaProjects/securemx/smx3/smx3-ui", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.invoicing"]
+font-size = 14
 
 # "light" or "dark". If not set, your OS settings will be used.
 # theme-override = "light"
