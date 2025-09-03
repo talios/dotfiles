@@ -96,7 +96,7 @@ autostash=true
 
 [core]
 quotepath = false
-	excludesFile = ~/.config/git/ignore
+	excludesfile = /Users/amrk/.config/git/ignore
 autocrlf = input
 #pager = delta --line-numbers --dark
 preloadindex = true
