@@ -18,14 +18,14 @@
   "remove_trailing_whitespace_on_save": true,
   "when_closing_with_no_tabs": "close_window",
   "ui_font_size": 13,
-  "buffer_font_size": 11.0,
-  "buffer_font_family": "Zed Plex Mono",
+  "buffer_font_size": 14.0,
+  "buffer_font_family": "PragmataPro Mono Liga",
   // "buffer_font_family": "TX-02 Condensed",
   "preferred_line_length": 120,
   "autosave": "on_focus_change",
   "theme": {
-    "mode": "dark",
-    "light": "Gruvbox Light Hard",
+    "mode": "light",
+    "light": "JetBrains Light",
     "dark": "Gruvbox Dark Hard"
   },
   "terminal": {

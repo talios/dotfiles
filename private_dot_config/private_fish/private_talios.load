@@ -340,6 +340,7 @@ set -x GIT_CLIFF_CONFIG /Users/amrk/IdeaProjects/securemx/smx3/cliff.toml
 
 set -x KRB5_CONFIG ~/.config/krb5.conf
 
+set -x MAVEN_OPTS "-Dmaven.artifact.threads=4 -Daether.dependencyCollector.impl=bf"
 set -x JAVA_HOME $HOME/.sdkman/candidates/java/current/
 set -x ZVM_INSTALL $HOME/.zvm/self
 set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
@@ -360,7 +361,8 @@ set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 # $HOME/zig/master/files
 
 #fish_config theme choose "Snow Day"
-fish_config theme choose "Lava"
+#fish_config theme choose "Lava"
+fish_config theme choose "ayu Dark"
 #fish_config theme choose "Bay Cruise"
 
 set -x LS_COLORS $(vivid generate gruvbox-dark-hard)

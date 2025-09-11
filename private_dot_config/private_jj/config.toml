@@ -46,7 +46,7 @@ conflict-marker-style = "git"
 # https://github.com/jj-vcs/jj/pull/3129
 [experimental-advance-branches]
 enabled-branches = ["glob:*"]
-disabled-branches = ["main", "master", "develop"]
+disabled-branches = ["main", "master", "develop", "tip"]
 
 [git]
 private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
@@ -147,15 +147,15 @@ concat(
 # )
 # '''
 
-#commit_trailers = '''
-#if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
-#'''
+commit_trailers = '''
+if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
+'''
 
 [colors]
 "node" = { bold = true }
 "node elided" = { fg = "bright black" }
 "node working_copy" = { fg = "green" }
-"node conflict" = { fg = "red" }
+"node conflicted" = { fg = "red" }
 "node immutable" = { fg = "bright cyan" }
 "node wip" = { fg = "yellow" }
 "node normal" = { bold = false }

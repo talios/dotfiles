@@ -6,7 +6,7 @@ function qsr-prod-test --description "qsr-prod-test <count> <description>"
   for i in (seq 1 $count)
     swaks --from mark@talios.com \
         --to markd@o365filter.com \
-        --server smtp.gmail.com:587 -a PLAIN --auth-user mark@talios.com \
+        --server au3mta02:1025 -a PLAIN --auth-user mark@talios.com \
         --auth-password $PASSWORD \
         --header-From "Mark <mark@talios.com>" \
         --header-Subject "$i: $desc" -tls --body "$i: $desc"
