@@ -59,6 +59,8 @@ keybind = ctrl+t=unbind
 keybind = cmd+f=write_scrollback_file:open
 keybind = cmd+shift+f=write_selection_file:open
 
+keybind = opt+backspace=text:\x17
+
 scrollback-limit = 20000000
 
 #keybind = shift+page_down=jump_to_prompt
@@ -81,7 +83,7 @@ shell-integration-features=no-cursor
 #theme = "catppuccin-mocha"
 #theme = "Banana Blueberry"
 #theme = "GruvboxLightHard"
-theme = "GruvboxDarkHard"
+theme = "Gruvbox Dark Hard"
 #theme = "GruvboxDark"
 #theme = "catppuccin-latte"
 #theme = "CLRS"

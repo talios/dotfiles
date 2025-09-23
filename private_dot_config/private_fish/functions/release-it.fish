@@ -18,7 +18,7 @@ function release-it
     if not test (git diff-index --quiet HEAD -- ; and echo "yes")
         echo "• Repository dirty after resolving dependencies - releasing $project"
         git-commit-deps
-        git clean -fdx
+        git clean -fd
         git mvnrelease && echo "• Released $project" && cd /Users/amrk/IdeaProjects/securemx/smx3/
     end
 end

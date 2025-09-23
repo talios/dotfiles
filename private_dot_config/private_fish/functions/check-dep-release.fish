@@ -6,7 +6,11 @@ function check-dep-release
         if git -C $pom diff-index --quiet HEAD --
             echo "$pom clean"
         else
-            echo "Git is dirty, release $pom needed!"
+            if test -d $pom/.jj
+                echo "JJ is dirty, release $pom needed!"
+            else
+                echo "Git is dirty, release $pom needed!"
+            end
         end
     end
 end

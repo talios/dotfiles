@@ -147,9 +147,9 @@ concat(
 # )
 # '''
 
-commit_trailers = '''
-if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
-'''
+# commit_trailers = '''
+# if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
+# '''
 
 [colors]
 "node" = { bold = true }
