@@ -141,6 +141,7 @@ function daily-routine
   # daily_task "cargo install --git https://github.com/jj-vcs/jj.git --bin jj jj-cli"
   daily_task cd /Users/amrk/IdeaProjects/upstream/jj
   daily_task jj git fetch
+  daily_task jj new main
   daily_task cargo install --path cli --force
 
   daily_task_label "Updating kopia from stale HEAD"
@@ -383,3 +384,4 @@ fish_add_path ~/.sdkman/candidates/bld/current/bin
 fish_add_path ~/.sdkman/candidates/jbang/current/bin
 fish_add_path /opt/homebrew/opt/gnu-getopt/bin
 fish_add_path /opt/homebrew/opt/postgresql@17/bin
+fish_add_path /nix/store/2k2mx9jkqs2wv6as70f098cddc9vznxr-devenv-1.9/bin
