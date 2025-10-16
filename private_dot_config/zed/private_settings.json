@@ -10,8 +10,8 @@
   "agent": {
     "default_profile": "ask",
     "default_model": {
-      "provider": "ollama",
-      "model": "qwen2.5-coder:latest"
+      "provider": "lmstudio",
+      "model": "qwen/qwen3-coder-30b"
     }
   },
   "wrap_guides": [50, 78, 120],
@@ -25,7 +25,7 @@
   "autosave": "on_focus_change",
   "theme": {
     "mode": "light",
-    "light": "JetBrains Light",
+    "light": "Alabaster BG",
     "dark": "Gruvbox Dark Hard"
   },
   "terminal": {
@@ -35,6 +35,12 @@
     "font_family": "Zed Plex Mono"
   },
   "languages": {
+    "YAML": {
+      "format_on_save": "off"
+    },
+    "XML": {
+      "format_on_save": "off"
+    },
     "SQL": {
       "formatter": {
         "external": {

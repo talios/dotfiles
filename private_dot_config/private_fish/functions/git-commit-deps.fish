@@ -9,7 +9,12 @@ function git-commit-deps
             echo "" >>/tmp/COMMIT_MSG.txt
             grep resolved pom.deps >>/tmp/COMMIT_MSG.txt
             mvn com.smxemail:rangeresolver-maven-plugin:lock-deps
-            git commit -F /tmp/COMMIT_MSG.txt (fd "pom.*") (fd "tile.xml")
+            if test -d .jj
+                jj desc --stdin < /tmp/COMMIT_MSG.txt
+                jj commit (fd "pom.*") (fd "tile.xml")
+            else
+                git commit -F /tmp/COMMIT_MSG.txt (fd "pom.*") (fd "tile.xml")
+            end
             rm /tmp/COMMIT_MSG.txt
         end
     else
