@@ -87,7 +87,8 @@ shell-integration-features=no-cursor
 #theme = "Gruvbox Dark Hard"
 #theme = "catppuccin-latte"
 #theme = "CLRS"
-#theme = "ayu Mirage"
+#theme = "Ayu Light"
+theme = "Bluloco Light"
 #theme = "Zenburn"
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
