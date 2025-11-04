@@ -2,12 +2,14 @@
     "skip_existing": true,
     "lyrics_embed": false,
     "lyrics_file": false,
+    "use_primary_album_artist": false,
     "video_download": true,
     "download_delay": true,
     "download_base_path": "~/Music/Tidal Staging",
     "quality_audio": "HI_RES_LOSSLESS",
     "quality_video": "1080",
-    "format_album": "Album/{album_artist}/{album_year} {album_title} [{album_id} {media}]{album_explicit}/{track_volume_num_optional}{album_track_num} {artist_name} - {track_title}{album_explicit}",
+    "download_dolby_atmos": false,
+    "format_album": "Album/{album_artist}/{album_year} {album_title} [{album_id}]{album_explicit}/{track_volume_num_optional}{album_track_num} {artist_name} - {track_title}{album_explicit}",
     "format_playlist": "Playlists/{playlist_name}/{list_pos}. {artist_name} - {track_title}",
     "format_mix": "Mix/{mix_name}/{artist_name} - {track_title}",
     "format_track": "Tracks/{artist_name}/{track_year} {track_title}{track_explicit}",
@@ -16,6 +18,7 @@
     "path_binary_ffmpeg": "/opt/homebrew/bin/ffmpeg",
     "metadata_cover_dimension": "320",
     "metadata_cover_embed": true,
+    "mark_explicit": false,
     "cover_album_file": true,
     "extract_flac": true,
     "downloads_simultaneous_per_track_max": 20,
@@ -35,5 +38,7 @@
     "metadata_delimiter_album_artist": ", ",
     "filename_delimiter_artist": ", ",
     "filename_delimiter_album_artist": ", ",
-    "metadata_target_upc": "UPC"
+    "metadata_target_upc": "UPC",
+    "api_rate_limit_batch_size": 20,
+    "api_rate_limit_delay_sec": 3.0
 }

@@ -1,11 +1,13 @@
 # fonts
 #font-family = "Recursive Mono Linear Static"
-font-family = "TX-02 UltraCondensed"
+#font-family = "TX-02 UltraCondensed"
 #font-family = "TX-02 Condensed"
 #font-family = "Zed Mono"
 #font-family = "Jetbrains Mono"
-#font-family = "PragmataPro Mono Liga"
+font-family = "PragmataPro Mono Liga"
 #font-family = "Google Sans Code Regular Light"
+
+font-feature="ss18"
 
 font-thicken=true
 font-size = 12
@@ -85,11 +87,12 @@ shell-integration-features=no-cursor
 #theme = "Everforest Light Med"
 #theme = "Farmhouse Light"
 #theme = "Gruvbox Dark Hard"
-#theme = "catppuccin-latte"
+##theme = "Catppuccin Mocha"
 #theme = "CLRS"
 #theme = "Ayu Light"
-theme = "Bluloco Light"
-#theme = "Zenburn"
+theme = "Bluloco Dark"
+#heme = "Zenburn"
+#theme = "Aurora"
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl
@@ -104,3 +107,4 @@ theme = "Bluloco Light"
 #custom-shader = ghostty-shaders/animated-gradient-shader.glsl
 #custom-shader = ghostty-shaders/bettercrt.glsl
 #custom-shader = ghostty-shaders/drunkard.glsl
+custom-shader = ghostty-cursor-shaders/cursor_warp.glsl
