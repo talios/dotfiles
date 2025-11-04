@@ -9,7 +9,7 @@
     "quality_audio": "HI_RES_LOSSLESS",
     "quality_video": "1080",
     "download_dolby_atmos": false,
-    "format_album": "Album/{album_artist}/{album_year} {album_title} [{album_id}]{album_explicit}/{track_volume_num_optional}{album_track_num} {artist_name} - {track_title}{album_explicit}",
+    "format_album": "Album/{album_artist}/{album_year} {album_title} [{album_id} {media_type}]{album_explicit}/{track_volume_num_optional}{album_track_num} {artist_name} - {track_title}{album_explicit}",
     "format_playlist": "Playlists/{playlist_name}/{list_pos}. {artist_name} - {track_title}",
     "format_mix": "Mix/{mix_name}/{artist_name} - {track_title}",
     "format_track": "Tracks/{artist_name}/{track_year} {track_title}{track_explicit}",
