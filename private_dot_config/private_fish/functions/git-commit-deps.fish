@@ -11,7 +11,9 @@ function git-commit-deps
             mvn com.smxemail:rangeresolver-maven-plugin:lock-deps
             if test -d .jj
                 jj desc --stdin < /tmp/COMMIT_MSG.txt
-                jj split (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
+                # jj split (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
+                jj commit (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
+                jj desc -m ""
             else
                 git commit -F /tmp/COMMIT_MSG.txt (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
             end

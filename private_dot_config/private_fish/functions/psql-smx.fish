@@ -48,15 +48,15 @@ function psql-smx
             set DBHOST psql-drmgmt-nzn-prd-dr.postgres.database.azure.com
             set DBNAME disaster-recovery
 
-        case mr-xmd
-            set DBHOST xm-ae-dev-hst-remediationmgr-pgsf.postgres.database.azure.com
-            set DBNAME msgremediation
+        # case mr-xmd
+        #     set DBHOST xm-ae-dev-hst-remediationmgr-pgsf.postgres.database.azure.com
+        #     set DBNAME msgremediation
         case mr-xms
-            set DBHOST xm-ae-stage-hst-remediationmgr-pgsf.postgres.database.azure.com
+            set DBHOST psql-msgremediation-ae-stg-esoc.postgres.database.azure.com
             set DBNAME msgremediation
-        case mr-xm1
-            set DBHOST xm-ae-prod-hst-remediationmgr-pgsf.postgres.database.azure.com
-            set DBNAME msgremediation
+        # case mr-xm1
+        #     set DBHOST xm-ae-prod-hst-remediationmgr-pgsf.postgres.database.azure.com
+        #     set DBNAME msgremediation
 
         case '*'
             echo "ERR: No Matching app/platform"

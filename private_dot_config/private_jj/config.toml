@@ -18,7 +18,8 @@ email = "mark@talios.com"
 default-command = "ls"
 editor = "hx"
 #editor = "zed -n -w"
-merge-editor = "bcomp"
+# merge-editor = "bcomp"
+# merge-editor = "idea"
 movement.edit = true
 
 # merge-editor = [
@@ -60,6 +61,14 @@ enabled = true
 default-remote = 'gerrit'
 default-remote-branch = "develop"
 
+[merge-tools.idea]
+# Likely needs to be adjusted, see below
+# program = "idea.sh"                                                  # Linux
+program = "/Applications/IntelliJ IDEA 2025.3 EAP.app/Contents/MacOS/idea"   # MacOS
+
+diff-args = ["diff",  "$left", "$right"]
+edit-args = ["diff",  "$left", "$right"]
+merge-args = ["merge" , "$left", "$right", "$base", "$output"]
 
 [merge-tools.bcomp]
 program = "bcomp"
