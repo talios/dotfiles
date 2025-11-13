@@ -107,4 +107,4 @@ theme = "Bluloco Dark"
 #custom-shader = ghostty-shaders/animated-gradient-shader.glsl
 #custom-shader = ghostty-shaders/bettercrt.glsl
 #custom-shader = ghostty-shaders/drunkard.glsl
-custom-shader = ghostty-cursor-shaders/cursor_warp.glsl
+#custom-shader = ghostty-cursor-shaders/cursor_warp.glsl
