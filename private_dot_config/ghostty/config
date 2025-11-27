@@ -4,8 +4,10 @@
 #font-family = "TX-02 Condensed"
 #font-family = "Zed Mono"
 #font-family = "Jetbrains Mono"
-font-family = "PragmataPro Mono Liga"
+#font-family = "PragmataPro Mono Liga"
 #font-family = "Google Sans Code Regular Light"
+#font-family = "Share Tech Mono"
+font-family = "0xProto Nerd Font Mono"
 
 font-feature="ss18"
 
@@ -58,8 +60,8 @@ keybind = unconsumed:page_up=scroll_page_up
 keybind = unconsumed:page_down=scroll_page_down
 keybind = ctrl+t=unbind
 #keybind = shift+page_up=write_scrollback_file:open
-keybind = cmd+f=write_scrollback_file:open
-keybind = cmd+shift+f=write_selection_file:open
+#keybind = cmd+f=write_scrollback_file:open
+#keybind = cmd+shift+f=write_selection_file:open
 
 keybind = opt+backspace=text:\x17
 

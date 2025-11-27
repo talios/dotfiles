@@ -19,6 +19,7 @@ default-command = "ls"
 editor = "hx"
 #editor = "zed -n -w"
 # merge-editor = "bcomp"
+merge-editor = "ksdiff"
 # merge-editor = "idea"
 movement.edit = true
 
@@ -69,6 +70,13 @@ program = "/Applications/IntelliJ IDEA 2025.3 EAP.app/Contents/MacOS/idea"   # M
 diff-args = ["diff",  "$left", "$right"]
 edit-args = ["diff",  "$left", "$right"]
 merge-args = ["merge" , "$left", "$right", "$base", "$output"]
+
+[merge-tools.ksdiff]
+program = "ksdiff"
+#merge-args = [ "--wait", "--merge", "--output", "$output", "--base",  "$base",  "--",  "$left", "--snapshot", "$right", "--snapshot"
+#  , "trustExitCode", "true"]
+merge-args = [ "--merge", "--output", "$output", "--base",  "$base",  "$right",  "$left"]
+conflict-marker-style = "git"
 
 [merge-tools.bcomp]
 program = "bcomp"
