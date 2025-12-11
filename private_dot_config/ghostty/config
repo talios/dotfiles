@@ -12,7 +12,7 @@ font-family = "PragmataPro Mono Liga"
 font-feature="ss18"
 
 font-thicken=true
-font-size = 12
+font-size = 16
 
 selection-invert-fg-bg=true
 
@@ -85,16 +85,19 @@ shell-integration-features=no-cursor
 #theme = "Desert"
 #theme = "Ayu Mirage"
 #theme = "Banana Blueberry"
-#theme = "Breadog"
+theme = "Breadog"
 #theme = "Everforest Light Med"
 #theme = "Farmhouse Light"
+#theme = "Flexoki Light"
+#theme = "Flexoki Dark"
 #theme = "Gruvbox Dark Hard"
-##theme = "Catppuccin Mocha"
+#theme = "Catppuccin Mocha"
 #theme = "CLRS"
 #theme = "Ayu Light"
-theme = "Bluloco Dark"
-#heme = "Zenburn"
+#theme = "Bluloco Dark"
+#theme = "Zenburn"
 #theme = "Aurora"
+
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl

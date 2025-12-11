@@ -50,7 +50,7 @@ conflict-marker-style = "git"
 # https://github.com/jj-vcs/jj/pull/3129
 [experimental-advance-branches]
 enabled-branches = ["glob:*"]
-disabled-branches = ["main", "master", "develop", "tip"]
+disabled-branches = ["main", "master", "develop", "tip", "glob:change-*"]
 
 [git]
 private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
@@ -128,7 +128,7 @@ if(root,
 
         tags,
         working_copies,
-        if(git_head, label("git_head", "git_head()")),
+        if(self.contained_in('first_parent(@)'), label("git_head", "git_head()")),
 
       ) ++ "\n",
     ),
@@ -322,7 +322,7 @@ large-repo-heuristic = 100000
 
 [gg.ui]
 # Stores a list of recently opened directories for shell integration
-recent-workspaces = []
+recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/smx3.mailproducts"]
 
 [fix.tools.spotless]
 command = ["spotless-file", "$path"]
