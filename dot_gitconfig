@@ -109,6 +109,7 @@ compression = 9
 # editor = mate -w -l1
 #	editor = mvim -f
 # editor = code -n -w
+commentChar = ";"
 editor = hx
 #editor = bbedit --new-window -w
 
