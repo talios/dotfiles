@@ -302,7 +302,7 @@ end
 
 set -x HOMEBREW_NO_AUTO_UPDATE 1
 
-set -x PATH $HOME/Dropbox/gitflow-avh $HOME/Dropbox/git-imerge $HOME/Dropbox/bin $HOME/Applications/bin /usr/local/bin/ $HOME/go/bin $HOME/.cargo/bin /opt/homebrew/bin /Applications/Araxis\ Merge.app/Contents/Utilities $PATH
+set -x PATH $HOME/Dropbox/gitflow-avh $HOME/Dropbox/git-imerge $HOME/Dropbox/bin $HOME/Applications/bin /usr/local/bin/ $HOME/go/bin $HOME/.cargo/bin /opt/homebrew/bin $PATH
 
 ulimit -S -n 2048
 
