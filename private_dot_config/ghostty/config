@@ -12,7 +12,7 @@ font-family = "TX-02 UltraCondensed"
 font-feature="ss18"
 
 font-thicken=true
-font-size = 13
+font-size = 15
 
 selection-invert-fg-bg=true
 
@@ -94,10 +94,11 @@ shell-integration-features=no-cursor
 #theme = "Farmhouse Light"
 #theme = "Flexoki Light"
 #theme = "Flexoki Dark"
-theme = "Gruvbox Dark Hard"
+#theme = "Gruvbox Dark Hard"
 #theme = "Catppuccin Mocha"
 #theme = "CLRS"
 #theme = "Ayu Light"
+theme = "Ayu Mirage"
 #theme = "Bluloco Dark"
 #theme = "Zenburn"
 #theme = "Aurora"

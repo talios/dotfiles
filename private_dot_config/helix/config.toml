@@ -4,7 +4,8 @@
 #theme = "flexoki_dark"
 #theme = "catppuccin_frappe"
 #theme = "kanagawa"
-theme = "gruvbox_light_hard"
+#theme = "gruvbox_light_hard"
+theme = "ayu_mirage"
 #theme = "flux"
 
 [editor]

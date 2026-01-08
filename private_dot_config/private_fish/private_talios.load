@@ -347,6 +347,13 @@ set -x ZVM_INSTALL $HOME/.zvm/self
 set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 #set -x XDG_CONFIG_HOME ~/.config
 
+# jj-desc
+
+set -x LLM_PROVIDER openai
+set -x OPENAI_API_KEY "dummy" # LM Studio doesn't require a key
+set -x OPENAI_BASE_URL "http://localhost:1234/v1"
+set -x LLM_MODEL "qwen/qwen3-coder-30b"
+
 
 # Map Option back to older bindings
 #bind alt-right nextd-or-forward-token
