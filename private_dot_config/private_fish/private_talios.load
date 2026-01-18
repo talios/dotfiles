@@ -382,13 +382,15 @@ fish_add_path /nix/var/nix/profiles/default/bin
 source /Users/amrk/Applications/git-subrepo/.fish.rc
 
 # SDKMan Support
-fish_add_path ~/.sdkman/candidates/mcs/current/bin
-fish_add_path ~/.sdkman/candidates/mvnd/current/bin
-fish_add_path ~/.sdkman/candidates/java/current/bin
-fish_add_path ~/.sdkman/candidates/jarviz/current/bin
-fish_add_path ~/.sdkman/candidates/maven/current/bin
-fish_add_path ~/.sdkman/candidates/bld/current/bin
-fish_add_path ~/.sdkman/candidates/jbang/current/bin
+fish_add_path /nix/store/2k2mx9jkqs2wv6as70f098cddc9vznxr-devenv-1.9/bin
 fish_add_path /opt/homebrew/opt/gnu-getopt/bin
 fish_add_path /opt/homebrew/opt/postgresql@17/bin
-fish_add_path /nix/store/2k2mx9jkqs2wv6as70f098cddc9vznxr-devenv-1.9/bin
+fish_add_path ~/.radicle/bin
+fish_add_path ~/.sdkman/candidates/bld/current/bin
+fish_add_path ~/.sdkman/candidates/jarviz/current/bin
+fish_add_path ~/.sdkman/candidates/java/current/bin
+fish_add_path ~/.sdkman/candidates/jbang/current/bin
+fish_add_path ~/.sdkman/candidates/jreleaser/current/bin
+fish_add_path ~/.sdkman/candidates/maven/current/bin
+fish_add_path ~/.sdkman/candidates/mcs/current/bin
+fish_add_path ~/.sdkman/candidates/mvnd/current/bin

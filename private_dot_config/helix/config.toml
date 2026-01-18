@@ -5,7 +5,8 @@
 #theme = "catppuccin_frappe"
 #theme = "kanagawa"
 #theme = "gruvbox_light_hard"
-theme = "ayu_mirage"
+#theme = "ayu_mirage"
+theme = "doom-one"
 #theme = "flux"
 
 [editor]
