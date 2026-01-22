@@ -322,7 +322,7 @@ large-repo-heuristic = 100000
 
 [gg.ui]
 # Stores a list of recently opened directories for shell integration
-recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/smx3.mailproducts"]
+recent-workspaces = ["/Users/amrk/IdeaProjects/upstream/tidal-dl-ng", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.mailproducts"]
 
 [fix.tools.spotless]
 command = ["spotless-file", "$path"]

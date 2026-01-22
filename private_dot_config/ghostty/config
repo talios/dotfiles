@@ -86,7 +86,7 @@ shell-integration=fish
 shell-integration-features=no-cursor
 
 #theme = "Desert"
-#theme = "Ayu Mirage"
+theme = "Ayu Mirage"
 #theme = "Banana Blueberry"
 #theme = "Breadog"
 #theme = "Broadcast"
@@ -97,12 +97,13 @@ shell-integration-features=no-cursor
 #theme = "Gruvbox Dark Hard"
 #theme = "Catppuccin Mocha"
 #theme = "CLRS"
-#theme = "Ayu Light"
-theme = "Ayu Mirage"
+#theme = "Ayu Mirage"
 #theme = "Bluloco Dark"
 #theme = "Zenburn"
 #theme = "Aurora"
 
+#theme = "Ayu Light"
+#theme = "Gruvbox Light Hard"
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl
