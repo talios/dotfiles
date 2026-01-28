@@ -11,7 +11,7 @@
     "default_profile": "ask",
     "default_model": {
       "provider": "lmstudio",
-      "model": "qwen/qwen3-coder-30b",
+      "model": "openai/gpt-oss-20b",
     },
   },
   "wrap_guides": [50, 78, 120],
