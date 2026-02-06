@@ -1,12 +1,12 @@
 # fonts
 #font-family = "Recursive Mono Linear Static"
-font-family = "TX-02 UltraCondensed"
+#font-family = "TX-02 UltraCondensed"
 #font-family = "TX-02 Condensed"
 #font-family = "Zed Mono"
 #font-family = "Jetbrains Mono"
 #font-family = "PragmataPro Mono Liga"
 #font-family = "Google Sans Code Regular Light"
-#font-family = "Share Tech Mono"
+font-family = "Share Tech Mono"
 #font-family = "0xProto Nerd Font Mono"
 
 font-feature="ss18"
@@ -18,7 +18,7 @@ selection-invert-fg-bg=true
 
 mouse-hide-while-typing = true
 
-background-opacity = 0.90
+background-opacity = 0.65
 #background-blur-radius = 10
 background-blur = macos-glass-regular
 #background-blur = macos-glass-clear
@@ -43,7 +43,7 @@ macos-non-native-fullscreen = true
 # valid values are: native, transparent, tabs, hidden
 macos-titlebar-style = tabs
 #macos-titlebar-style = hidden
-macos-window-shadow = true
+macos-window-shadow = false
 
 # window-title-font-size=15
 # window-title-font-family=
@@ -53,10 +53,10 @@ minimum-contrast=2
 cursor-style = block
 cursor-style-blink = true
 cursor-invert-fg-bg = true
-cursor-opacity = 0.8
+#cursor-opacity = 0.8
 
 focus-follows-mouse = true
-unfocused-split-opacity = 0.55
+unfocused-split-opacity = 0.75
 
 #keybind = global:cmd+[=toggle_quick_terminal
 keybind = unconsumed:page_up=scroll_page_up

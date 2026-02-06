@@ -18,8 +18,8 @@ email = "mark@talios.com"
 default-command = "ls"
 editor = "hx"
 #editor = "zed -n -w"
-# merge-editor = "bcomp"
-merge-editor = "ksdiff"
+merge-editor = "bcomp"
+#merge-editor = "ksdiff"
 # merge-editor = "idea"
 movement.edit = true
 revsets-use-glob-by-default=true
@@ -267,6 +267,8 @@ log-graph-prioritize = 'coalesce(megamerge(), trunk())'
 
 'mine()' = 'user("mark.derricutt@smxemail.com") | user("mark@talios.com")'
 
+'changes()' = 'develop+::@-'
+
 # stack(x, n) is the set of mutable commits reachable from 'x', with 'n'
 # parents. 'n' is often useful to customize the display and return set for
 # certain operations. 'x' can be used to target the set of 'roots' to traverse,
@@ -322,7 +324,7 @@ large-repo-heuristic = 100000
 
 [gg.ui]
 # Stores a list of recently opened directories for shell integration
-recent-workspaces = ["/Users/amrk/IdeaProjects/upstream/tidal-dl-ng", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.mailproducts"]
+recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/smx3.clickhousesearch", "/Users/amrk/IdeaProjects/upstream/tidal-dl-ng", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.mailproducts"]
 
 [fix.tools.spotless]
 command = ["spotless-file", "$path"]
