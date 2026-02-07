@@ -221,6 +221,7 @@ sync = [
 ]
 sync-features = [
     "rebase",
+    "--simplify-parents",
     "--skip-emptied",
     "-b",
     "bookmarks(glob:\"feature*\")",
@@ -229,6 +230,7 @@ sync-features = [
 ]
 sync-main = [
     "rebase",
+    "--simplify-parents",
     "--skip-emptied",
     "-b",
     "bookmarks(glob:\"feature*\")",

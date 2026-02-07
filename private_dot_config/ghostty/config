@@ -6,13 +6,14 @@
 #font-family = "Jetbrains Mono"
 #font-family = "PragmataPro Mono Liga"
 #font-family = "Google Sans Code Regular Light"
-font-family = "Share Tech Mono"
+#font-family = "Share Tech Mono"
+font-family = "Maple Mono NF"
 #font-family = "0xProto Nerd Font Mono"
 
-font-feature="ss18"
+font-feature="cv01,cv04,calt"
 
 font-thicken=true
-font-size = 15
+font-size = 13
 
 selection-invert-fg-bg=true
 
