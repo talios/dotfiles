@@ -1,5 +1,5 @@
 function mvn-resolve
-    set RANGERESOLVER 1.2.30
+    set RANGERESOLVER 1.2.31
     if test -f pom.deps
         if test -f release.properties
             echo "Found release.properties, aborting..."

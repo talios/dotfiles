@@ -6,8 +6,8 @@
 #theme = "kanagawa"
 #theme = "gruvbox_light_hard"
 #theme = "ayu_mirage"
-theme = "doom-one"
-#theme = "flux"
+#theme = "doom-one"
+theme = "emacs"
 
 [editor]
 line-number = "relative"

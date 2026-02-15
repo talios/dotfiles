@@ -197,6 +197,7 @@ lc = ["log", "-G", "-T", "change_log_summary", "-r", "trunk()::@-"]
 ls = ["log", "-T", "custom_log_summary"]
 ll = ["log", "-T", "builtin_log_detailed"]
 ld = ["log", "-T", "custom_log_summary", "-r", "develop::"]
+lr = ["log", "-T", "custom_log_summary", "-r", "root()::"]
 le = ["log", "-T", "custom_log_summary", "-r", "undescribed()"]
 
 # Get all open stacks of work
@@ -255,7 +256,7 @@ bookmark = "develop"
 
 [revsets]
 #log = "(trunk()..@):: | (trunk()..@)-"
-log = "present(@) | ancestors(immutable_heads().., 3) | present(trunk())"
+#log = "present(@) | ancestors(immutable_heads().., 3) | present(trunk())"
 #log = "tracked_remote_bookmarks()::"
 # log-graph-prioritize = "present(@)"
 log-graph-prioritize = 'coalesce(megamerge(), trunk())'

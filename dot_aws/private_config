@@ -8,6 +8,7 @@ sso_account_id = 518055152219
 sso_role_name = AdministratorAccess
 region = us-east-1
 output = json
+
 [sso-session ses]
 sso_start_url = https://d-90674c7361.awsapps.com/start/#
 sso_region = us-east-1
