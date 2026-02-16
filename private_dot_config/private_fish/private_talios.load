@@ -144,7 +144,7 @@ function daily-routine
   # daily_task "cargo install --git https://github.com/jj-vcs/jj.git --bin jj jj-cli"
   daily_task cd /Users/amrk/IdeaProjects/upstream/jj
   daily_task jj git fetch
-  daily_task jj new main push-trtmutvyypvs
+  daily_task jj new main push-trtmutvyypvs mz/xrqrksunxynx
   daily_task cargo install --path cli --force
 
   daily_task_label "Updating kopia from stale HEAD"
