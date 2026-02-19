@@ -4,5 +4,5 @@ function trunkver
     set buildref 0
   end
 
-  docker run --rm ghcr.io/crftd-tech/trunkver:latest generate --build-ref "$buildref" --source-ref "g$(git rev-parse --short HEAD)"
+  docker run --platform linux/arm64 --rm ghcr.io/crftd-tech/trunkver:latest generate --build-ref "$buildref" --source-ref "g$(git rev-parse --short HEAD)"
 end
