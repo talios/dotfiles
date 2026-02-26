@@ -19,14 +19,14 @@
   "when_closing_with_no_tabs": "close_window",
   "ui_font_size": 13,
   "buffer_font_size": 14.0,
-  "buffer_font_family": "PragmataPro Mono Liga",
+  "buffer_font_family": "Maple Mono",
   // "buffer_font_family": "TX-02 Condensed",
   "preferred_line_length": 120,
   "autosave": "on_focus_change",
   "theme": {
     "mode": "light",
-    "light": "Ayu Dark",
-    "dark": "Gruvbox Dark Hard",
+    "light": "Fleet Light",
+    "dark": "Zedokai Darker Classic",
   },
   "terminal": {
     "dock": "right",

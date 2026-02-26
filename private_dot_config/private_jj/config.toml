@@ -179,14 +179,14 @@ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
 "node elided" = { fg = "bright black" }
 "node working_copy" = { fg = "green" }
 "node conflicted" = { fg = "red" }
-"node immutable" = { fg = "bright cyan" }
+"node immutable" = { fg = "bright red" }
 "node wip" = { fg = "yellow" }
 "node normal" = { bold = false }
 "commit_id prefix" = { bold = true }
 "tags" = { fg = "green" }
 "bookmarks" = { fg = "blue" }
 "normal change_id" = { bold = true, fg = "magenta" }
-"immutable change_id" = { bold = false, fg = "bright cyan" }
+"immutable change_id" = { bold = false, fg = "bright red" }
 "protected_bookmark" = { bold = true, fg = "bright yellow" }
 
 [aliases]
@@ -201,7 +201,7 @@ lr = ["log", "-T", "custom_log_summary", "-r", "root()::"]
 le = ["log", "-T", "custom_log_summary", "-r", "undescribed()"]
 
 # Get all open stacks of work
-open = ["log", "-r", "open()"]
+open = ["log", "-T", "custom_log_summary", "-r", "open()"]
 
 changes = ["log", "-T", "custom_log_summary"]
 sync-trunk = [
@@ -250,6 +250,7 @@ tug = [
 baseb = ["util", "exec", "--", "bash", "-c", """
   echo $(jj log -r@- -T 'bookmarks' --no-graph | cut -d ' ' -f 1)
 """]
+pr = ["util", "exec", "--", "jj-vine"]
 
 [root]
 bookmark = "develop"

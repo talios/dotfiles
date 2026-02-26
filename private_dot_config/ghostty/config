@@ -19,9 +19,9 @@ selection-invert-fg-bg=true
 
 mouse-hide-while-typing = true
 
-background-opacity = 0.65
+#background-opacity = 0.65
 #background-blur-radius = 10
-background-blur = macos-glass-regular
+#background-blur = macos-glass-regular
 #background-blur = macos-glass-clear
 
 
@@ -34,17 +34,17 @@ window-theme = ghostty
 window-title-font-family = "TX-02 UltraCondensed"
 #window-title-font-family = "PragmataPro Mono"
 
-window-save-state = always
+#window-save-state = always
 window-padding-balance = true
 window-padding-x = 8
-window-padding-y = 8
+window-padding-y = 4
 
 macos-non-native-fullscreen = true
 
 # valid values are: native, transparent, tabs, hidden
 macos-titlebar-style = tabs
 #macos-titlebar-style = hidden
-macos-window-shadow = false
+macos-window-shadow = true
 
 # window-title-font-size=15
 # window-title-font-family=
@@ -87,8 +87,9 @@ shell-integration=fish
 shell-integration-features=no-cursor
 
 #theme = "Desert"
-theme = "Ayu Mirage"
+theme = "Adwaita"
 #theme = "Banana Blueberry"
+#theme = "Apple System Colors Light"
 #theme = "Breadog"
 #theme = "Broadcast"
 #theme = "Everforest Light Med"
@@ -105,6 +106,7 @@ theme = "Ayu Mirage"
 
 #theme = "Ayu Light"
 #theme = "Gruvbox Light Hard"
+#theme = iterm2-tango-light
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl
