@@ -3,21 +3,20 @@ function git-commit-deps
         if test -f release.properties
             echo "Found release.properties, aborting..."
         else
-            mvn-resolve
+            mvn-resolve-locked
             git clean -fd
-            echo "build(deps): Synced bill-of-materials" >/tmp/COMMIT_MSG.txt
-            echo "" >>/tmp/COMMIT_MSG.txt
-            grep resolved pom.deps >>/tmp/COMMIT_MSG.txt
-            mvn com.smxemail:rangeresolver-maven-plugin:lock-deps
+            # echo "build(deps): Synced bill-of-materials" >/tmp/COMMIT_MSG.txt
+            # echo "" >>/tmp/COMMIT_MSG.txt
+            # grep resolved pom.deps >>/tmp/COMMIT_MSG.txt
+            # mvn com.smxemail:rangeresolver-maven-plugin:lock-deps
             if test -d .jj
-                jj desc --stdin < /tmp/COMMIT_MSG.txt
+                jj desc --stdin </tmp/COMMIT_MSG.txt
                 # jj split (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
-                jj commit (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
-                jj desc -m ""
+                jj commit -m "build(deps): Synced bill-of-materials" (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
             else
-                git commit -F /tmp/COMMIT_MSG.txt (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
+                git commit -m "build(deps): Synced bill-of-materials" (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
             end
-            rm /tmp/COMMIT_MSG.txt
+            # rm /tmp/COMMIT_MSG.txt
         end
     else
         echo "Missing pom.deps file in working directory.."

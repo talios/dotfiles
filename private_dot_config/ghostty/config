@@ -86,9 +86,9 @@ split-divider-color=#EFEF43
 shell-integration=fish
 shell-integration-features=no-cursor
 
-#theme = "Desert"
-theme = "Adwaita"
-#theme = "Banana Blueberry"
+#heme = "Desert"
+#theme = "Adwaita"
+theme = "Banana Blueberry"
 #theme = "Apple System Colors Light"
 #theme = "Breadog"
 #theme = "Broadcast"

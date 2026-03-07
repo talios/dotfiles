@@ -17,22 +17,22 @@
   "wrap_guides": [50, 78, 120],
   "remove_trailing_whitespace_on_save": true,
   "when_closing_with_no_tabs": "close_window",
-  "ui_font_size": 13,
-  "buffer_font_size": 14.0,
+  "ui_font_size": 12,
+  "buffer_font_size": 12.0,
   "buffer_font_family": "Maple Mono",
   // "buffer_font_family": "TX-02 Condensed",
   "preferred_line_length": 120,
   "autosave": "on_focus_change",
   "theme": {
-    "mode": "light",
-    "light": "Fleet Light",
+    "mode": "dark",
+    "light": "Gruvbox Light Hard",
     "dark": "Zedokai Darker Classic",
   },
   "terminal": {
     "dock": "right",
     "font_size": 11,
     "line_height": "comfortable",
-    "font_family": "Zed Plex Mono",
+    "font_family": "Maple Mono",
   },
   "languages": {
     "YAML": {
