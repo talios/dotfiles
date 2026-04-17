@@ -10,7 +10,7 @@ function git-commit-deps
             # grep resolved pom.deps >>/tmp/COMMIT_MSG.txt
             # mvn com.smxemail:rangeresolver-maven-plugin:lock-deps
             if test -d .jj
-                jj desc --stdin </tmp/COMMIT_MSG.txt
+                # jj desc --stdin </tmp/COMMIT_MSG.txt
                 # jj split (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
                 jj commit -m "build(deps): Synced bill-of-materials" (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
             else

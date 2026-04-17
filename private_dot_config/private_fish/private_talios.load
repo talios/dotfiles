@@ -373,8 +373,8 @@ set -x LLM_MODEL "qwen/qwen3-coder-30b"
 
 #fish_config theme choose "Snow Day"
 #fish_config theme choose "Lava"
-fish_config theme choose "ayu Dark"
-#fish_config theme choose "Bay Cruise"
+#fish_config theme choose "ayu Dark"
+fish_config theme choose "Bay Cruise"
 
 set -x LS_COLORS $(vivid generate gruvbox-dark-hard)
 
@@ -388,6 +388,7 @@ source /Users/amrk/Applications/git-subrepo/.fish.rc
 fish_add_path /nix/store/2k2mx9jkqs2wv6as70f098cddc9vznxr-devenv-1.9/bin
 fish_add_path /opt/homebrew/opt/gnu-getopt/bin
 fish_add_path /opt/homebrew/opt/postgresql@17/bin
+fish_add_path /opt/nanobrew/prefix/bin
 fish_add_path ~/.radicle/bin
 fish_add_path ~/.sdkman/candidates/bld/current/bin
 fish_add_path ~/.sdkman/candidates/jarviz/current/bin
