@@ -238,15 +238,6 @@ sync-main = [
     "-d",
     "main",
 ]
-tug = [
-    "bookmark",
-    "move",
-    "--from",
-    "closest_bookmark(@)",
-    "--to",
-    "closest_pushable(@)",
-]
-#baseb = ["log", "--no-graph", "-r@-", "-Tlocal_bookmarks"]
 baseb = ["util", "exec", "--", "bash", "-c", """
   echo $(jj log -r@- -T 'bookmarks' --no-graph | cut -d ' ' -f 1)
 """]

@@ -325,6 +325,7 @@ alias jjt jj_tui
 zoxide init fish | source
 direnv hook fish | source
 starship init fish | source
+mise activate fish | source
 #tug completion fish | source
 zellij setup --generate-completion fish | source
 dagger completion fish | source

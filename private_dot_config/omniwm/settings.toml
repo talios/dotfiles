@@ -2,7 +2,6 @@ monitorBarOverrides = []
 monitorDwindleOverrides = []
 monitorNiriOverrides = []
 monitorOrientationOverrides = []
-version = 5
 
 [appearance]
 mode = "dark"
@@ -57,22 +56,28 @@ scrollSensitivity = 5.0
 [mouseWarp]
 axis = "horizontal"
 margin = 1
-monitorOrder = []
+
+[[mouseWarp.monitorOrder]]
+displayUUID = "CC5477DA-E3D8-437F-8752-7BECEE410B55"
+name = "LG HDR 4K"
+
+[[mouseWarp.monitorOrder]]
+name = ""
 
 [niri]
 alwaysCenterSingleColumn = true
 centerFocusedColumn = "never"
 columnWidthPresets = [0.3333333333333333, 0.5, 0.66]
-infiniteLoop = false
+infiniteLoop = true
 maxVisibleColumns = 2
-maxWindowsPerColumn = 3
+maxWindowsPerColumn = 1
 singleWindowAspectRatio = "4:3"
 
 [quakeTerminal]
 animationDuration = 0.2
-autoHide = false
+autoHide = true
 enabled = true
-heightPercent = 50.0
+heightPercent = 75.0
 monitorMode = "focusedWindow"
 opacity = 1.0
 position = "center"
@@ -84,21 +89,21 @@ commandPaletteLastMode = "windows"
 hiddenBarIsCollapsed = true
 
 [statusBar]
-showAppNames = false
-showWorkspaceName = false
-useWorkspaceId = false
+showAppNames = true
+showWorkspaceName = true
+useWorkspaceId = true
 
 [workspaceBar]
 backgroundOpacity = 0.1
-deduplicateAppIcons = false
+deduplicateAppIcons = true
 enabled = true
 height = 24.0
-hideEmptyWorkspaces = false
+hideEmptyWorkspaces = true
 labelFontSize = 12.0
 notchAware = true
 position = "overlappingMenuBar"
 reserveLayoutSpace = false
-showFloatingWindows = false
+showFloatingWindows = true
 showLabels = true
 windowLevel = "popup"
 xOffset = 0.0

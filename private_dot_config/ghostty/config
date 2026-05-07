@@ -3,10 +3,10 @@
 #font-family = "PragmataPro Mono Liga"
 font-family = "Maple Mono NF"
 
-font-feature="cv01,cv04,calt"
+#font-feature="cv01,cv04,calt"
 
 font-thicken=true
-font-size = 13
+font-size = 14
 
 selection-invert-fg-bg=true
 
@@ -78,6 +78,9 @@ split-divider-color=#EFEF43
 
 shell-integration=fish
 shell-integration-features=no-cursor
+shell-integration-features=sudo
+shell-integration-features=title
+shell-integration-features=ssh-env
 
 #theme = "Desert"
 #theme = "Adwaita"
@@ -85,11 +88,12 @@ shell-integration-features=no-cursor
 #theme = "Apple System Colors Light"
 #theme = "Breadog"
 #theme = "Broadcast"
-theme = "Everforest Dark Hard"
+#theme = "Everforest Dark Hard"
+
 #theme = "Farmhouse Light"
 #theme = "Flexoki Light"
 #theme = "Flexoki Dark"
-#theme = "Gruvbox Dark Hard"
+theme = "Gruvbox Dark Hard"
 #theme = "Catppuccin Mocha"
 #theme = "CLRS"
 #theme = "Ayu Mirage"
