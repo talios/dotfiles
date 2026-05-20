@@ -25,7 +25,7 @@
     "download_delay_sec_min": 3.0,
     "download_delay_sec_max": 5.0,
     "album_track_num_pad_min": 2,
-    "downloads_concurrent_max": 1,
+    "downloads_concurrent_max": 4,
     "symlink_to_track": false,
     "playlist_create": false,
     "metadata_replay_gain": false,

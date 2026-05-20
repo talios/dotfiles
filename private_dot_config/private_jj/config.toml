@@ -117,7 +117,6 @@ if(root,
       separate(" ",
         format_short_change_id_with_change_offset(self),
         format_short_commit_id(commit_id),
-        if(author.email(), author.email().local(), email_placeholder),
         if(conflict, label("conflict", "conflict")),
         if(config("ui.show-cryptographic-signatures").as_boolean(),
           format_short_cryptographic_signature(signature)),
@@ -126,6 +125,7 @@ if(root,
         describe_with_diff(self, description),
         render_bookmarks(bookmarks),
 
+        if(author.email(), author.email().local(), email_placeholder),
         tags,
         working_copies,
         if(self.contained_in('first_parent(@)'), label("git_head", "git_head()")),
@@ -197,6 +197,7 @@ lc = ["log", "-G", "-T", "change_log_summary", "-r", "trunk()::@-"]
 ls = ["log", "-T", "custom_log_summary"]
 ll = ["log", "-T", "builtin_log_detailed"]
 ld = ["log", "-T", "custom_log_summary", "-r", "develop::"]
+lm = ["log", "-T", "custom_log_summary", "-r", "master::"]
 lr = ["log", "-T", "custom_log_summary", "-r", "root()::"]
 le = ["log", "-T", "custom_log_summary", "-r", "undescribed()"]
 

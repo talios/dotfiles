@@ -1,1 +1,1 @@
-export FEATURE=$(git branch --show-current)
+export FEATURE=$(jj baseb)
