@@ -23,6 +23,6 @@ set tree-view = line-number:no,interval=5 mode author:full \
 
 # Show line numbers for every 10th line in the pager view
 set pager-view = line-number:yes,interval=10 text
-set main-view = line-number:yes,interval=10 id, date, author, commit-title,graph=yes,refs=yes,overflow=yes
-#set main-view = line-number:yes,interval=10 id, date, author, commit-title,graph=yes,refs=no,overflow=yes
+#set main-view = line-number:yes,interval=10 id, date, author, commit-title,graph=yes,refs=yes,overflow=yes
+set main-view = line-number:yes,interval=10 id, date, author, commit-title,graph=yes,refs=no,overflow=yes
 set log-view = line-number:yes,interval=10 text

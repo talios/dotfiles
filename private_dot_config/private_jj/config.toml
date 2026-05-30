@@ -258,6 +258,7 @@ bookmark = "develop"
 #log-graph-prioritize = 'coalesce(megamerge(), trunk())'
 
 [revset-aliases]
+'oldfeature()' = 'bookmarks(glob:"oldfeature*")'
 # 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 # 'closest_pushable(to)' = 'heads(::to & ~description(exact:"") & (~empty() | merges()))'
 'undescribed()' = 'mutable() & mine() & description(exact:"")'
@@ -326,7 +327,7 @@ large-repo-heuristic = 100000
 
 [gg.ui]
 # Stores a list of recently opened directories for shell integration
-recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/smx3.archiving", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.core", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.clickhousesearch", "/Users/amrk/IdeaProjects/upstream/tidal-dl-ng", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.mailproducts"]
+recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/smx3.core", "/Users/amrk/IdeaProjects/securemx/smx3/smx3-ui-extjs", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.archiving", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.clickhousesearch", "/Users/amrk/IdeaProjects/upstream/tidal-dl-ng", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.mailproducts"]
 
 [fix.tools.spotless]
 command = ["spotless-file", "$path"]
@@ -334,11 +335,3 @@ patterns = ["glob:'**/*.java'"]
 
 # When set, bookmarks that are local-only or remote-only will be visually indicated.
 mark-unpushed-bookmarks = true
-
-[vizjj.ui]
-recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx-migration-web", "/Users/amrk/IdeaProjects/securemx/smx3/selfrelease/selfrelease-java-func", "/Users/amrk/IdeaProjects/securemx/smx3/smx3-ui", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.invoicing"]
-font-size = 14
-
-# "light" or "dark". If not set, your OS settings will be used.
-# theme-override = "light"
-#
