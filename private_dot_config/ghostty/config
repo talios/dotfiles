@@ -89,7 +89,8 @@ shell-integration-features=ssh-env
 #theme = "Apple System Colors Light"
 #theme = "Breadog"
 #theme = "Broadcast"
-theme = "Everforest Dark Hard"
+#theme = "Everforest Dark Hard"
+theme = "Nord"
 
 #theme = "Farmhouse Light"
 #theme = "Flexoki Light"

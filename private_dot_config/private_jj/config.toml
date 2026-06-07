@@ -193,6 +193,9 @@ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
 # jj run - https://github.com/neongreen/jj-run
 x = ["util", "exec", "--", "uvx", "git+https://github.com/neongreen/jj-run.git"]
 
+# abandon helpers
+abandon-release = ["abandon", "files(glob:'release.properties') & mutable()"]
+
 lc = ["log", "-G", "-T", "change_log_summary", "-r", "trunk()::@-"]
 ls = ["log", "-T", "custom_log_summary"]
 ll = ["log", "-T", "builtin_log_detailed"]
@@ -245,7 +248,7 @@ baseb = ["util", "exec", "--", "bash", "-c", """
 pr = ["util", "exec", "--", "jj-vine"]
 # Inserts the given revset as a new branch under the megamerge.
 stack = ["rebase", "--after", "trunk()", "--before", "closest_merge(@)", "--revision"]
-restack = ["rebase", "--onto", "trunk()", "--source", "roots(trunk()..) & mutable()", "--simplify-parents"]
+restack = ["rebase", "--onto", "trunk()", "--source", "roots(trunk()..) & mutable() ~ roots(oldfeature())", "--simplify-parents"]
 
 [root]
 bookmark = "develop"
@@ -327,7 +330,7 @@ large-repo-heuristic = 100000
 
 [gg.ui]
 # Stores a list of recently opened directories for shell integration
-recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/smx3.core", "/Users/amrk/IdeaProjects/securemx/smx3/smx3-ui-extjs", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.archiving", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.clickhousesearch", "/Users/amrk/IdeaProjects/upstream/tidal-dl-ng", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.mailproducts"]
+recent-workspaces = ["/Users/amrk/IdeaProjects/securemx/smx3/smx3-ui-extjs", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.core", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.archiving", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.clickhousesearch", "/Users/amrk/IdeaProjects/upstream/tidal-dl-ng", "/Users/amrk/IdeaProjects/securemx/smx3/smx3.mailproducts"]
 
 [fix.tools.spotless]
 command = ["spotless-file", "$path"]

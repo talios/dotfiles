@@ -44,8 +44,8 @@
   "autosave": "on_focus_change",
   "theme": {
     "mode": "dark",
-    "light": "VSCode Dark Polished",
-    "dark": "Ayu Dark",
+    "light": "Alabaster BG High Contrast",
+    "dark": "Zedokai Darker (Filter Spectrum)",
   },
   "terminal": {
     "dock": "right",
