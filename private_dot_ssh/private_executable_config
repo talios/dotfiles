@@ -1,3 +1,5 @@
+Include /Users/amrk/.colima/ssh_config
+
 Include ~/.orbstack/ssh/config
 
 #GSSAPIAuthentication yes

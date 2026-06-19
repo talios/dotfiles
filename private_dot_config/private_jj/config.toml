@@ -17,6 +17,7 @@ email = "mark@talios.com"
 #diff-editor = "ksdiff"
 default-command = "ls"
 editor = "hx"
+#editor = "fresh -w"
 #editor = "zed -n -w"
 merge-editor = "bcomp"
 #merge-editor = "ksdiff"
@@ -194,7 +195,7 @@ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
 x = ["util", "exec", "--", "uvx", "git+https://github.com/neongreen/jj-run.git"]
 
 # abandon helpers
-abandon-release = ["abandon", "files(glob:'release.properties') & mutable()"]
+release-abandon = ["abandon", "files(glob:'release.properties') & mutable()"]
 
 lc = ["log", "-G", "-T", "change_log_summary", "-r", "trunk()::@-"]
 ls = ["log", "-T", "custom_log_summary"]

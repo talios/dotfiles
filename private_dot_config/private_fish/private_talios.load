@@ -145,7 +145,7 @@ function daily-routine
   daily_task cd /Users/amrk/IdeaProjects/upstream/jj
   daily_task jj git fetch
   # daily_task jj new main
-  daily_task jj new main push-mqxwqtnwnpts
+  daily_task jj new main
   daily_task cargo install --path cli --force
 
   daily_task_label "Updating kopia from stale HEAD"
