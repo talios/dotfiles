@@ -3,7 +3,7 @@
 #font-family = "PragmataPro Mono Liga"
 #font-family = "Maple Mono NF"
 #font-family = "Iosevka"
-font-family = "Monaspace Krypton Regular"
+font-family = "Monaspace Krypton"
 
 font-feature="ss01,ss02,ss03,ss04,ss05,ss07,ss09,ss10"
 
@@ -91,7 +91,7 @@ shell-integration-features=ssh-env
 #theme = "Breadog"
 #theme = "Broadcast"
 #theme = "Everforest Dark Hard"
-theme = "Nord"
+#theme = "Nord"
 
 #theme = "Farmhouse Light"
 #theme = "Flexoki Light"
@@ -107,6 +107,8 @@ theme = "Nord"
 #theme = "Ayu Light"
 #theme = "Gruvbox Light Hard"
 #theme = iterm2-tango-light
+
+config-file = ?auto/theme.ghostty
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl
