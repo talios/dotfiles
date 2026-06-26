@@ -103,7 +103,7 @@ function daily-routine
   daily_task brew update
 
   daily_task_label "Upgrading homebrew packages"
-  daily_task brew upgrade
+  daily_task brew upgrade --no-ask
 
   daily_task_label "Cleaning old homebrew packages"
   daily_task brew cleanup --prune 1
