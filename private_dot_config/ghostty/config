@@ -1,9 +1,9 @@
 # fonts
 #font-family = "TX-02 UltraCondensed"
 #font-family = "PragmataPro Mono Liga"
-#font-family = "Maple Mono NF"
+font-family = "Maple Mono NF"
 #font-family = "Iosevka"
-font-family = "Monaspace Krypton"
+#font-family = "Monaspace Krypton"
 
 font-feature="ss01,ss02,ss03,ss04,ss05,ss07,ss09,ss10"
 
@@ -108,7 +108,7 @@ shell-integration-features=ssh-env
 #theme = "Gruvbox Light Hard"
 #theme = iterm2-tango-light
 
-config-file = ?auto/theme.ghostty
+config-file = ?auto/theme2.ghostty
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl

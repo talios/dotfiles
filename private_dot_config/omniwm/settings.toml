@@ -36,11 +36,12 @@ useGlobalGaps = true
 crossesMonitorAtEdge = false
 followsMouse = false
 followsWindowToMonitor = false
+lockModifier = "off"
 moveCrossesMonitorAtEdge = false
 moveMouseToFocusedWindow = false
 
 [gaps]
-size = 16.0
+size = 6.0
 
 [gaps.outer]
 bottom = 3.0
@@ -79,7 +80,7 @@ centerFocusedColumn = "never"
 columnWidthPresets = [0.3333333333333333, 0.5, 0.6666666666666666]
 infiniteLoop = false
 maxVisibleColumns = 2
-singleWindowAspectRatio = "fill"
+singleWindowAspectRatio = "2048x1500"
 
 [quakeTerminal]
 animationDuration = 0.2
@@ -97,7 +98,7 @@ mode = "macOS"
 [statusBar]
 showAppNames = true
 showWorkspaceName = true
-useWorkspaceId = false
+useWorkspaceId = true
 
 [workspaceBar]
 backgroundOpacity = 0.1
@@ -106,11 +107,14 @@ enabled = true
 height = 24.0
 hideEmptyWorkspaces = true
 labelFontSize = 12.0
+notchActiveZoneWidth = 180.0
 notchAware = false
+notchMode = "moveBelowMenuBar"
 position = "overlappingMenuBar"
 reserveLayoutSpace = false
 showFloatingWindows = false
 showLabels = true
+systemStatsButton = false
 windowLevel = "popup"
 xOffset = 0.0
 yOffset = 0.0
@@ -194,43 +198,43 @@ minHeight = 320.0
 minWidth = 660.0
 
 [[hotkeys]]
-binding = "Hyper+1"
+binding = "Option+1"
 id = "switchWorkspace.0"
 
 [[hotkeys]]
-binding = "Hyper+1"
+binding = "Option+Shift+1"
 id = "moveToWorkspace.0"
 
 [[hotkeys]]
-binding = "Hyper+2"
+binding = "Option+2"
 id = "switchWorkspace.1"
 
 [[hotkeys]]
-binding = "Hyper+2"
+binding = "Option+Shift+2"
 id = "moveToWorkspace.1"
 
 [[hotkeys]]
-binding = "Hyper+3"
+binding = "Option+3"
 id = "switchWorkspace.2"
 
 [[hotkeys]]
-binding = "Hyper+3"
+binding = "Option+Shift+3"
 id = "moveToWorkspace.2"
 
 [[hotkeys]]
-binding = "Hyper+4"
+binding = "Option+4"
 id = "switchWorkspace.3"
 
 [[hotkeys]]
-binding = "Hyper+4"
+binding = "Option+Shift+4"
 id = "moveToWorkspace.3"
 
 [[hotkeys]]
-binding = "Hyper+5"
+binding = "Option+5"
 id = "switchWorkspace.4"
 
 [[hotkeys]]
-binding = "Hyper+5"
+binding = "Option+Shift+5"
 id = "moveToWorkspace.4"
 
 [[hotkeys]]
@@ -703,6 +707,14 @@ id = "resizeShrink.down"
 
 [[hotkeys]]
 binding = "Unassigned"
+id = "resizeFocusedWindow.grow"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "resizeFocusedWindow.shrink"
+
+[[hotkeys]]
+binding = "Unassigned"
 id = "preselect.left"
 
 [[hotkeys]]
@@ -768,6 +780,10 @@ id = "toggleWorkspaceLayout"
 [[hotkeys]]
 binding = "Hyper+O"
 id = "toggleOverview"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "toggleSystemStats"
 
 [[workspaces]]
 id = "AD36F001-C57E-41A5-AC1D-DF5249D007F0"
