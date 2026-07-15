@@ -108,7 +108,7 @@ shell-integration-features=ssh-env
 #theme = "Gruvbox Light Hard"
 #theme = iterm2-tango-light
 
-config-file = ?auto/theme2.ghostty
+config-file = ?auto/theme.ghostty
 
 #custom-shader = ghostty-shaders/in-game-crt.glsl
 #custom-shader = ghostty-shaders/inside-the-matrix.glsl

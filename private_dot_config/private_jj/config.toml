@@ -103,13 +103,22 @@ bookmarks.map(|b|
 
 'describe_with_diff(commit, description)' = '''
 if(description,
-  description.first_line(),
+  format_description_header(description.first_line()),
   label(
     if(empty, "empty"),
     description_placeholder ++ "\n" ++ commit.diff().summary())
 )
 '''
 
+'format_description_header(header)' = '''
+    label("header",
+    replace(
+        regex:"^([^(:]+)(\\([^)]+\\))?([^:]*):",
+        header,
+        |c| label("conventional_type", c.get(1)) ++ label("conventional_context", c.get(2)) ++ label("conventional_type", c.get(3)) ++ label("conventional_type",":")
+    )
+)
+'''
 custom_log_summary = '''
 if(root,
   format_root_commit(self),
@@ -189,6 +198,8 @@ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
 "normal change_id" = { bold = true, fg = "magenta" }
 "immutable change_id" = { bold = false, fg = "bright red" }
 "protected_bookmark" = { bold = true, fg = "bright yellow" }
+"conventional_context" = "#7BE005"
+"conventional_type" = "#C104E0"
 
 [aliases]
 # jj run - https://github.com/neongreen/jj-run

@@ -400,3 +400,4 @@ fish_add_path ~/.sdkman/candidates/jreleaser/current/bin
 fish_add_path ~/.sdkman/candidates/maven/current/bin
 fish_add_path ~/.sdkman/candidates/mcs/current/bin
 fish_add_path ~/.sdkman/candidates/mvnd/current/bin
+fish_add_path "/Applications/Sublime Text.app/Contents/SharedSupport/bin"

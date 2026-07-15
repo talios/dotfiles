@@ -2,8 +2,6 @@ monitorBarOverrides = []
 monitorDwindleOverrides = []
 monitorGapOverrides = []
 monitorNiriOverrides = []
-monitorOrientationOverrides = []
-monitorRoutingOverrides = []
 
 [appearance]
 mode = "dark"
@@ -41,7 +39,7 @@ moveCrossesMonitorAtEdge = false
 moveMouseToFocusedWindow = false
 
 [gaps]
-size = 6.0
+size = 3.0
 
 [gaps.outer]
 bottom = 3.0
@@ -71,7 +69,7 @@ scrollSensitivity = 5.0
 trackpadScrollStyle = "snap"
 
 [mouseWarp]
-enabled = true
+enabled = false
 margin = 1
 
 [niri]
@@ -112,6 +110,8 @@ notchAware = false
 notchMode = "moveBelowMenuBar"
 position = "overlappingMenuBar"
 reserveLayoutSpace = false
+revealHoldMilliseconds = 200.0
+revealModifier = "off"
 showFloatingWindows = false
 showLabels = true
 systemStatsButton = false
@@ -238,11 +238,11 @@ binding = "Option+Shift+5"
 id = "moveToWorkspace.4"
 
 [[hotkeys]]
-binding = "Hyper+6"
+binding = "Command+6"
 id = "switchWorkspace.5"
 
 [[hotkeys]]
-binding = "Hyper+6"
+binding = "Shift+Command+6"
 id = "moveToWorkspace.5"
 
 [[hotkeys]]
@@ -785,6 +785,23 @@ id = "toggleOverview"
 binding = "Unassigned"
 id = "toggleSystemStats"
 
+[[monitorOrientationOverrides]]
+monitorDisplayId = 1
+monitorName = "LG ULTRAGEAR"
+orientation = "vertical"
+
+[[monitorRoutingOverrides]]
+gridColumn = 1
+gridRow = 1
+monitorDisplayId = 2
+monitorName = "LG HDR 4K"
+
+[[monitorRoutingOverrides]]
+gridColumn = 0
+gridRow = 0
+monitorDisplayId = 1
+monitorName = "LG ULTRAGEAR"
+
 [[workspaces]]
 id = "AD36F001-C57E-41A5-AC1D-DF5249D007F0"
 layoutType = "niri"
@@ -828,7 +845,7 @@ type = "main"
 [[workspaces]]
 displayName = "❤️"
 id = "5953F2BF-A378-4266-91B2-287174C4FA4D"
-layoutType = "niri"
+layoutType = "dwindle"
 name = "6"
 
 [workspaces.monitorAssignment]

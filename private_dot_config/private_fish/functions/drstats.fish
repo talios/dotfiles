@@ -4,7 +4,8 @@ function drstats
         echo "DR Manager Stats for $host" >> /tmp/drstats.txt
         echo "" >> /tmp/drstats.txt
         curl -sn https://disaster-manager-app.$host.smxemail.com/reports/summary | \
-            jq -r '. | to_entries | sort_by(.key)' | \
+            jq -r '[. | to_entries | sort_by(.key)[] | select(.key == "completed" or .key == "failed" or .key == "in-progress" or .key == "started" or .key == "submitted")]' | \
+            # jq -r '[. | to_entries | sort_by(.key)[] | select(.value != 0)]' | \
             jp -type bar -x ..key -y ..value -height 10 >> /tmp/drstats.txt
         echo "" >> /tmp/drstats.txt
     end
