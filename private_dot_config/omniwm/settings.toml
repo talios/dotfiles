@@ -8,7 +8,7 @@ mode = "dark"
 
 [borders]
 enabled = false
-width = 5.0
+width = 1.5
 
 [borders.color]
 alpha = 1.0
@@ -26,6 +26,7 @@ maxTotalBytes = 67108864
 defaultSplitRatio = 1.0
 moveToRootStable = true
 singleWindowAspectRatio = "1440x1080"
+singleWindowFit = "fill"
 smartSplit = false
 splitWidthMultiplier = 1.0
 useGlobalGaps = true
@@ -67,18 +68,59 @@ scrollEnabled = true
 scrollModifierKey = "optionShift"
 scrollSensitivity = 5.0
 trackpadScrollStyle = "snap"
+workspaceSwipeAxis = "vertical"
+workspaceSwipeEnabled = false
+workspaceSwipeFingerCount = 3
+
+[hiddenBar]
+enabled = true
+hiddenBundleIDs = []
+rehideIntervalSeconds = 5.0
 
 [mouseWarp]
-enabled = false
+constrainToArrangement = false
+enabled = true
 margin = 1
 
 [niri]
 alwaysCenterSingleColumn = false
 centerFocusedColumn = "never"
 columnWidthPresets = [0.3333333333333333, 0.5, 0.6666666666666666]
+containerPrimarySpanPresets = [0.3333333333333333, 0.5, 0.6666666666666666]
 infiniteLoop = false
 maxVisibleColumns = 2
 singleWindowAspectRatio = "2048x1500"
+singleWindowFit = "fill"
+visibleContainerCount = 2
+
+[overview]
+zoom = 1.0
+
+[overview.backdrop]
+alpha = 1.0
+blue = 0.08
+green = 0.05
+red = 0.05
+
+[overview.windowBorders]
+
+[overview.windowBorders.hovered]
+alpha = 1.0
+blue = 1.0
+green = 0.6
+red = 0.4
+
+[overview.windowBorders.normal]
+alpha = 0.5
+blue = 0.35
+green = 0.3
+red = 0.3
+
+[overview.windowBorders.selected]
+alpha = 1.0
+blue = 0.4
+green = 0.8
+red = 0.3
 
 [quakeTerminal]
 animationDuration = 0.2
@@ -91,7 +133,7 @@ position = "center"
 widthPercent = 70.0
 
 [routing]
-mode = "macOS"
+mode = "custom"
 
 [statusBar]
 showAppNames = true
@@ -102,6 +144,7 @@ useWorkspaceId = true
 backgroundOpacity = 0.1
 deduplicateAppIcons = false
 enabled = true
+excludedBundleIDs = []
 height = 24.0
 hideEmptyWorkspaces = true
 labelFontSize = 12.0
@@ -118,6 +161,8 @@ systemStatsButton = false
 windowLevel = "popup"
 xOffset = 0.0
 yOffset = 0.0
+
+[workspaceBar.iconOverrides]
 
 [[appRules]]
 bundleId = "com.openai.codex"
@@ -470,6 +515,14 @@ binding = "Hyper+Right Arrow"
 id = "moveColumn.right"
 
 [[hotkeys]]
+binding = "Unassigned"
+id = "moveColumn.up"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "moveColumn.down"
+
+[[hotkeys]]
 binding = "Hyper+Home"
 id = "moveColumnToFirst"
 
@@ -598,64 +651,64 @@ binding = "Unassigned"
 id = "moveColumnToIndex.9"
 
 [[hotkeys]]
-binding = "Hyper+Period"
-id = "cycleColumnWidthForward"
+binding = "Option+Period"
+id = "cycleSizeForward"
 
 [[hotkeys]]
-binding = "Hyper+Comma"
-id = "cycleColumnWidthBackward"
-
-[[hotkeys]]
-binding = "Unassigned"
-id = "cycleWindowWidthForward"
+binding = "Option+Comma"
+id = "cycleSizeBackward"
 
 [[hotkeys]]
 binding = "Unassigned"
-id = "cycleWindowWidthBackward"
+id = "cycleWindowPrimarySpanForward"
 
 [[hotkeys]]
 binding = "Unassigned"
-id = "cycleWindowHeightForward"
+id = "cycleWindowPrimarySpanBackward"
 
 [[hotkeys]]
 binding = "Unassigned"
-id = "cycleWindowHeightBackward"
-
-[[hotkeys]]
-binding = "Hyper+F"
-id = "toggleColumnFullWidth"
-
-[[hotkeys]]
-binding = "Hyper+F"
-id = "expandColumnToAvailableWidth"
-
-[[hotkeys]]
-binding = "Hyper+R"
-id = "resetWindowHeight"
-
-[[hotkeys]]
-binding = "Hyper+Minus"
-id = "setColumnWidth.decrease10Percent"
-
-[[hotkeys]]
-binding = "Hyper+Equal"
-id = "setColumnWidth.increase10Percent"
+id = "cycleWindowSecondarySpanForward"
 
 [[hotkeys]]
 binding = "Unassigned"
-id = "setWindowWidth.decrease10Percent"
+id = "cycleWindowSecondarySpanBackward"
+
+[[hotkeys]]
+binding = "Option+Shift+F"
+id = "toggleContainerFullPrimarySpan"
+
+[[hotkeys]]
+binding = "Control+Option+F"
+id = "expandContainerToAvailablePrimarySpan"
+
+[[hotkeys]]
+binding = "Control+Option+R"
+id = "resetWindowSecondarySpan"
+
+[[hotkeys]]
+binding = "Option+Minus"
+id = "setContainerPrimarySpan.decrease10Percent"
+
+[[hotkeys]]
+binding = "Option+Equal"
+id = "setContainerPrimarySpan.increase10Percent"
 
 [[hotkeys]]
 binding = "Unassigned"
-id = "setWindowWidth.increase10Percent"
+id = "setWindowPrimarySpan.decrease10Percent"
 
 [[hotkeys]]
-binding = "Hyper+Minus"
-id = "setWindowHeight.decrease10Percent"
+binding = "Unassigned"
+id = "setWindowPrimarySpan.increase10Percent"
 
 [[hotkeys]]
-binding = "Hyper+Equal"
-id = "setWindowHeight.increase10Percent"
+binding = "Option+Shift+Minus"
+id = "setWindowSecondarySpan.decrease10Percent"
+
+[[hotkeys]]
+binding = "Option+Shift+Equal"
+id = "setWindowSecondarySpan.increase10Percent"
 
 [[hotkeys]]
 binding = "Control+Command+B"
@@ -767,7 +820,7 @@ id = "toggleWorkspaceBarVisibility"
 
 [[hotkeys]]
 binding = "Unassigned"
-id = "toggleHiddenBar"
+id = "toggleHiddenBarPanel"
 
 [[hotkeys]]
 binding = "Option+Grave"
@@ -792,14 +845,14 @@ orientation = "vertical"
 
 [[monitorRoutingOverrides]]
 gridColumn = 1
-gridRow = 1
-monitorDisplayId = 2
+gridRow = 0
+monitorDisplayUUID = "CC5477DA-E3D8-437F-8752-7BECEE410B55"
 monitorName = "LG HDR 4K"
 
 [[monitorRoutingOverrides]]
 gridColumn = 0
 gridRow = 0
-monitorDisplayId = 1
+monitorDisplayUUID = "F0A3218A-442B-440C-9E5E-9D9E77705A8F"
 monitorName = "LG ULTRAGEAR"
 
 [[workspaces]]

@@ -76,7 +76,8 @@ scrollback-limit = 20000000
 adjust-cell-width = 0
 #adjust-cell-height = -18%
 
-split-divider-color=#EFEF43
+#split-divider-color=#EFEF43
+split-divider-color=#00AA33
 
 shell-integration=fish
 shell-integration-features=no-cursor

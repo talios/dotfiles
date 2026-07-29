@@ -6,8 +6,9 @@
 #theme = "kanagawa"
 #theme = "gruvbox_light_hard"
 #theme = "ayu_mirage"
-theme = "doom-one"
+#theme = "doom-one"
 #theme = "emacs"
+theme = "modus_operandi_deuteranopia"
 
 [editor]
 line-number = "relative"
