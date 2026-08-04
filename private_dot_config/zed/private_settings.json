@@ -45,7 +45,7 @@
   "theme": {
     "mode": "dark",
     "light": "Alabaster BG High Contrast",
-    "dark": "Gruvbox Dark Hard",
+    "dark": "Catppuccin Espresso (Blur)",
   },
   "terminal": {
     "dock": "right",

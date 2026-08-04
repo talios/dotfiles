@@ -360,7 +360,7 @@ set -x OPENAI_BASE_URL "http://localhost:1234/v1"
 set -x LLM_MODEL "qwen/qwen3-coder-30b"
 
 # Capacities API
-set -x CAPACITIES_API_TOKEN cap-api-cecvL8OmaNVTqOuE4iMwDzf88PUalCL_cKfuig1C
+set -x CAPACITIES_API_TOKEN cap-api-IMRTqGSBLqfubCmP0z_2TD8LIWKyFeIHINWMAM7W
 
 # Map Option back to older bindings
 #bind alt-right nextd-or-forward-token
