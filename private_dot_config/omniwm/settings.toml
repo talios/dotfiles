@@ -3,7 +3,6 @@ monitorDwindleOverrides = []
 monitorGapOverrides = []
 monitorNiriOverrides = []
 monitorOrientationOverrides = []
-monitorRoutingOverrides = []
 
 [appearance]
 mode = "dark"
@@ -131,7 +130,7 @@ position = "center"
 widthPercent = 50.0
 
 [routing]
-mode = "macOS"
+mode = "custom"
 
 [statusBar]
 showAppNames = true
@@ -811,7 +810,7 @@ binding = "Unassigned"
 id = "preselectClear"
 
 [[hotkeys]]
-binding = "Control+Option+Space"
+binding = "Command+P"
 id = "openCommandPalette"
 
 [[hotkeys]]
@@ -855,12 +854,24 @@ binding = "Option+Shift+L"
 id = "toggleWorkspaceLayout"
 
 [[hotkeys]]
-binding = "Option+Shift+O"
+binding = "Command+O"
 id = "toggleOverview"
 
 [[hotkeys]]
 binding = "Unassigned"
 id = "toggleSystemStats"
+
+[[monitorRoutingOverrides]]
+gridColumn = 1
+gridRow = 0
+monitorDisplayUUID = "CC5477DA-E3D8-437F-8752-7BECEE410B55"
+monitorName = "LG HDR 4K"
+
+[[monitorRoutingOverrides]]
+gridColumn = 0
+gridRow = 0
+monitorDisplayUUID = "F0A3218A-442B-440C-9E5E-9D9E77705A8F"
+monitorName = "LG ULTRAGEAR"
 
 [[workspaces]]
 id = "AD36F001-C57E-41A5-AC1D-DF5249D007F0"
