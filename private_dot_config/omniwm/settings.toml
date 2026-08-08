@@ -8,7 +8,7 @@ monitorOrientationOverrides = []
 mode = "dark"
 
 [borders]
-enabled = true
+enabled = false
 width = 2.5
 
 [borders.color]
@@ -77,7 +77,7 @@ rehideIntervalSeconds = 5.0
 
 [mouseWarp]
 constrainToArrangement = false
-enabled = true
+enabled = false
 margin = 1
 
 [niri]
@@ -214,12 +214,6 @@ minHeight = 120.0
 minWidth = 500.0
 
 [[appRules]]
-bundleId = "company.thebrowser.dia"
-id = "C21156B1-0224-4998-97E3-8F4FA65B9F3B"
-minHeight = 420.0
-minWidth = 500.0
-
-[[appRules]]
 bundleId = "com.spotify.client"
 id = "2DE9390B-0DB4-4D0C-9ABA-06F76F1D4EA9"
 minHeight = 600.0
@@ -248,6 +242,15 @@ bundleId = "com.apple.MobileSMS"
 id = "552FB77D-BF0E-4737-90A6-B5BC6986C579"
 minHeight = 320.0
 minWidth = 660.0
+
+[[appRules]]
+assignToWorkspace = "1"
+axRole = "AXWindow"
+axSubrole = "AXStandardWindow"
+bundleId = "com.tinyspeck.slackmacgap"
+id = "47628532-DB33-43FF-8611-4E9C3D795A52"
+initialContainerPrimarySpan = 0.5
+layout = "tile"
 
 [[hotkeys]]
 binding = "Option+1"
