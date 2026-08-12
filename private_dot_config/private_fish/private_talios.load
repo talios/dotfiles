@@ -389,7 +389,6 @@ fish_add_path /nix/var/nix/profiles/default/bin
 source /Users/amrk/Applications/git-subrepo/.fish.rc
 
 # SDKMan Support
-fish_add_path /nix/store/2k2mx9jkqs2wv6as70f098cddc9vznxr-devenv-1.9/bin
 fish_add_path /opt/homebrew/opt/gnu-getopt/bin
 fish_add_path /opt/homebrew/opt/postgresql@17/bin
 fish_add_path /opt/nanobrew/prefix/bin
