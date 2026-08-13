@@ -1,0 +1,6 @@
+tags = ["TODO", "FIXME", "BUG", "NOTE", "HACK", "REVIEW"]
+include = ["*.rs", "*.js", "*.java", "*.clj"]
+exclude = ["target/**", "node_modules/**"]
+json = false
+flat = false
+no_color = false
