@@ -15,7 +15,7 @@ email = "mark@talios.com"
 #diff-editor = "diffpatch"
 #diff-editor = "diffedit3"
 #diff-editor = "ksdiff"
-default-command = "ls"
+default-command = "lm"
 editor = "hx"
 #editor = "fresh -w"
 #editor = "zed -n -w"
@@ -202,9 +202,6 @@ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
 "conventional_type" = "#C104E0"
 
 [aliases]
-# jj run - https://github.com/neongreen/jj-run
-x = ["util", "exec", "--", "uvx", "git+https://github.com/neongreen/jj-run.git"]
-
 # abandon helpers
 release-abandon = ["abandon", "files(glob:'release.properties') & mutable()"]
 
