@@ -8,7 +8,8 @@
 #theme = "ayu_mirage"
 #theme = "doom-one"
 #theme = "emacs"
-theme = "modus_operandi_deuteranopia"
+#theme = "modus_operandi_deuteranopia"
+theme = "adwaita-dark"
 
 [editor]
 line-number = "relative"
