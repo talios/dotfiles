@@ -1,2 +1,11 @@
-#theme = Citrus Ink
-theme = Adwaita Dark
+#theme = No Clown Fiesta
+theme = Night Owl
+
+# background & opacity
+background-opacity = 0.87
+
+# font
+font-size = 15
+
+# cursor
+cursor-style = bar
