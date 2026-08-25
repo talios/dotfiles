@@ -3,7 +3,6 @@ monitorDwindleOverrides = []
 monitorGapOverrides = []
 monitorNiriOverrides = []
 monitorOrientationOverrides = []
-monitorRoutingOverrides = []
 
 [appearance]
 mode = "dark"
@@ -42,7 +41,7 @@ moveMouseToFocusedWindow = false
 raiseOnMouseFocus = false
 
 [gaps]
-fullscreenUsesOuterGaps = false
+fullscreenUsesOuterGaps = true
 size = 16.0
 
 [gaps.outer]
@@ -135,12 +134,12 @@ position = "center"
 widthPercent = 50.0
 
 [routing]
-mode = "macOS"
+mode = "custom"
 
 [statusBar]
-showAppNames = false
-showWorkspaceName = false
-useWorkspaceId = false
+showAppNames = true
+showWorkspaceName = true
+useWorkspaceId = true
 
 [workspaceBar]
 backgroundOpacity = 0.1
@@ -150,7 +149,7 @@ excludedBundleIDs = []
 height = 24.0
 hideEmptyWorkspaces = false
 notchActiveZoneWidth = 180.0
-notchMode = "moveBelowMenuBar"
+notchMode = "off"
 position = "overlappingMenuBar"
 reserveLayoutSpace = false
 revealHoldMilliseconds = 200.0
@@ -845,6 +844,18 @@ id = "toggleOverview"
 [[hotkeys]]
 binding = "Unassigned"
 id = "toggleSystemStats"
+
+[[monitorRoutingOverrides]]
+gridColumn = 1
+gridRow = 0
+monitorDisplayUUID = "CC5477DA-E3D8-437F-8752-7BECEE410B55"
+monitorName = "LG HDR 4K"
+
+[[monitorRoutingOverrides]]
+gridColumn = 0
+gridRow = 0
+monitorDisplayUUID = "F0A3218A-442B-440C-9E5E-9D9E77705A8F"
+monitorName = "LG ULTRAGEAR"
 
 [[workspaces]]
 id = "AD36F001-C57E-41A5-AC1D-DF5249D007F0"
