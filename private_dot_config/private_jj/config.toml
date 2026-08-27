@@ -15,7 +15,7 @@ email = "mark@talios.com"
 #diff-editor = "diffpatch"
 #diff-editor = "diffedit3"
 #diff-editor = "ksdiff"
-default-command = "lm"
+default-command = "lt"
 editor = "hx"
 #editor = "fresh -w"
 #editor = "zed -n -w"
@@ -210,6 +210,7 @@ ls = ["log", "-T", "custom_log_summary"]
 ll = ["log", "-T", "builtin_log_detailed"]
 ld = ["log", "-T", "custom_log_summary", "-r", "develop::"]
 lm = ["log", "-T", "custom_log_summary", "-r", "master::"]
+lt = ["log", "-T", "custom_log_summary", "-r", "trunk()::"]
 lr = ["log", "-T", "custom_log_summary", "-r", "root()::"]
 le = ["log", "-T", "custom_log_summary", "-r", "undescribed()"]
 
