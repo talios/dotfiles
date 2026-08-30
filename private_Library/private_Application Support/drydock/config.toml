@@ -1,6 +1,6 @@
-roots = ["~/Projects"]
+roots = ["~/IdeaProjects/securemx/smx3"]
 max_depth = 4
-follow_nested_repos = false
+follow_nested_repos = true
 follow_symlinks = false
 exclude = [
     "riffle-testbed/**",
