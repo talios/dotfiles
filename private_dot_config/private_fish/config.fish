@@ -17,3 +17,7 @@ fish_add_path "/Users/amrk/.local/bin"
 set -gx PATH $PATH /Users/amrk/.lmstudio/bin
 # End of LM Studio CLI section
 
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/Users/amrk/.local/bin" $PATH

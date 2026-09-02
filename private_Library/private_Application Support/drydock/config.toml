@@ -1,4 +1,4 @@
-roots = ["~/IdeaProjects/securemx/smx3"]
+roots = ["~/IdeaProjects"]
 max_depth = 4
 follow_nested_repos = true
 follow_symlinks = false
@@ -58,7 +58,7 @@ git_client_command = [
 terminal_command = [
     "open",
     "-a",
-    "Terminal",
+    "Ghostty",
     "{path}",
 ]
 file_manager_command = [
