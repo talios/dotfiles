@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_line_height": "standard",
   "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "right"
@@ -37,7 +38,7 @@
   "remove_trailing_whitespace_on_save": true,
   "when_closing_with_no_tabs": "close_window",
   "ui_font_size": 12,
-  "buffer_font_size": 12.0,
+  "buffer_font_size": 13.0,
   "buffer_font_family": "Maple Mono",
   // "buffer_font_family": "TX-02 Condensed",
   "preferred_line_length": 120,
@@ -45,7 +46,7 @@
   "theme": {
     "mode": "dark",
     "light": "Alabaster BG High Contrast",
-    "dark": "Catppuccin Espresso (Blur)",
+    "dark": "Ayu Mirage",
   },
   "terminal": {
     "dock": "right",

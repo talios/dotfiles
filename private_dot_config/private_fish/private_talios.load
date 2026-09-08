@@ -102,6 +102,9 @@ function daily-routine
   daily_task_label "Updating homebrew"
   daily_task brew update
 
+#  daily_task_label "Updating lightjj"
+#  daily_task curl -fsSL https://raw.githubusercontent.com/chronologos/lightjj/main/install.sh | sh
+
   daily_task_label "Upgrading homebrew packages"
   daily_task brew upgrade --no-ask
 
@@ -113,6 +116,12 @@ function daily-routine
 
   daily_task_label "Updating zig"
   daily_task zvm i master
+
+  daily_task_label "Updating smx-build"
+  daily_task cd ~/IdeaProjects/securemx/snx-build
+  daily_task cargo update
+  daily_task cargo fmt
+  daily_task cargo install --path .
 
 #  daily_task_label "Reinstalling emacs"
 #  daily_task brew reinstall emacs --HEAD --use-git-head --srgb --with-cocoa
@@ -146,7 +155,7 @@ function daily-routine
   daily_task jj git fetch
   # daily_task jj new main
   daily_task jj new main
-  daily_task cargo install --path cli --force
+  daily_task cargo install --path cli --force --locked
 
   daily_task_label "Updating kopia from stale HEAD"
   daily_task cd ~/IdeaProjects/upstream/kopia
@@ -318,7 +327,6 @@ alias orb '/Applications/OrbStack.app/Contents/MacOS/bin/orb'
 alias orbctl '/Applications/OrbStack.app/Contents/MacOS/bin/orbctl'
 alias pricepatch 'java -jar ~/.m2/repository/smx3/pricingpatcher/smx3.pricingpatcher/1.0.1-SNAPSHOT/smx3.pricingpatcher-1.0.1-SNAPSHOT-jar-with-dependencies.jar'
 alias smartgit '/Applications/SmartGit.app/Contents/MacOS/SmartGit --open .'
-alias jjg '/Users/amrk/IdeaProjects/upstream/jj/result/bin/jj'
 
 alias greg rg
 alias jjt jj_tui
@@ -386,7 +394,7 @@ set -x LS_COLORS $(vivid generate gruvbox-dark-hard)
 fish_add_path /nix/var/nix/profiles/default/bin
 
 # git-subrepo
-source /Users/amrk/Applications/git-subrepo/.fish.rc
+# source /Users/amrk/Applications/git-subrepo/.fish.rc
 
 # SDKMan Support
 fish_add_path /opt/homebrew/opt/gnu-getopt/bin
