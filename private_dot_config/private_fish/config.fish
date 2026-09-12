@@ -20,3 +20,6 @@ set -gx PATH $PATH /Users/amrk/.lmstudio/bin
 
 # uv
 fish_add_path "/Users/markderricutt/.local/bin"
+
+# Added by Radicle.
+export PATH="$PATH:/Users/amrk/.radicle/bin"

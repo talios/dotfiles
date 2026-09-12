@@ -118,7 +118,7 @@ function daily-routine
   daily_task zvm i master
 
   daily_task_label "Updating smx-build"
-  daily_task cd ~/IdeaProjects/securemx/snx-build
+  daily_task cd ~/IdeaProjects/securemx/smx-build
   daily_task cargo update
   daily_task cargo fmt
   daily_task cargo install --path .
