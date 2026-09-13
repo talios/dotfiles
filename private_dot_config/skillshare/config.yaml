@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/config.schema.json
+sources:
+  skills: /Users/amrk/.config/skillshare/skills
+  agents: /Users/amrk/.config/skillshare/agents
+mode: merge
+targets:
+  antigravity:
+    skills:
+      path: /Users/amrk/.gemini/config/skills
+  claude:
+    skills:
+      path: /Users/amrk/.claude/skills
+  codex:
+    skills:
+      path: /Users/amrk/.codex/skills
+ignore:
+  - .DS_Store
+  - .git/
+  - __pycache__/
+audit:
+  block_threshold: CRITICAL
