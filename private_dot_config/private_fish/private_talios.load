@@ -123,6 +123,12 @@ function daily-routine
   daily_task cargo fmt
   daily_task cargo install --path .
 
+  daily_task_label "Updating bill-of-materials"
+  daily_task cd ~/IdeaProjects/securemx/smx3.upstream.bill-of-materials
+  daily_task mvn-resolve
+  daily_task cd ~/IdeaProjects/securemx/smx3.upstream.testing.bill-of-materials
+  daily_task mvn-resolve
+
 #  daily_task_label "Reinstalling emacs"
 #  daily_task brew reinstall emacs --HEAD --use-git-head --srgb --with-cocoa
 
