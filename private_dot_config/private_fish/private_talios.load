@@ -129,6 +129,10 @@ function daily-routine
   daily_task cd ~/IdeaProjects/securemx/smx3.upstream.testing.bill-of-materials
   daily_task mvn-resolve
 
+  daily_task_label "Cleaning build files"
+  daily_task cd ~/IdeaProjects
+  daily_task clean-dev-dirs --permanent --yes
+
 #  daily_task_label "Reinstalling emacs"
 #  daily_task brew reinstall emacs --HEAD --use-git-head --srgb --with-cocoa
 

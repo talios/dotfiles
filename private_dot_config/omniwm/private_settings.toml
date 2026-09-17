@@ -56,10 +56,10 @@ animationsEnabled = true
 defaultLayoutType = "niri"
 hotkeysEnabled = true
 hyperKeyModifiers = "Control+Option+Shift+Command"
-ipcEnabled = true
+ipcEnabled = false
 preventSleepEnabled = false
 systemHyperTrigger = "None"
-updateChecksEnabled = false
+updateChecksEnabled = true
 
 [gestures]
 fingerCount = 3
@@ -85,8 +85,8 @@ enabled = true
 margin = 1
 
 [niri]
-alwaysCenterSingleColumn = true
-centerFocusedColumn = "always"
+alwaysCenterSingleColumn = false
+centerFocusedColumn = "never"
 containerPrimarySpanPresets = [0.3333333333333333, 0.5, 0.6666666666666666]
 defaultContainerPrimarySpan = 0.5
 infiniteLoop = false
@@ -138,7 +138,7 @@ widthPercent = 50.0
 mode = "custom"
 
 [[routing.arrangements]]
-id = "D17A6B3C-43BE-4E34-99AF-E05C95626C98"
+id = "269F33D7-368E-46E9-8B28-B078D9FAA763"
 
 [[routing.arrangements.monitors]]
 gridColumn = 1
@@ -167,7 +167,7 @@ deduplicateAppIcons = false
 enabled = true
 excludedBundleIDs = []
 height = 24.0
-hideEmptyWorkspaces = true
+hideEmptyWorkspaces = false
 hideInNativeFullscreen = false
 notchActiveZoneWidth = 180.0
 notchMode = "off"
@@ -907,7 +907,7 @@ binding = "Option+Shift+Equal"
 id = "setWindowSecondarySpan.increase10Percent"
 
 [[hotkeys]]
-binding = "Control+Command+B"
+binding = "Option+Shift+B"
 id = "balanceSizes"
 
 [[hotkeys]]
