@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "buffer_line_height": "standard",
-  "cli_default_open_behavior": "new_window",
+  "cli_default_open_behavior": "existing_window",
   "project_panel": {
     "dock": "right"
   },
@@ -46,7 +46,7 @@
   "theme": {
     "mode": "dark",
     "light": "Alabaster BG High Contrast",
-    "dark": "Ayu Mirage",
+    "dark": "Zedokai Darker (Filter Octagon)",
   },
   "terminal": {
     "dock": "right",

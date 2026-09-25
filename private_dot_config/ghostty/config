@@ -1,5 +1,6 @@
 # fonts
-font-family = "TX-02 ExtraCondensed"
+#font-family = "TX-02 ExtraCondensed"
+font-family = "TX-02"
 #font-family = "PragmataPro Mono Liga"
 #font-family = "Maple Mono NF"
 #font-family = "Iosevka"
