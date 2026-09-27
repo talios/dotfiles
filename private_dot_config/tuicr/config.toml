@@ -18,7 +18,3 @@ id = "praise"
 color = "green"
 definition = "looking good!"
 
-[[comment_types]]
-id = "question"
-color = "orange"
-definition = "needs more thought"

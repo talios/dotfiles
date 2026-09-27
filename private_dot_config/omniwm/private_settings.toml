@@ -7,7 +7,7 @@ schemaVersion = 3
 
 [appearance]
 mode = "dark"
-tabRailAppIcons = false
+tabRailAppIcons = true
 
 [borders]
 enabled = false
@@ -84,7 +84,7 @@ workspaceSwipeEnabled = false
 workspaceSwipeFingerCount = 3
 
 [hiddenBar]
-enabled = true
+enabled = false
 hiddenBundleIDs = []
 rehideIntervalSeconds = 5.0
 
@@ -1073,7 +1073,7 @@ type = "main"
 [[workspaces]]
 displayName = "❤️"
 id = "5953F2BF-A378-4266-91B2-287174C4FA4D"
-layoutType = "dwindle"
+layoutType = "niri"
 name = "6"
 
 [workspaces.monitorAssignment]
