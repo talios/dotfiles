@@ -4747,8 +4747,8 @@
       "lastUsedNumStartups": 46
     },
     "security-guidance@claude-plugins-official": {
-      "usageCount": 2045,
-      "lastUsedAt": 1790840232332,
+      "usageCount": 2048,
+      "lastUsedAt": 1790840257124,
       "lastUsedNumStartups": 218
     },
     "jdtls-lsp@claude-plugins-official": {
@@ -4838,7 +4838,7 @@
   },
   "hasSeenAutoModeEntryWarning": true,
   "feedbackSurveyState": {
-    "lastShownTime": 1790840259135
+    "lastShownTime": 1790840380770
   },
   "pluginUsageLspGraceAppliedIds": [
     "rust-analyzer-lsp@claude-plugins-official",

@@ -26,4 +26,5 @@ or additional work (run `jj new`).
   A Markdown footnote is identified by '[^1]' (an incrementing number start from 1) following the body text, and '[^1]: Footnote content.' at the end of the message.
 
   Further information about Markdown Footnotes can be found at https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes
+- When repeating refernces to commits, just include the appropriate footnote reference, there's no need to repeat the commit message.
 
