@@ -9,9 +9,19 @@ relative_line_numbers = false # show rendered-row distances in the diff gutter
 review_watch_interval_ms = 1000 # set to 0 to disable persisted-review polling
 
 [[comment_types]]
-id = "issue"
+id = "fixup"
 color = "red"
-definition = "must fix before merge"
+definition = "must fix before merge, ammending the original commit"
+
+[[comment_types]]
+id = "improvement"
+color = "orange"
+definition = "must fix before merge, change should be on a new commit in the stack"
+
+[[comment_types]]
+id = "change"
+color = "blue"
+definition = "must fix before merge, but on a fresh commit off the develop branch"
 
 [[comment_types]]
 id = "praise"
