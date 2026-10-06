@@ -28,3 +28,6 @@ or additional work (run `jj new`).
   Further information about Markdown Footnotes can be found at https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes
 - When repeating refernces to commits, just include the appropriate footnote reference, there's no need to repeat the commit message.
 
+## Post Commit
+
+- Never leave the repository sitting directly on the commit, ALWAYS leave it on an empty working copy (run `jj new`)
