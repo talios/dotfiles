@@ -10,14 +10,35 @@ mode = "dark"
 tabRailAppIcons = true
 
 [borders]
-enabled = false
+enabled = true
 width = 5.0
 
 [borders.color]
 alpha = 1.0
-blue = 0.979300037944676
-green = 1.0
-red = 0.08458520228437894
+blue = 0.0
+green = 0.9887304902076721
+red = 0.8796642422676086
+
+[borders.glow]
+enabled = true
+opacity = 0.6
+radius = 8.0
+
+[borders.gradient]
+direction = "topLeftToBottomRight"
+enabled = true
+
+[borders.gradient.end]
+alpha = 1.0
+blue = 0.0
+green = 0.8257035613059998
+red = 1.0
+
+[borders.gradient.start]
+alpha = 1.0
+blue = 0.4397796392440796
+green = 0.9810327887535095
+red = 0.0
 
 [clipboard]
 historyEnabled = false
@@ -54,11 +75,12 @@ right = 0.0
 top = 0.0
 
 [general]
+animationSpeed = 1.0
 animationsEnabled = true
 defaultLayoutType = "niri"
 hotkeysEnabled = true
 hyperKeyModifiers = "Control+Option+Shift+Command"
-ipcEnabled = false
+ipcEnabled = true
 preventSleepEnabled = false
 systemHyperTrigger = "None"
 updateChecksEnabled = true
@@ -100,6 +122,7 @@ containerPrimarySpanPresets = [0.3333333333333333, 0.5, 0.6666666666666666]
 defaultContainerPrimarySpan = 0.5
 edgeGaps = true
 infiniteLoop = false
+resizeStepPercent = 5
 singleWindowFit = "fill"
 visibleContainerCount = 2
 
@@ -177,15 +200,17 @@ useWorkspaceId = true
 
 [workspaceBar]
 backgroundOpacity = 0.1
-deduplicateAppIcons = false
+deduplicateAppIcons = true
 enabled = true
 excludedBundleIDs = []
 height = 24.0
-hideEmptyWorkspaces = false
+hideEmptyWorkspaces = true
 hideInNativeFullscreen = false
 hoverPreviewsEnabled = true
 notchActiveZoneWidth = 180.0
 notchMode = "off"
+notificationBadgeRefreshIntervalSeconds = 5.0
+notificationBadges = "dot"
 position = "overlappingMenuBar"
 reserveLayoutSpace = false
 revealHoldMilliseconds = 200.0
