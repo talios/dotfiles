@@ -1,5 +1,6 @@
 # Custom
 source $HOME/.config/fish/talios.load
+source $HOME/.config/fish/openapi.load
 
 # opam configuration
 source /Users/amrk/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
