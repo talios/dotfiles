@@ -16,3 +16,9 @@ process the changes with:
     mvn clean org.openrewrite.maven:rewrite-maven-plugin:runNoFork spotless:apply clean install
 
 This will apply any recommended rewrites/optimizations from the OpenRewrite project.
+
+# Manual Formatting Preferences
+
+- Always include a blank line before a `return` statement, unless that statement is the first line of the method.
+- Always include a blank line between variable assignments and actual code.
+ 
