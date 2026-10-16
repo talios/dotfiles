@@ -24,3 +24,7 @@ fish_add_path "/Users/markderricutt/.local/bin"
 
 # Added by Radicle.
 export PATH="$PATH:/Users/amrk/.radicle/bin"
+
+# >>> minimal >>>
+if test -f "/Users/amrk/.local/share/minimal/shell-init/fish.fish"; source "/Users/amrk/.local/share/minimal/shell-init/fish.fish"; end
+# <<< minimal <<<

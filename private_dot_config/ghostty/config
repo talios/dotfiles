@@ -13,7 +13,7 @@ font-family = "Menlo Regular for Powerline"
 #font-variation="wdth=90"
 
 font-thicken=true
-font-size = 18
+font-size = 21
 
 selection-invert-fg-bg=true
 
