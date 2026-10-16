@@ -5,8 +5,10 @@ description: Things to do with java and maven
 
 # Running Maven
 
-Whenever running maven to build your changes, run with the profile "patch" enabled (use -Ppatch on the command line)
+Whenever running maven to build inflight changes, run with the profile "patch" enabled (use -Ppatch on the command line)
 to automatically apply any ErrorProne based improvements.
+
+If building just to verify changes work, do NOT use -Ppatch
 
 # Apply OpenRewrite cleanups
 
