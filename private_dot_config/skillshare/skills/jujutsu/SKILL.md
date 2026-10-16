@@ -28,6 +28,12 @@ or additional work (run `jj new`).
   Further information about Markdown Footnotes can be found at https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes
 - When repeating refernces to commits, just include the appropriate footnote reference, there's no need to repeat the commit message.
 
+## On Rebase
+
+After rebasing changes, check the rebased commit descriptions for outdated git sha's and update them appropriately.
+
+The descriptions should also be reevaluated based on the current changes in the commit, as rebasing may have moved changed to earlier commits etc.
+
 ## Post Commit
 
 - Never leave the repository sitting directly on the commit, ALWAYS leave it on an empty working copy (run `jj new`)
