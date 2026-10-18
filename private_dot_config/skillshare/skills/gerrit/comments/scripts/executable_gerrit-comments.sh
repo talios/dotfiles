@@ -2,7 +2,8 @@
 # Dump Gerrit review comments for a change in an LLM-friendly format.
 # Usage: gerrit-comments <query>   e.g. gerrit-comments MANAGE-135
 # Comments by users in GERRIT_IGNORE_USERS (comma-separated usernames or
-# names, default "markd") are skipped; set it to "" to show everyone.
+# names, default the caller's SSH login for GERRIT_HOST) are skipped; set it
+# to "" to show everyone.
 set -euo pipefail
 
 if [[ $# -lt 1 ]]; then
@@ -12,11 +13,14 @@ fi
 
 GERRIT_HOST="${GERRIT_HOST:-gerrit.smxemail.com}"
 GERRIT_PORT="${GERRIT_PORT:-29418}"
-GERRIT_IGNORE_USERS="${GERRIT_IGNORE_USERS-markd}"
+if [[ -z "${GERRIT_IGNORE_USERS+set}" ]]; then
+  GERRIT_IGNORE_USERS="$(ssh -G -p "$GERRIT_PORT" "$GERRIT_HOST" | awk '$1 == "user" { print $2 }')"
+fi
 
 ssh -p "$GERRIT_PORT" "$GERRIT_HOST" gerrit query --format json --comments --patch-sets "$@" |
   jq -r --arg ignore "$GERRIT_IGNORE_USERS" '
     ($ignore | split(",") | map(select(. != ""))) as $ignored |
+    if .type == "error" then error(.message) else . end |
     select(.type != "stats") |
     "# Change \(.number): \(.subject)\n\(.url)\n",
     "## Inline comments\n",

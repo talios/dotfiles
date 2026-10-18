@@ -35,8 +35,9 @@ resolved, so check the current code before acting on them.
 ## Environment
 
 - `GERRIT_IGNORE_USERS`: comma-separated usernames or names whose comments
-  are skipped. Defaults to `markd` (the user's own replies). Set to `""` to
-  include everyone, e.g. when the user wants to see their own replies too.
+  are skipped. Defaults to the user's SSH login for `GERRIT_HOST` (from
+  `ssh -G`), which hides their own replies. Set to `""` to include everyone,
+  e.g. when the user wants to see their own replies too.
 - `GERRIT_HOST` / `GERRIT_PORT`: default `gerrit.smxemail.com` / `29418`.
 
 ## Addressing comments
