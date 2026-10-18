@@ -5,10 +5,11 @@
 #font-family = "PragmataPro Mono Liga"
 #font-family = "Maple Mono NF"
 #font-family = "Iosevka"
-font-family = "Menlo Regular for Powerline"
+#font-family = "Menlo Regular for Powerline"
+font-family = "Paper Mono"
 #font-family = "Monaspace Krypton"
 
-#font-feature="ss01,ss02,ss03,ss04,ss05,ss07,ss09,ss10"
+font-feature="ss02,ss03,ss04,ss05,ss06,ss07"
 
 #font-variation="wdth=90"
 
