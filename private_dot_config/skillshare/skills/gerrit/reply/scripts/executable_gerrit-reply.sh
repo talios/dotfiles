@@ -37,11 +37,17 @@ fi
 
 ssh -p "$GERRIT_PORT" "$GERRIT_HOST" gerrit review --json "$1" <<<"$payload"
 
+# The review has posted; everything below is best-effort so a failure here
+# can't look like a failed post and prompt a duplicate retry.
 if $open_files && command -v open >/dev/null; then
   change="${1%,*}"
   patchset="${1#*,}"
   change_url="$(ssh -p "$GERRIT_PORT" "$GERRIT_HOST" gerrit query --format json "change:$change" |
-    jq -r 'select(.type != "stats") | .url')"
+    jq -r 'select(.type != "stats") | .url // empty')" || true
+  if [[ -z "$change_url" ]]; then
+    echo "posted; couldn't look up the change URL to open it" >&2
+    exit 0
+  fi
   # Gerrit's file URLs are <change url>/<patchset>/<path>#<line>; /COMMIT_MSG
   # keeps its leading slash, giving <patchset>//COMMIT_MSG.
   urls="$(jq -r --arg base "$change_url/$patchset/" '
@@ -49,6 +55,6 @@ if $open_files && command -v open >/dev/null; then
     | $base + .key + ([.value[].line | numbers] | if length > 0 then "#\(min)" else "" end)
   ' <<<"$payload")"
   for url in ${urls:-$change_url}; do
-    open "$url"
+    open "$url" || echo "posted; couldn't open $url" >&2
   done
 fi
