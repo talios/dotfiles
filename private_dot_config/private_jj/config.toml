@@ -256,7 +256,7 @@ sync-main = [
 baseb = ["util", "exec", "--", "bash", "-c", """
   echo $(jj log -r@- -T 'bookmarks' --no-graph | cut -d ' ' -f 1)
 """]
-# `jj run` that labels the Rex tab with the change being run and how many are left.
+# `jj run` that labels the Rex pane with the change being run and how many are left.
 # Usage: jj rex-run [jj run options] -- <command> [args...]
 rex-run = ["util", "exec", "--", "bash", "-c", '''
   set -euo pipefail
@@ -286,13 +286,12 @@ rex-run = ["util", "exec", "--", "bash", "-c", '''
     > "$state/changes"
   export REX_RUN_STATE=$state REX_RUN_TOTAL=$(wc -l < "$state/changes" | tr -d ' ')
 
-  view=$(rex api call -s "$REX_SESSION" session.view)
-  export REX_RUN_WINDOW=$(jq -r --arg b "$REX_BLOCK" '.windows[] | select(tostring | contains($b)) | .window_id' <<< "$view")
-  original=$(jq -r --arg w "$REX_RUN_WINDOW" '.windows[] | select(.window_id == $w) | .label' <<< "$view")
+  original=$(rex api call -s "$REX_SESSION" session.view |
+    jq -r --arg b "$REX_BLOCK" '[.. | objects | select(.block_id? == $b and has("label")) | .label][0] // ""')
 
   set_label() {
-    rex api call -s "$REX_SESSION" session.set_window_label \
-      "$(jq -nc --arg w "$REX_RUN_WINDOW" --arg l "$1" '{window_id: $w, label: $l}')" > /dev/null || true
+    rex api call -s "$REX_SESSION" session.set_block_label \
+      "$(jq -nc --arg b "$REX_BLOCK" --arg l "$1" '{block_id: $b, label: $l}')" > /dev/null || true
   }
   export -f set_label
   trap 'set_label "$original"; rm -rf "$state"' EXIT

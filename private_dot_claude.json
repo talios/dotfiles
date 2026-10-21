@@ -1,12 +1,12 @@
 {
-  "numStartups": 319,
+  "numStartups": 322,
   "installMethod": "native",
   "autoUpdates": false,
   "tipsHistory": {
     "new-user-warmup": 2,
     "plan-mode-for-complex-tasks": 258,
     "terminal-setup": 226,
-    "memory-command": 307,
+    "memory-command": 322,
     "theme-command": 304,
     "status-line": 304,
     "prompt-queue": 63,
@@ -19,7 +19,7 @@
     "double-esc-code-restore": 313,
     "continue": 317,
     "color-when-multi-clauding": 316,
-    "shift-tab": 312,
+    "shift-tab": 322,
     "image-paste": 311,
     "custom-agents": 100,
     "agent-flag": 9,
@@ -31,7 +31,7 @@
     "desktop-shortcut": 316,
     "web-app": 319,
     "remote-control": 141,
-    "voice-mode": 312,
+    "voice-mode": 322,
     "feedback-command": 311,
     "goal-command-nudge": 36,
     "team-onboarding-share": 319,
@@ -56,7 +56,7 @@
     "focus-view": 315,
     "you-should-know-plugin": 243
   },
-  "promptQueueUseCount": 101,
+  "promptQueueUseCount": 106,
   "btwUseCount": 2,
   "cachedGrowthBookFeatures": {
     "claude_code_skills_dashboard_enabled_cli": false,
@@ -619,7 +619,7 @@
     "tengu_garnet_spool": false,
     "tengu_gault_kestrel": true,
     "tengu_gentle_frost": false,
-    "tengu_gentle_grove": false,
+    "tengu_gentle_grove": true,
     "tengu_gentle_hammock": true,
     "tengu_gha_plugin_code_review": false,
     "tengu_gleaming_creek": {},
@@ -2629,58 +2629,51 @@
       "lastVersionBase": "2.1.305",
       "hasUnseenTeamArtifacts": false,
       "exampleFilesGeneratedAt": 1792121993145,
-      "lastCost": 0.3053465,
-      "lastAPIDuration": 34333,
-      "lastAPIDurationWithoutRetries": 34289,
-      "lastToolDuration": 16785,
-      "lastDuration": 325302,
+      "lastCost": 0.7097495000000001,
+      "lastAPIDuration": 88759,
+      "lastAPIDurationWithoutRetries": 88672,
+      "lastToolDuration": 123695,
+      "lastDuration": 321201,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 2723,
-      "lastTotalOutputTokens": 3173,
-      "lastTotalCacheCreationInputTokens": 29346,
-      "lastTotalCacheReadInputTokens": 447511,
+      "lastTotalInputTokens": 28638,
+      "lastTotalOutputTokens": 6120,
+      "lastTotalCacheCreationInputTokens": 33943,
+      "lastTotalCacheReadInputTokens": 1540626,
       "lastTotalWebSearchRequests": 0,
       "lastModelUsage": {
         "claude-haiku-5-5": {
-          "inputTokens": 1193,
-          "outputTokens": 30,
+          "inputTokens": 1188,
+          "outputTokens": 21,
           "thinkingTokens": 0,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.0001343
+          "costUSD": 0.00012930000000000003
         },
         "claude-opus-5-5": {
-          "inputTokens": 1530,
-          "outputTokens": 3143,
-          "thinkingTokens": 589,
-          "cacheReadInputTokens": 447511,
-          "cacheCreationInputTokens": 29346,
+          "inputTokens": 27450,
+          "outputTokens": 6099,
+          "thinkingTokens": 1603,
+          "cacheReadInputTokens": 1540626,
+          "cacheCreationInputTokens": 33943,
           "webSearchRequests": 0,
-          "costUSD": 0.3052122
+          "costUSD": 0.7096202000000001
         }
       },
-      "lastSessionId": "1a1db3ad-0b91-4ad3-b14a-40c2c85e8e6e",
+      "lastSessionId": "bad62fe0-455c-4834-b266-042fa3f3b771",
       "lastSessionMetrics": {
-        "frame_duration_ms_count": 66,
-        "frame_duration_ms_min": 0.06450000000040745,
-        "frame_duration_ms_max": 8.872041999999055,
-        "frame_duration_ms_avg": 0.7318270454547463,
-        "frame_duration_ms_p50": 0.23818750000100408,
-        "frame_duration_ms_p95": 3.0816352500007724,
-        "frame_duration_ms_p99": 5.417074899999686,
-        "hook_duration_ms_count": 1,
-        "hook_duration_ms_min": 140,
-        "hook_duration_ms_max": 140,
-        "hook_duration_ms_avg": 140,
-        "hook_duration_ms_p50": 140,
-        "hook_duration_ms_p95": 140,
-        "hook_duration_ms_p99": 140
+        "frame_duration_ms_count": 19,
+        "frame_duration_ms_min": 0.12241699999958655,
+        "frame_duration_ms_max": 2.0457910000000084,
+        "frame_duration_ms_avg": 0.6598596842105915,
+        "frame_duration_ms_p50": 0.4586669999998776,
+        "frame_duration_ms_p95": 1.6070410000000483,
+        "frame_duration_ms_p99": 1.9580410000000166
       },
-      "lastStartTime": 1792541545360,
-      "lastFpsAverage": 4.64,
-      "lastFpsLow1Pct": 175.45
+      "lastStartTime": 1792549060904,
+      "lastFpsAverage": 13.69,
+      "lastFpsLow1Pct": 866.18
     },
     "/Users/amrk/IdeaProjects/securemx/eventstore/archiving-delete": {
       "allowedTools": [],
@@ -5378,7 +5371,16 @@
           "costUSD": 0.2813182
         }
       },
-      "lastSessionId": "bc159a71-617b-4d14-b675-e4873dc4229a"
+      "lastSessionId": "bc159a71-617b-4d14-b675-e4873dc4229a",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 14,
+        "frame_duration_ms_min": 0.04908400000022084,
+        "frame_duration_ms_max": 1.3782090000000267,
+        "frame_duration_ms_avg": 0.5049973571428593,
+        "frame_duration_ms_p50": 0.5006670000000497,
+        "frame_duration_ms_p95": 1.1301247999999957,
+        "frame_duration_ms_p99": 1.3285921600000203
+      }
     }
   },
   "deepLinkTerminal": "Ghostty",
@@ -5591,7 +5593,7 @@
   "seenNotifications": {},
   "warmResumeHintShown": true,
   "autoPermissionsNotificationCount": 1,
-  "cachedGrowthBookFeaturesAt": 1792541546298,
+  "cachedGrowthBookFeaturesAt": 1792549061751,
   "pluginUsage": {
     "rust-analyzer-lsp@claude-plugins-official": {
       "usageCount": 0,
@@ -5604,9 +5606,9 @@
       "lastUsedNumStartups": 46
     },
     "security-guidance@claude-plugins-official": {
-      "usageCount": 3444,
-      "lastUsedAt": 1792541813349,
-      "lastUsedNumStartups": 319
+      "usageCount": 3467,
+      "lastUsedAt": 1792549377673,
+      "lastUsedNumStartups": 322
     },
     "jdtls-lsp@claude-plugins-official": {
       "usageCount": 1795,
@@ -5671,9 +5673,9 @@
     "prompt-queue": 3,
     "permissions": 25,
     "install-github-app": 26,
-    "voice-mode": 24,
+    "voice-mode": 25,
     "image-paste": 14,
-    "memory-command": 18,
+    "memory-command": 19,
     "plan-mode-for-complex-tasks": 27,
     "team-onboarding-share": 42,
     "git-worktrees": 26,
@@ -5684,7 +5686,7 @@
     "double-esc-code-restore": 25,
     "custom-agents": 4,
     "continue": 25,
-    "shift-tab": 24,
+    "shift-tab": 25,
     "ide-upsell-external-terminal": 1,
     "rename-conversation": 18,
     "custom-commands": 7,
@@ -6017,7 +6019,7 @@
     },
     "voice": {
       "tipId": "voice-mode",
-      "numStartups": 312
+      "numStartups": 322
     },
     "plugin": {
       "tipId": "plugin-disuse-review",
@@ -6053,7 +6055,7 @@
     },
     "memory": {
       "tipId": "memory-command",
-      "numStartups": 307
+      "numStartups": 322
     }
   },
   "cachedUsageUtilization": {
