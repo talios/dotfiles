@@ -20,8 +20,7 @@ or additional work (run `jj new`).
 - When mentioning/references changes, inline the commit message, with a MarkDown style
   footnote.
 
-  The footnote should mention both the jujutsu change-id *and* the short
-  format of a git commit SHA using the format "change-id (sha: sha): commit summary"
+  The footnote should mention both the commit summary using the format "commit summary"
 
   A Markdown footnote is identified by '[^1]' (an incrementing number start from 1) following the body text, and '[^1]: Footnote content.' at the end of the message.
 

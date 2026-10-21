@@ -46,4 +46,7 @@ When asked to address the comments, work through them one at a time against
 the current code, and summarise at the end which ones were fixed, which were
 already resolved, and which need the user's judgement.
 
+If the comment suggests multiple choices, or questions if the code is
+needed/correct - ask the user to select one of the choices.
+
 To post replies back to Gerrit, use the `gerrit-reply` skill.

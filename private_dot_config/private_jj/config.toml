@@ -256,6 +256,58 @@ sync-main = [
 baseb = ["util", "exec", "--", "bash", "-c", """
   echo $(jj log -r@- -T 'bookmarks' --no-graph | cut -d ' ' -f 1)
 """]
+# `jj run` that labels the Rex tab with the change being run and how many are left.
+# Usage: jj rex-run [jj run options] -- <command> [args...]
+rex-run = ["util", "exec", "--", "bash", "-c", '''
+  set -euo pipefail
+  if [ -z "${REX_SESSION:-}" ] || [ -z "${REX_BLOCK:-}" ]; then exec jj run "$@"; fi
+
+  opts=() revsets=()
+  while [ $# -gt 0 ] && [ "$1" != "--" ]; do
+    case "$1" in
+      -r|--revision|--revisions) revsets+=("$2"); opts+=("$1" "$2"); shift 2; continue ;;
+      -r?*) revsets+=("${1#-r}") ;;
+      --revision=*|--revisions=*) revsets+=("${1#*=}") ;;
+    esac
+    opts+=("$1"); shift
+  done
+  if [ $# -lt 2 ]; then echo "usage: jj rex-run [jj run options] -- <command> [args...]" >&2; exit 2; fi
+  shift
+
+  if [ ${#revsets[@]} -eq 0 ]; then
+    revset=$(jj config get revsets.run)
+  else
+    revset=$(printf '(%s)|' "${revsets[@]}"); revset=${revset%|}
+  fi
+
+  state=$(mktemp -d)
+  jj log --no-graph -r "$revset" \
+    -T 'change_id ++ "\t" ++ change_id.shortest(8) ++ "\t" ++ description.first_line() ++ "\n"' \
+    > "$state/changes"
+  export REX_RUN_STATE=$state REX_RUN_TOTAL=$(wc -l < "$state/changes" | tr -d ' ')
+
+  view=$(rex api call -s "$REX_SESSION" session.view)
+  export REX_RUN_WINDOW=$(jq -r --arg b "$REX_BLOCK" '.windows[] | select(tostring | contains($b)) | .window_id' <<< "$view")
+  original=$(jq -r --arg w "$REX_RUN_WINDOW" '.windows[] | select(.window_id == $w) | .label' <<< "$view")
+
+  set_label() {
+    rex api call -s "$REX_SESSION" session.set_window_label \
+      "$(jq -nc --arg w "$REX_RUN_WINDOW" --arg l "$1" '{window_id: $w, label: $l}')" > /dev/null || true
+  }
+  export -f set_label
+  trap 'set_label "$original"; rm -rf "$state"' EXIT
+
+  jj run "${opts[@]}" -- bash -c '
+    line=$(grep "^$JJ_CHANGE_ID" "$REX_RUN_STATE/changes")
+    short=$(cut -f2 <<< "$line"); desc=$(cut -f3- <<< "$line")
+    [ ${#desc} -gt 40 ] && desc="${desc:0:39}…"
+    done_count=$(find "$REX_RUN_STATE" -name "*.done" | wc -l | tr -d " ")
+    set_label "$short ${desc:-(no description)} · $((REX_RUN_TOTAL - done_count)) left"
+    status=0; "$@" || status=$?
+    touch "$REX_RUN_STATE/$JJ_CHANGE_ID.done"
+    exit $status
+  ' rex-run-step "$@"
+''', "rex-run"]
 pr = ["util", "exec", "--", "jj-vine"]
 # Inserts the given revset as a new branch under the megamerge.
 stack = ["rebase", "--after", "trunk()", "--before", "closest_merge(@)", "--revision"]

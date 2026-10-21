@@ -23,4 +23,9 @@ This will apply any recommended rewrites/optimizations from the OpenRewrite proj
 
 - Always include a blank line before a `return`, 'if', 'try', or 'throw' statement, unless that statement is the first line of the method.
 - Always include a blank line between variable assignments and actual code.
- 
+
+# Code Comments
+
+- Avoid single line Javadoc comments that add no value.
+
+

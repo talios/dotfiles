@@ -46,7 +46,7 @@
   "theme": {
     "mode": "dark",
     "light": "Alabaster BG High Contrast",
-    "dark": "Zedokai Darker (Filter Machine)",
+    "dark": "Zedokai (Filter Spectrum)",
   },
   "terminal": {
     "dock": "right",
