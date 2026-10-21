@@ -256,11 +256,10 @@ sync-main = [
 baseb = ["util", "exec", "--", "bash", "-c", """
   echo $(jj log -r@- -T 'bookmarks' --no-graph | cut -d ' ' -f 1)
 """]
-# `jj run` that labels the Rex pane with the change being run and how many are left.
+# `jj run` that titles the pane with the change being run and how many are left.
 # Usage: jj rex-run [jj run options] -- <command> [args...]
 rex-run = ["util", "exec", "--", "bash", "-c", '''
   set -euo pipefail
-  if [ -z "${REX_SESSION:-}" ] || [ -z "${REX_BLOCK:-}" ]; then exec jj run "$@"; fi
 
   opts=() revsets=()
   while [ $# -gt 0 ] && [ "$1" != "--" ]; do
@@ -286,22 +285,20 @@ rex-run = ["util", "exec", "--", "bash", "-c", '''
     > "$state/changes"
   export REX_RUN_STATE=$state REX_RUN_TOTAL=$(wc -l < "$state/changes" | tr -d ' ')
 
-  original=$(rex api call -s "$REX_SESSION" session.view |
-    jq -r --arg b "$REX_BLOCK" '[.. | objects | select(.block_id? == $b and has("label")) | .label][0] // ""')
-
-  set_label() {
-    rex api call -s "$REX_SESSION" session.set_block_label \
-      "$(jq -nc --arg b "$REX_BLOCK" --arg l "$1" '{block_id: $b, label: $l}')" > /dev/null || true
+  # jj run captures the step's output, so write the title straight to the terminal
+  set_title() {
+    printf '\e]2;%s\a' "$1" 2> /dev/null > /dev/tty || true
   }
-  export -f set_label
-  trap 'set_label "$original"; rm -rf "$state"' EXIT
+  export -f set_title
+  # An empty title hands the header back to Rex's automatic title
+  trap 'set_title ""; rm -rf "$state"' EXIT
 
   jj run "${opts[@]}" -- bash -c '
     line=$(grep "^$JJ_CHANGE_ID" "$REX_RUN_STATE/changes")
     short=$(cut -f2 <<< "$line"); desc=$(cut -f3- <<< "$line")
     [ ${#desc} -gt 40 ] && desc="${desc:0:39}…"
     done_count=$(find "$REX_RUN_STATE" -name "*.done" | wc -l | tr -d " ")
-    set_label "$short ${desc:-(no description)} · $((REX_RUN_TOTAL - done_count)) left"
+    set_title "$short ${desc:-(no description)} · $((REX_RUN_TOTAL - done_count)) left"
     status=0; "$@" || status=$?
     touch "$REX_RUN_STATE/$JJ_CHANGE_ID.done"
     exit $status
