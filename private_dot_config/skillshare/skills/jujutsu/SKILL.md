@@ -17,7 +17,8 @@ or additional work (run `jj new`).
 
 - Summaries should be 50 characters, or as close to it as possible.
 - Body text should be wrapped at 72 characters.
-- When mentioning/references changes, inline the commit message, with a MarkDown style
+- Don't directly reference method or class names, and keep the message to a description of changes to behaviour and any issues found.
+- When mentioning/referencing changes, inline the commit message, with a MarkDown style
   footnote.
 
   The footnote should mention both the commit summary using the format "commit summary"
