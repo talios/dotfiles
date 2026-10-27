@@ -1,50 +1,50 @@
 {
-  "numStartups": 344,
+  "numStartups": 355,
   "installMethod": "native",
   "autoUpdates": false,
   "tipsHistory": {
     "new-user-warmup": 2,
-    "plan-mode-for-complex-tasks": 340,
+    "plan-mode-for-complex-tasks": 346,
     "terminal-setup": 226,
-    "memory-command": 337,
+    "memory-command": 352,
     "theme-command": 344,
-    "status-line": 329,
+    "status-line": 354,
     "prompt-queue": 63,
-    "enter-to-steer-in-relatime": 331,
+    "enter-to-steer-in-relatime": 351,
     "todo-list": 150,
-    "install-github-app": 336,
-    "install-slack-app": 338,
-    "drag-and-drop-images": 343,
-    "paste-images-mac": 343,
-    "double-esc-code-restore": 343,
-    "continue": 338,
+    "install-github-app": 346,
+    "install-slack-app": 348,
+    "drag-and-drop-images": 353,
+    "paste-images-mac": 353,
+    "double-esc-code-restore": 353,
+    "continue": 348,
     "color-when-multi-clauding": 343,
-    "shift-tab": 342,
-    "image-paste": 331,
+    "shift-tab": 352,
+    "image-paste": 351,
     "custom-agents": 100,
     "agent-flag": 9,
     "desktop-app": 10,
     "shift-enter-setup": 226,
-    "permissions": 343,
+    "permissions": 353,
     "rename-conversation": 344,
     "custom-commands": 149,
-    "desktop-shortcut": 331,
-    "web-app": 334,
+    "desktop-shortcut": 346,
+    "web-app": 349,
     "remote-control": 141,
-    "voice-mode": 343,
+    "voice-mode": 354,
     "feedback-command": 341,
     "goal-command-nudge": 36,
-    "team-onboarding-share": 344,
+    "team-onboarding-share": 354,
     "fotw-campaign-upsell": 46,
-    "git-worktrees": 343,
+    "git-worktrees": 353,
     "ide-upsell-external-terminal": 57,
     "plugin-disuse-review": 332,
     "dynamic-workflows": 191,
     "agents-view-multiclauding": 128,
     "no-flicker": 65,
     "artifact-publish-plan": 102,
-    "auto-copy-config-hint": 335,
-    "workflow-size-prompting-ambient": 339,
+    "auto-copy-config-hint": 353,
+    "workflow-size-prompting-ambient": 351,
     "colorterm-truecolor": 107,
     "artifact-duplicate": 140,
     "c4e-desktop": 113,
@@ -52,12 +52,12 @@
     "c4e-remote-sessions": 127,
     "c4e-ultrareview": 139,
     "subagent-fanout-nudge": 145,
-    "default-permission-mode-config": 335,
-    "focus-view": 330,
+    "default-permission-mode-config": 355,
+    "focus-view": 345,
     "you-should-know-plugin": 243,
     "loop-command-nudge": 337
   },
-  "promptQueueUseCount": 146,
+  "promptQueueUseCount": 162,
   "btwUseCount": 2,
   "cachedGrowthBookFeatures": {
     "cai_proud_planet": false,
@@ -79,6 +79,7 @@
       "maxQueueSize": 8192,
       "path": "/api/event_logging/v2/batch"
     },
+    "tengu_abundant_squid": false,
     "tengu_account_plugins_sync_enabled": false,
     "tengu_account_skills_sync_enabled": false,
     "tengu_adaptive_raven": false,
@@ -307,9 +308,9 @@
       "poll_interval_ms_not_at_capacity": 2000,
       "poll_interval_ms_at_capacity": 600000,
       "heartbeat_interval_ms": 0,
-      "multisession_poll_interval_ms_not_at_capacity": 5000,
+      "multisession_poll_interval_ms_not_at_capacity": 15000,
       "multisession_poll_interval_ms_at_capacity": 60000,
-      "multisession_poll_interval_ms_partial_capacity": 5000,
+      "multisession_poll_interval_ms_partial_capacity": 15000,
       "non_exclusive_heartbeat_interval_ms": 180000,
       "session_keepalive_interval_ms": 0,
       "session_keepalive_interval_v2_ms": 0
@@ -394,6 +395,7 @@
     "tengu_ccr_v2_send_events_cli": true,
     "tengu_ccr_v2_session_crud_cli": true,
     "tengu_ccs_org_managed_settings": true,
+    "tengu_ccs_repo_rules": false,
     "tengu_cedar_halo": false,
     "tengu_cedar_hollow_7m": {},
     "tengu_cedar_lantern": true,
@@ -417,6 +419,7 @@
     "tengu_claudeai_plugins_sync_enabled": true,
     "tengu_claudeai_skills_sync_enabled": true,
     "tengu_claudeai_skills_sync_shared_round": true,
+    "tengu_clever_bonbon": false,
     "tengu_clever_orbit": false,
     "tengu_cloth_snorkel": true,
     "tengu_cobalt_awning": -1,
@@ -641,6 +644,7 @@
     "tengu_gleaming_fair": false,
     "tengu_gleaming_fair_reuse": false,
     "tengu_glimmering_glade": true,
+    "tengu_glimmering_pizza": false,
     "tengu_glittery_fern": 50,
     "tengu_glowing_lark": true,
     "tengu_glowing_orbit": true,
@@ -658,6 +662,7 @@
       "dialogDescription": "Effort determines how long Claude thinks for when completing your task. We recommend medium effort for most tasks to balance speed and intelligence and maximize rate limits. Use ultrathink to trigger high effort when needed."
     },
     "tengu_groovy_eclipse": true,
+    "tengu_groovy_ember": {},
     "tengu_gypsum_kite": false,
     "tengu_happy_ocean": false,
     "tengu_harbor": true,
@@ -707,6 +712,7 @@
     "tengu_hover_rest": false,
     "tengu_humble_hammock": true,
     "tengu_humble_zephyr": false,
+    "tengu_humming_waffle": 0,
     "tengu_hushed_lark": 5,
     "tengu_hushed_lark_text": "The user hasn't heard from you in a while — say in a few words what you're doing, then continue.",
     "tengu_ide_rc_auto_enable": true,
@@ -758,6 +764,7 @@
     "tengu_kestrel_arch": "OFF",
     "tengu_kestrel_moor": true,
     "tengu_keybinding_customization_release": true,
+    "tengu_knobby_oxbow": {},
     "tengu_lantern_hearth": "off",
     "tengu_lantern_prism": true,
     "tengu_lantern_sconce": true,
@@ -942,7 +949,7 @@
         "team",
         "enterprise"
       ],
-      "percent": 1,
+      "percent": 10,
       "graceTtlHours": 24,
       "budgetMs": 10000,
       "exemptReasons": [
@@ -963,6 +970,7 @@
       "endDate": "Feb 16"
     },
     "tengu_penguins_enabled": true,
+    "tengu_peppy_nest": false,
     "tengu_peppy_riddle": true,
     "tengu_peppy_spindle": false,
     "tengu_peppy_stardust": {},
@@ -1045,6 +1053,7 @@
     "tengu_radiant_hare": false,
     "tengu_radiant_heron": false,
     "tengu_radiant_island": {},
+    "tengu_radiant_lemur": false,
     "tengu_rate_limit_promo_notices": [],
     "tengu_rc_long_turn_nudge": {
       "thresholdSec": 10,
@@ -1059,8 +1068,10 @@
     },
     "tengu_react_vulnerability_warning": false,
     "tengu_reactive_compact_remote": false,
+    "tengu_reactive_waterfall": false,
     "tengu_reactive_zephyr": true,
     "tengu_read_dedup_killswitch": true,
+    "tengu_recursive_puddle": false,
     "tengu_recursive_tide": true,
     "tengu_red_coaster": false,
     "tengu_refactored_gadget": true,
@@ -1176,6 +1187,7 @@
     },
     "tengu_snuggly_goblet": false,
     "tengu_soft_dawn": false,
+    "tengu_soft_kurzweil": true,
     "tengu_soft_slate_nudge": "baseline",
     "tengu_sorrel_avocet": false,
     "tengu_sorrel_trellis": true,
@@ -1190,6 +1202,8 @@
     "tengu_spicy_pearl": true,
     "tengu_sprightly_lagoon": false,
     "tengu_starry_locket": true,
+    "tengu_starry_swing": false,
+    "tengu_starry_wall": {},
     "tengu_starry_waterfall": {
       "enabled": true,
       "version": 2,
@@ -1231,7 +1245,7 @@
     "tengu_steady_finch": false,
     "tengu_steady_lantern": false,
     "tengu_steady_marshmallow": false,
-    "tengu_steady_mitten": false,
+    "tengu_steady_mitten": true,
     "tengu_steady_panda": true,
     "tengu_steady_plum": {},
     "tengu_steady_sunbeam": false,
@@ -1488,7 +1502,16 @@
     "tengu_witty_firefly": true,
     "tengu_wobbly_dahl": false,
     "tengu_wobbly_dewdrop": false,
-    "tengu_wobbly_petal": null,
+    "tengu_wobbly_petal": {
+      "sessionModelFamilies": [
+        "sonnet",
+        "opus",
+        "haiku",
+        "fable",
+        "other"
+      ],
+      "sdkHosts": false
+    },
     "tengu_wondrous_acorn": {
       "enabled": true,
       "min_continues": 3
@@ -1511,7 +1534,7 @@
   "sonnet1m45MigrationComplete": true,
   "migrationVersion": 14,
   "userID": "4b7ec9fd101bd9fbad9aa33fc782de385ec82be6d935673163bbebf8b06044e6",
-  "changelogLastFetched": 1792827019978,
+  "changelogLastFetched": 1793053103189,
   "autoUpdatesProtectedForNative": true,
   "claudeCodeFirstTokenDate": "2026-04-20T00:09:29.191806Z",
   "hasCompletedOnboarding": true,
@@ -2249,45 +2272,45 @@
         "pom.deps",
         "project.rs"
       ],
-      "exampleFilesGeneratedAt": 1792015549343,
+      "exampleFilesGeneratedAt": 1792985054614,
       "lastHintSessionId": "64d212ec-f839-4bf3-a33e-5400d4608a2d",
       "lastSessionFirstPrompt": "why can't cargo find bwrap::wrap_maybrk",
       "lastSessionModified": 1778311390189,
-      "lastCost": 0.7330727,
-      "lastAPIDuration": 88843,
-      "lastAPIDurationWithoutRetries": 88617,
-      "lastToolDuration": 42903,
-      "lastDuration": 869482,
-      "lastLinesAdded": 10,
-      "lastLinesRemoved": 3,
-      "lastTotalInputTokens": 3220,
-      "lastTotalOutputTokens": 6231,
-      "lastTotalCacheCreationInputTokens": 36011,
-      "lastTotalCacheReadInputTokens": 1570008,
+      "lastCost": 0.6677139999999999,
+      "lastAPIDuration": 87299,
+      "lastAPIDurationWithoutRetries": 87022,
+      "lastToolDuration": 207961,
+      "lastDuration": 1068505,
+      "lastLinesAdded": 2,
+      "lastLinesRemoved": 1,
+      "lastTotalInputTokens": 15821,
+      "lastTotalOutputTokens": 6232,
+      "lastTotalCacheCreationInputTokens": 34029,
+      "lastTotalCacheReadInputTokens": 1091427,
       "lastTotalWebSearchRequests": 0,
-      "lastFpsAverage": 3.9,
-      "lastFpsLow1Pct": 370.08,
+      "lastFpsAverage": 6.07,
+      "lastFpsLow1Pct": 466.52,
       "lastModelUsage": {
         "claude-haiku-5-5": {
-          "inputTokens": 1556,
-          "outputTokens": 23,
-          "thinkingTokens": 0,
+          "inputTokens": 1591,
+          "outputTokens": 203,
+          "thinkingTokens": 187,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.00016710000000000002
+          "costUSD": 0.00026060000000000005
         },
         "claude-opus-5-5": {
-          "inputTokens": 1664,
-          "outputTokens": 6208,
-          "thinkingTokens": 1287,
-          "cacheReadInputTokens": 1570008,
-          "cacheCreationInputTokens": 36011,
+          "inputTokens": 14230,
+          "outputTokens": 6029,
+          "thinkingTokens": 2327,
+          "cacheReadInputTokens": 1091427,
+          "cacheCreationInputTokens": 34029,
           "webSearchRequests": 0,
-          "costUSD": 0.7329056
+          "costUSD": 0.6674534
         }
       },
-      "lastSessionId": "c405ad6f-ca5d-40b4-80bc-c7ba8b501b61",
+      "lastSessionId": "2d8200a3-5a30-45da-82f2-cc0a2acfbf94",
       "lastSessionMetrics": {
         "frame_duration_ms_count": 2384,
         "frame_duration_ms_min": 0.0630830000154674,
@@ -2311,9 +2334,9 @@
         "hook_duration_ms_p95": 0,
         "hook_duration_ms_p99": 0
       },
-      "lastVersionBase": "2.1.300",
+      "lastVersionBase": "2.1.310",
       "hasUnseenTeamArtifacts": false,
-      "lastStartTime": 1792015548099
+      "lastStartTime": 1792987186143
     },
     "/Users/amrk/IdeaProjects/securemx/smx3/smx3.featureset.deploy": {
       "allowedTools": [],
@@ -2687,46 +2710,46 @@
         "pom.deps",
         "MailboxWriterImpl.java",
         "PolicySetServiceImpl.java",
-        "CustomerManagerImpl.java",
+        "UserManagerImpl.java",
         "MailProductsResourceProvider.java"
       ],
       "lastGracefulShutdown": true,
-      "lastVersionBase": "2.1.309",
+      "lastVersionBase": "2.1.310",
       "hasUnseenTeamArtifacts": false,
-      "exampleFilesGeneratedAt": 1792121993145,
-      "lastCost": 1.4898413000000001,
-      "lastAPIDuration": 210080,
-      "lastAPIDurationWithoutRetries": 209210,
-      "lastToolDuration": 269809,
-      "lastDuration": 1201294,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 51923,
-      "lastTotalOutputTokens": 21520,
-      "lastTotalCacheCreationInputTokens": 65723,
-      "lastTotalCacheReadInputTokens": 2674776,
+      "exampleFilesGeneratedAt": 1793049677834,
+      "lastCost": 3.8238790999999996,
+      "lastAPIDuration": 420390,
+      "lastAPIDurationWithoutRetries": 419610,
+      "lastToolDuration": 255159,
+      "lastDuration": 1310417,
+      "lastLinesAdded": 166,
+      "lastLinesRemoved": 7,
+      "lastTotalInputTokens": 66485,
+      "lastTotalOutputTokens": 41133,
+      "lastTotalCacheCreationInputTokens": 155943,
+      "lastTotalCacheReadInputTokens": 7502445,
       "lastTotalWebSearchRequests": 0,
       "lastModelUsage": {
         "claude-haiku-5-5": {
-          "inputTokens": 1276,
-          "outputTokens": 351,
-          "thinkingTokens": 316,
+          "inputTokens": 1191,
+          "outputTokens": 166,
+          "thinkingTokens": 147,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.00030310000000000005
+          "costUSD": 0.0002021
         },
         "claude-opus-5-5": {
-          "inputTokens": 50647,
-          "outputTokens": 21169,
-          "thinkingTokens": 4205,
-          "cacheReadInputTokens": 2674776,
-          "cacheCreationInputTokens": 65723,
+          "inputTokens": 65294,
+          "outputTokens": 40967,
+          "thinkingTokens": 10727,
+          "cacheReadInputTokens": 7502445,
+          "cacheCreationInputTokens": 155943,
           "webSearchRequests": 0,
-          "costUSD": 1.4895382000000001
+          "costUSD": 3.8236770000000004
         }
       },
-      "lastSessionId": "5fd731ff-1e11-43a1-b133-ca2b1ee3447b",
+      "lastSessionId": "697e87c8-acba-4cdc-bdc5-862f7e87a406",
       "lastSessionMetrics": {
         "frame_duration_ms_count": 19,
         "frame_duration_ms_min": 0.12241699999958655,
@@ -2736,9 +2759,9 @@
         "frame_duration_ms_p95": 1.6070410000000483,
         "frame_duration_ms_p99": 1.9580410000000166
       },
-      "lastStartTime": 1792720763161,
-      "lastFpsAverage": 9.16,
-      "lastFpsLow1Pct": 496.76
+      "lastStartTime": 1793051474492,
+      "lastFpsAverage": 10.62,
+      "lastFpsLow1Pct": 356.42
     },
     "/Users/amrk/IdeaProjects/securemx/eventstore/archiving-delete": {
       "allowedTools": [],
@@ -4646,51 +4669,51 @@
       "hasClaudeMdExternalIncludesWarningShown": false,
       "exampleFiles": [
         "App.java",
-        "AppTest.java",
         "pom.deps",
+        "AppTest.java",
         "UpdateWholesale.java",
         "UpdateDirect.java"
       ],
-      "exampleFilesGeneratedAt": 1790673780685,
+      "exampleFilesGeneratedAt": 1793060365606,
       "lastGracefulShutdown": true,
-      "lastVersionBase": "2.1.285",
+      "lastVersionBase": "2.1.311",
       "hasUnseenTeamArtifacts": false,
-      "lastCost": 0.40623400000000004,
-      "lastAPIDuration": 70734,
-      "lastAPIDurationWithoutRetries": 70594,
-      "lastToolDuration": 30771,
-      "lastDuration": 232781,
-      "lastStartTime": 1790744258949,
-      "lastLinesAdded": 5,
-      "lastLinesRemoved": 2,
-      "lastTotalInputTokens": 2471,
-      "lastTotalOutputTokens": 3980,
-      "lastTotalCacheCreationInputTokens": 21192,
-      "lastTotalCacheReadInputTokens": 751190,
+      "lastCost": 1.1855469000000003,
+      "lastAPIDuration": 142812,
+      "lastAPIDurationWithoutRetries": 141732,
+      "lastToolDuration": 99699,
+      "lastDuration": 1467024,
+      "lastStartTime": 1793060363916,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 36452,
+      "lastTotalOutputTokens": 11942,
+      "lastTotalCacheCreationInputTokens": 55962,
+      "lastTotalCacheReadInputTokens": 1799004,
       "lastTotalWebSearchRequests": 0,
-      "lastFpsAverage": 5.23,
-      "lastFpsLow1Pct": 594.55,
+      "lastFpsAverage": 3.57,
+      "lastFpsLow1Pct": 191.77,
       "lastModelUsage": {
-        "claude-haiku-4-5-20251001": {
-          "inputTokens": 923,
-          "outputTokens": 17,
+        "claude-haiku-5-5": {
+          "inputTokens": 1171,
+          "outputTokens": 16,
           "thinkingTokens": 0,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.001008
+          "costUSD": 0.0001251
         },
         "claude-opus-5-5": {
-          "inputTokens": 1548,
-          "outputTokens": 3963,
-          "thinkingTokens": 723,
-          "cacheReadInputTokens": 751190,
-          "cacheCreationInputTokens": 21192,
+          "inputTokens": 35281,
+          "outputTokens": 11926,
+          "thinkingTokens": 3200,
+          "cacheReadInputTokens": 1799004,
+          "cacheCreationInputTokens": 55962,
           "webSearchRequests": 0,
-          "costUSD": 0.40522600000000003
+          "costUSD": 1.1854218000000003
         }
       },
-      "lastSessionId": "384f7214-c26b-492c-828f-917b552e8663"
+      "lastSessionId": "e404d9ac-5ee6-40d3-a1c1-f981b2e8b1a3"
     },
     "/Users/amrk/IdeaProjects/securemx/smx3/smx3-bruno-collections": {
       "allowedTools": [],
@@ -5305,43 +5328,51 @@
       "hasClaudeMdExternalIncludesWarningShown": false,
       "lastGracefulShutdown": true,
       "lastVersionBase": "2.1.310",
-      "lastCost": 9.379002699999994,
-      "lastAPIDuration": 1094256,
-      "lastAPIDurationWithoutRetries": 1093269,
-      "lastToolDuration": 480513,
-      "lastDuration": 1841002,
-      "lastStartTime": 1792979166384,
-      "lastLinesAdded": 1085,
-      "lastLinesRemoved": 1,
-      "lastTotalInputTokens": 229024,
-      "lastTotalOutputTokens": 91383,
-      "lastTotalCacheCreationInputTokens": 251452,
-      "lastTotalCacheReadInputTokens": 23290541,
+      "lastCost": 6.782430800000001,
+      "lastAPIDuration": 1213677,
+      "lastAPIDurationWithoutRetries": 1212928,
+      "lastToolDuration": 399640,
+      "lastDuration": 1436816,
+      "lastStartTime": 1793006615818,
+      "lastLinesAdded": 1982,
+      "lastLinesRemoved": 29,
+      "lastTotalInputTokens": 31830,
+      "lastTotalOutputTokens": 115598,
+      "lastTotalCacheCreationInputTokens": 214362,
+      "lastTotalCacheReadInputTokens": 13811438,
       "lastTotalWebSearchRequests": 0,
-      "lastFpsAverage": 17.33,
-      "lastFpsLow1Pct": 327.94,
+      "lastFpsAverage": 18.59,
+      "lastFpsLow1Pct": 223.81,
       "lastModelUsage": {
         "claude-haiku-5-5": {
-          "inputTokens": 1175,
+          "inputTokens": 1172,
           "outputTokens": 20,
           "thinkingTokens": 0,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.0001275
+          "costUSD": 0.00012720000000000003
         },
         "claude-opus-5-5": {
-          "inputTokens": 227849,
-          "outputTokens": 91363,
-          "thinkingTokens": 34618,
-          "cacheReadInputTokens": 23290541,
-          "cacheCreationInputTokens": 251452,
+          "inputTokens": 30658,
+          "outputTokens": 115578,
+          "thinkingTokens": 45308,
+          "cacheReadInputTokens": 13811438,
+          "cacheCreationInputTokens": 214362,
           "webSearchRequests": 0,
-          "costUSD": 9.378875199999996
+          "costUSD": 6.782303600000001
         }
       },
-      "lastSessionId": "86d748fe-ef91-4fab-989a-ba5509b6c854",
-      "hasUnseenTeamArtifacts": false
+      "lastSessionId": "09422223-0762-47ae-94b9-5a17184b6062",
+      "hasUnseenTeamArtifacts": false,
+      "exampleFiles": [
+        "main.rs",
+        "index.astro",
+        "terminal.rs",
+        "Terminal.astro",
+        "global.css"
+      ],
+      "exampleFilesGeneratedAt": 1793003583347
     },
     "/Users/amrk/temp": {
       "allowedTools": [],
@@ -5553,6 +5584,55 @@
         }
       },
       "lastSessionId": "413bb400-99b5-4b65-8aa7-b4fe4c8a7eab"
+    },
+    "/Users/amrk/IdeaProjects/securemx/smx-slapo-oxcloud": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastGracefulShutdown": true,
+      "lastVersionBase": "2.1.311",
+      "hasUnseenTeamArtifacts": false,
+      "lastCost": 1.1693927000000002,
+      "lastAPIDuration": 145078,
+      "lastAPIDurationWithoutRetries": 144553,
+      "lastToolDuration": 9622,
+      "lastDuration": 799596,
+      "lastStartTime": 1793053819196,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 15014,
+      "lastTotalOutputTokens": 12783,
+      "lastTotalCacheCreationInputTokens": 76317,
+      "lastTotalCacheReadInputTokens": 1286793,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 4.44,
+      "lastFpsLow1Pct": 261.03,
+      "lastModelUsage": {
+        "claude-haiku-5-5": {
+          "inputTokens": 1281,
+          "outputTokens": 24,
+          "thinkingTokens": 0,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.0001401
+        },
+        "claude-opus-5-5": {
+          "inputTokens": 13733,
+          "outputTokens": 12759,
+          "thinkingTokens": 6837,
+          "cacheReadInputTokens": 1286793,
+          "cacheCreationInputTokens": 76317,
+          "webSearchRequests": 0,
+          "costUSD": 1.1692526
+        }
+      },
+      "lastSessionId": "f500cc78-984a-47b7-be2b-55eeb8676924"
     }
   },
   "deepLinkTerminal": "Ghostty",
@@ -5670,9 +5750,15 @@
     ],
     "talios/typst-updater": [
       "/Users/amrk/IdeaProjects/upstream/typst-updater"
+    ],
+    "smx-ltd/smx-slapo-oxcloud": [
+      "/Users/amrk/IdeaProjects/securemx/smx-slapo-oxcloud"
+    ],
+    "smx-ltd/smx3.pricingpatcher": [
+      "/Users/amrk/IdeaProjects/securemx/smx3.pricingpatcher"
     ]
   },
-  "lastReleaseNotesSeen": "2.1.310",
+  "lastReleaseNotesSeen": "2.1.311",
   "penguinModeOrgEnabled": false,
   "overageCreditGrantCache": {
     "9aa58a62-0a42-4c7a-a92f-bee46ec60f99": {
@@ -5693,7 +5779,7 @@
   "hasIdeOnboardingBeenShown": {
     "intellij": true
   },
-  "closedIssuesLastChecked": 1792914551593,
+  "closedIssuesLastChecked": 1793003583053,
   "skillUsage": {
     "simplify": {
       "usageCount": 2,
@@ -5716,8 +5802,8 @@
       "lastUsedAt": 1787646294297
     },
     "jujutsu": {
-      "usageCount": 88,
-      "lastUsedAt": 1792979181608
+      "usageCount": 91,
+      "lastUsedAt": 1793051481118
     },
     "claude-in-chrome": {
       "usageCount": 1,
@@ -5728,8 +5814,8 @@
       "lastUsedAt": 1791618054669
     },
     "java": {
-      "usageCount": 8,
-      "lastUsedAt": 1792309092747
+      "usageCount": 9,
+      "lastUsedAt": 1793060372559
     },
     "mattpocock-skills:grill-me": {
       "usageCount": 1,
@@ -5744,12 +5830,20 @@
       "lastUsedAt": 1791885225754
     },
     "gerrit__comments": {
-      "usageCount": 12,
-      "lastUsedAt": 1792720790095
+      "usageCount": 14,
+      "lastUsedAt": 1793051481097
     },
     "gerrit__reply": {
-      "usageCount": 10,
-      "lastUsedAt": 1792721792209
+      "usageCount": 14,
+      "lastUsedAt": 1793054290490
+    },
+    "beautiful-rust:rust-review": {
+      "usageCount": 2,
+      "lastUsedAt": 1792985083484
+    },
+    "beautiful-rust:rust-port": {
+      "usageCount": 1,
+      "lastUsedAt": 1792985078021
     }
   },
   "hasResetAutoModeOptInForDefaultOffer": true,
@@ -5770,7 +5864,7 @@
   "seenNotifications": {},
   "warmResumeHintShown": true,
   "autoPermissionsNotificationCount": 1,
-  "cachedGrowthBookFeaturesAt": 1792979167366,
+  "cachedGrowthBookFeaturesAt": 1793060364586,
   "pluginUsage": {
     "rust-analyzer-lsp@claude-plugins-official": {
       "usageCount": 0,
@@ -5783,14 +5877,14 @@
       "lastUsedNumStartups": 46
     },
     "security-guidance@claude-plugins-official": {
-      "usageCount": 3824,
-      "lastUsedAt": 1792980989168,
-      "lastUsedNumStartups": 344
+      "usageCount": 4017,
+      "lastUsedAt": 1793061457519,
+      "lastUsedNumStartups": 355
     },
     "jdtls-lsp@claude-plugins-official": {
-      "usageCount": 2307,
-      "lastUsedAt": 1792718601763,
-      "lastUsedNumStartups": 332
+      "usageCount": 2516,
+      "lastUsedAt": 1793052465816,
+      "lastUsedNumStartups": 352
     },
     "agents-md@builtin": {
       "usageCount": 0,
@@ -5841,34 +5935,39 @@
       "usageCount": 0,
       "lastUsedAt": 1791885216606,
       "lastUsedNumStartups": 247
+    },
+    "beautiful-rust@beautiful-rust": {
+      "usageCount": 3,
+      "lastUsedAt": 1792985083484,
+      "lastUsedNumStartups": 347
     }
   },
   "tipLifetimeShownCounts": {
     "fotw-campaign-upsell": 1,
-    "enter-to-steer-in-relatime": 15,
+    "enter-to-steer-in-relatime": 16,
     "todo-list": 6,
     "prompt-queue": 3,
-    "permissions": 28,
-    "install-github-app": 28,
-    "voice-mode": 27,
-    "image-paste": 15,
-    "memory-command": 20,
-    "plan-mode-for-complex-tasks": 31,
-    "team-onboarding-share": 47,
-    "git-worktrees": 29,
-    "install-slack-app": 28,
-    "drag-and-drop-images": 28,
-    "paste-images-mac": 28,
-    "status-line": 12,
-    "double-esc-code-restore": 28,
+    "permissions": 29,
+    "install-github-app": 29,
+    "voice-mode": 28,
+    "image-paste": 16,
+    "memory-command": 21,
+    "plan-mode-for-complex-tasks": 32,
+    "team-onboarding-share": 49,
+    "git-worktrees": 30,
+    "install-slack-app": 29,
+    "drag-and-drop-images": 29,
+    "paste-images-mac": 29,
+    "status-line": 13,
+    "double-esc-code-restore": 29,
     "custom-agents": 4,
-    "continue": 27,
-    "shift-tab": 27,
+    "continue": 28,
+    "shift-tab": 28,
     "ide-upsell-external-terminal": 1,
     "rename-conversation": 20,
     "custom-commands": 7,
-    "desktop-shortcut": 19,
-    "web-app": 19,
+    "desktop-shortcut": 20,
+    "web-app": 20,
     "remote-control": 6,
     "feedback-command": 19,
     "plugin-disuse-review": 10,
@@ -5877,8 +5976,8 @@
     "agents-view-multiclauding": 4,
     "no-flicker": 1,
     "artifact-publish-plan": 5,
-    "auto-copy-config-hint": 22,
-    "workflow-size-prompting-ambient": 22,
+    "auto-copy-config-hint": 23,
+    "workflow-size-prompting-ambient": 23,
     "color-when-multi-clauding": 11,
     "colorterm-truecolor": 1,
     "artifact-duplicate": 5,
@@ -5887,8 +5986,8 @@
     "c4e-remote-sessions": 1,
     "c4e-ultrareview": 1,
     "subagent-fanout-nudge": 1,
-    "default-permission-mode-config": 19,
-    "focus-view": 13,
+    "default-permission-mode-config": 21,
+    "focus-view": 14,
     "you-should-know-plugin": 3,
     "shift-enter-setup": 1,
     "terminal-setup": 1,
@@ -5980,17 +6079,17 @@
     }
   },
   "hasSeenAutoDefaultNotice": true,
-  "lastClawdEntranceVersion": "2.1.310",
+  "lastClawdEntranceVersion": "2.1.311",
   "fullscreenUpsellSeenCount": 3,
-  "lastPlanModeUse": 1792051767887,
+  "lastPlanModeUse": 1793049708045,
   "tipsHistoryByCommand": {
     "focus": {
       "tipId": "focus-view",
-      "numStartups": 330
+      "numStartups": 345
     },
     "voice": {
       "tipId": "voice-mode",
-      "numStartups": 343
+      "numStartups": 354
     },
     "plugin": {
       "tipId": "plugin-disuse-review",
@@ -5998,35 +6097,35 @@
     },
     "desktop": {
       "tipId": "desktop-shortcut",
-      "numStartups": 331
+      "numStartups": 346
     },
     "config": {
-      "tipId": "workflow-size-prompting-ambient",
-      "numStartups": 339
+      "tipId": "default-permission-mode-config",
+      "numStartups": 355
     },
     "install-github-app": {
       "tipId": "install-github-app",
-      "numStartups": 336
+      "numStartups": 346
     },
     "statusline": {
       "tipId": "status-line",
-      "numStartups": 329
+      "numStartups": 354
     },
     "permissions": {
       "tipId": "permissions",
-      "numStartups": 343
+      "numStartups": 353
     },
     "install-slack-app": {
       "tipId": "install-slack-app",
-      "numStartups": 338
+      "numStartups": 348
     },
     "team-onboarding": {
       "tipId": "team-onboarding-share",
-      "numStartups": 344
+      "numStartups": 354
     },
     "memory": {
       "tipId": "memory-command",
-      "numStartups": 337
+      "numStartups": 352
     }
   },
   "claudeAiMcpEverConnected": [
@@ -6081,7 +6180,7 @@
     "seatTier": "team_standard",
     "displayName": "Mark",
     "fullName": "Mark",
-    "profileFetchedAt": 1792909870909,
+    "profileFetchedAt": 1793003245760,
     "organizationRole": "user",
     "workspaceRole": null,
     "organizationName": "SMX",
@@ -6090,6 +6189,20 @@
     "userRateLimitTier": "default_raven"
   },
   "clientDataCacheSlots": {
+    "bi1-e69435c1723a3eb2": {
+      "data": {
+        "cedar_lagoon": {
+          "claude-fable": true,
+          "claude-mythos": true
+        },
+        "tengu_lapis_anchor": "off",
+        "cedar_basin": "2027-08-31"
+      },
+      "at": 1793053820282,
+      "entrypoint": "cli",
+      "model": "claude-opus-5-5",
+      "org": "9aa58a62-0a42-4c7a-a92f-bee46ec60f99"
+    },
     "bi1-75b748c10318c530": {
       "data": {
         "cedar_lagoon": {
@@ -6098,7 +6211,7 @@
         },
         "cedar_basin": "2027-08-31"
       },
-      "at": 1792909871875,
+      "at": 1793003583259,
       "entrypoint": "cli",
       "model": "claude-opus-5-5",
       "org": "9aa58a62-0a42-4c7a-a92f-bee46ec60f99"
@@ -6111,7 +6224,7 @@
       "description": "Fable 5.1 · Most capable for your hardest and longest-running tasks"
     }
   ],
-  "additionalModelOptionsAnsweredAt": 1792909871875,
+  "additionalModelOptionsAnsweredAt": 1793053820282,
   "additionalModelCostsCache": {},
   "modelAccessCache": [],
   "orgModelDefaultCache": null,
@@ -6119,7 +6232,7 @@
   "cachedArtifactRoster": {
     "accountUuid": "d6b73899-19c0-4435-8a8b-c7a87b2f820a",
     "organizationUuid": "9aa58a62-0a42-4c7a-a92f-bee46ec60f99",
-    "version": "0.2.90",
+    "version": "0.2.91",
     "capabilities": [
       "artifact",
       "assets",
@@ -6134,12 +6247,12 @@
       "self",
       "user"
     ],
-    "fetchedAt": 1792909880511
+    "fetchedAt": 1793003245677
   },
   "metricsStatusCacheByPrincipal": {
     "acct:d6b73899-19c0-4435-8a8b-c7a87b2f820a/9aa58a62-0a42-4c7a-a92f-bee46ec60f99": {
       "enabled": true,
-      "timestamp": 1792910127606
+      "timestamp": 1793003636925
     }
   }
 }
