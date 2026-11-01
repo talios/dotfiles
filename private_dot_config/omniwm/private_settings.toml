@@ -15,9 +15,9 @@ width = 5.0
 
 [borders.color]
 alpha = 1.0
-blue = 0.0
-green = 0.9887304902076721
-red = 0.8796642422676086
+blue = 1.0
+green = 0.8283905386924744
+red = 0.6287501454353333
 
 [borders.glow]
 enabled = true
@@ -195,10 +195,14 @@ monitorName = "LG ULTRAGEAR"
 
 [statusBar]
 showAppNames = true
+showIcon = true
 showWorkspaceName = true
 useWorkspaceId = true
 
 [workspaceBar]
+autoHide = false
+autoHideHideDelayMilliseconds = 0.0
+autoHideRevealDelayMilliseconds = 0.0
 backgroundOpacity = 0.1
 deduplicateAppIcons = true
 enabled = true
@@ -1017,6 +1021,10 @@ id = "openCommandPalette"
 [[hotkeys]]
 binding = "Option+Shift+R"
 id = "raiseAllFloatingWindows"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "toggleFloatingFocus"
 
 [[hotkeys]]
 binding = "Unassigned"

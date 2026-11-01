@@ -16,17 +16,8 @@ or additional work (run `jj new`).
 ## Commit Descriptions
 
 - Summaries should be 50 characters, or as close to it as possible.
-- Body text should be wrapped at 72 characters.
+- Body text should be wrapped at 70 characters.
 - Don't directly reference method or class names, and keep the message to a description of changes to behaviour and any issues found.
-- When mentioning/referencing changes, inline the commit message, with a MarkDown style
-  footnote.
-
-  The footnote should mention both the commit summary using the format "commit summary"
-
-  A Markdown footnote is identified by '[^1]' (an incrementing number start from 1) following the body text, and '[^1]: Footnote content.' at the end of the message.
-
-  Further information about Markdown Footnotes can be found at https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes
-- When repeating refernces to commits, just include the appropriate footnote reference, there's no need to repeat the commit message.
 
 ## On Rebase
 

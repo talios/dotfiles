@@ -1,42 +1,42 @@
 {
-  "numStartups": 364,
+  "numStartups": 377,
   "installMethod": "native",
   "autoUpdates": false,
   "tipsHistory": {
     "new-user-warmup": 2,
     "plan-mode-for-complex-tasks": 346,
     "terminal-setup": 226,
-    "memory-command": 352,
+    "memory-command": 367,
     "theme-command": 364,
     "status-line": 354,
     "prompt-queue": 63,
-    "enter-to-steer-in-relatime": 351,
+    "enter-to-steer-in-relatime": 371,
     "todo-list": 150,
-    "install-github-app": 356,
-    "install-slack-app": 358,
-    "drag-and-drop-images": 363,
-    "paste-images-mac": 363,
-    "double-esc-code-restore": 353,
-    "continue": 358,
+    "install-github-app": 376,
+    "install-slack-app": 368,
+    "drag-and-drop-images": 374,
+    "paste-images-mac": 374,
+    "double-esc-code-restore": 376,
+    "continue": 368,
     "color-when-multi-clauding": 343,
-    "shift-tab": 362,
-    "image-paste": 351,
+    "shift-tab": 372,
+    "image-paste": 371,
     "custom-agents": 100,
     "agent-flag": 9,
     "desktop-app": 10,
     "shift-enter-setup": 226,
-    "permissions": 363,
-    "rename-conversation": 359,
+    "permissions": 373,
+    "rename-conversation": 374,
     "custom-commands": 149,
-    "desktop-shortcut": 361,
-    "web-app": 349,
+    "desktop-shortcut": 376,
+    "web-app": 365,
     "remote-control": 141,
-    "voice-mode": 354,
-    "feedback-command": 356,
+    "voice-mode": 376,
+    "feedback-command": 372,
     "goal-command-nudge": 36,
-    "team-onboarding-share": 360,
+    "team-onboarding-share": 376,
     "fotw-campaign-upsell": 46,
-    "git-worktrees": 363,
+    "git-worktrees": 373,
     "ide-upsell-external-terminal": 57,
     "plugin-disuse-review": 362,
     "dynamic-workflows": 191,
@@ -44,7 +44,7 @@
     "no-flicker": 65,
     "artifact-publish-plan": 102,
     "auto-copy-config-hint": 363,
-    "workflow-size-prompting-ambient": 363,
+    "workflow-size-prompting-ambient": 376,
     "colorterm-truecolor": 107,
     "artifact-duplicate": 140,
     "c4e-desktop": 113,
@@ -52,12 +52,12 @@
     "c4e-remote-sessions": 127,
     "c4e-ultrareview": 139,
     "subagent-fanout-nudge": 145,
-    "default-permission-mode-config": 355,
-    "focus-view": 360,
+    "default-permission-mode-config": 376,
+    "focus-view": 376,
     "you-should-know-plugin": 243,
     "loop-command-nudge": 337
   },
-  "promptQueueUseCount": 181,
+  "promptQueueUseCount": 196,
   "btwUseCount": 2,
   "cachedGrowthBookFeatures": {
     "cai_proud_planet": false,
@@ -79,7 +79,6 @@
       "maxQueueSize": 8192,
       "path": "/api/event_logging/v2/batch"
     },
-    "tengu_abundant_pebble": false,
     "tengu_abundant_squid": false,
     "tengu_account_plugins_sync_enabled": false,
     "tengu_account_skills_sync_enabled": false,
@@ -147,7 +146,8 @@
       "lsp_shutdown": 0.01,
       "hook_user_prompt_submit": 0.01,
       "api_bootstrap_fetch": 0.01,
-      "prompt_suggestion_generate": 0.01
+      "prompt_suggestion_generate": 0.01,
+      "bash_edit_diff_skip": 0.01
     },
     "tengu_alder_compass": false,
     "tengu_amber_anchor": false,
@@ -207,6 +207,7 @@
     "tengu_amber_sextant": true,
     "tengu_amber_tally": {},
     "tengu_amber_tollgate": false,
+    "tengu_amber_tributary_dotterel": false,
     "tengu_amber_tributary_join": false,
     "tengu_amber_wren": {
       "targetedRangeNudge": true,
@@ -339,6 +340,7 @@
     "tengu_bridge_subagent_frames": true,
     "tengu_bridge_system_init": true,
     "tengu_bridge_unarchive_on_resume": true,
+    "tengu_bright_kettle": false,
     "tengu_brindle_causeway": true,
     "tengu_brisk_lantern": true,
     "tengu_brisk_meadow": true,
@@ -423,7 +425,6 @@
     "tengu_clever_bonbon": false,
     "tengu_clever_orbit": false,
     "tengu_cloth_snorkel": true,
-    "tengu_cobalt_awning": -1,
     "tengu_cobalt_compass": true,
     "tengu_cobalt_harbor": false,
     "tengu_cobalt_harbor_notice": true,
@@ -477,9 +478,10 @@
     "tengu_copper_fox": true,
     "tengu_copper_gazette": true,
     "tengu_copper_kite": false,
+    "tengu_copper_ledger": false,
     "tengu_copper_meadow": false,
     "tengu_copper_thistle": false,
-    "tengu_copper_trellis": false,
+    "tengu_copper_trellis": true,
     "tengu_copper_wren": false,
     "tengu_coral_fern": false,
     "tengu_cork_lantern": false,
@@ -492,10 +494,12 @@
     "tengu_cozy_crane": "enforce",
     "tengu_cozy_fern": false,
     "tengu_cozy_kite": false,
+    "tengu_cozy_pinwheel": false,
     "tengu_cozy_teapot": "strict",
     "tengu_crimson_echo": {},
     "tengu_crimson_vector": false,
     "tengu_crispy_frost": 0,
+    "tengu_cryptic_brook": false,
     "tengu_crystal_beam": {
       "budgetTokens": 0
     },
@@ -505,13 +509,14 @@
     "tengu_curious_tower_stateless_models": "",
     "tengu_curried_trinket": "control",
     "tengu_dapper_brooks": false,
-    "tengu_dapper_dawn": true,
+    "tengu_dapper_dawn": false,
     "tengu_dapper_dusk": true,
     "tengu_dapper_lagoon": false,
     "tengu_dapper_truffle": "off",
     "tengu_dappled_oar": true,
     "tengu_dash_flame": true,
     "tengu_dazzling_floyd": true,
+    "tengu_deep_dusk": true,
     "tengu_deep_shore": true,
     "tengu_deferred_stub_tool": true,
     "tengu_delegated_quail": {
@@ -540,12 +545,14 @@
       "computerUseChecks": true,
       "computerUseSummary": true
     },
+    "tengu_drifting_seahorse": false,
     "tengu_dune_wren": false,
     "tengu_dunwich_bell": false,
     "tengu_eager_pillow": true,
     "tengu_eager_raccoon": true,
+    "tengu_ebbing_tide": false,
     "tengu_elegant_ocean": true,
-    "tengu_elegant_pancake": false,
+    "tengu_elegant_pancake": true,
     "tengu_ember_latch": false,
     "tengu_ember_trail": "0",
     "tengu_encapsulated_pebble": true,
@@ -589,7 +596,7 @@
     },
     "tengu_event_watchdog_default_on": true,
     "tengu_eventual_noodle": false,
-    "tengu_expressive_church": false,
+    "tengu_expressive_church": true,
     "tengu_expressive_whistle": false,
     "tengu_fallow_plover": false,
     "tengu_fancy_crab": 300,
@@ -607,7 +614,7 @@
       "onForModels": [
         "*"
       ],
-      "probability": 0.05
+      "probability": 0.15
     },
     "tengu_fennel_godwit": false,
     "tengu_fennel_kite": false,
@@ -650,7 +657,10 @@
     "tengu_glittery_fern": 50,
     "tengu_glowing_lark": true,
     "tengu_glowing_orbit": true,
+    "tengu_glowing_pancake": false,
     "tengu_golden_popcorn": 0,
+    "tengu_golden_thimble": false,
+    "tengu_golden_wirth": false,
     "tengu_good_survey_transcript_ask_config": {
       "probability": 0
     },
@@ -664,7 +674,6 @@
       "dialogDescription": "Effort determines how long Claude thinks for when completing your task. We recommend medium effort for most tasks to balance speed and intelligence and maximize rate limits. Use ultrathink to trigger high effort when needed."
     },
     "tengu_groovy_eclipse": true,
-    "tengu_groovy_ember": {},
     "tengu_gypsum_kite": false,
     "tengu_happy_ocean": false,
     "tengu_harbor": true,
@@ -695,6 +704,7 @@
     "tengu_harbor_permissions": true,
     "tengu_harbor_willow": true,
     "tengu_hashed_lark": false,
+    "tengu_hashed_pascal": false,
     "tengu_hawthorn_steeple": false,
     "tengu_hawthorn_window": 200000,
     "tengu_haze_glass": false,
@@ -714,23 +724,25 @@
     "tengu_hover_rest": false,
     "tengu_humble_hammock": true,
     "tengu_humble_zephyr": false,
-    "tengu_humming_waffle": 0,
     "tengu_hushed_lark": 5,
     "tengu_hushed_lark_text": "The user hasn't heard from you in a while — say in a few words what you're doing, then continue.",
     "tengu_ide_rc_auto_enable": true,
+    "tengu_idempotent_pine": 0,
     "tengu_idle_amber_finch": false,
     "tengu_immediate_model_command": true,
+    "tengu_imperative_whistle": false,
     "tengu_import": true,
     "tengu_iridescent_crystal": false,
     "tengu_iridescent_gem": 0.01,
     "tengu_iridescent_pascal": false,
     "tengu_jade_anvil_4": false,
-    "tengu_jaunty_plum": {},
+    "tengu_jaunty_ember": true,
     "tengu_jaunty_umbrella": true,
     "tengu_jazzy_bird": true,
     "tengu_jazzy_goblet": true,
     "tengu_jazzy_taco": false,
     "tengu_jiggly_blossom": "off",
+    "tengu_jiggly_lollipop": false,
     "tengu_jiggly_quilt": false,
     "tengu_jolly_aurora": false,
     "tengu_jolly_dewdrop": true,
@@ -766,7 +778,6 @@
     "tengu_kestrel_arch": "OFF",
     "tengu_kestrel_moor": true,
     "tengu_keybinding_customization_release": true,
-    "tengu_knobby_oxbow": {},
     "tengu_lantern_hearth": "off",
     "tengu_lantern_prism": true,
     "tengu_lantern_sconce": true,
@@ -788,16 +799,19 @@
     "tengu_lazy_river": true,
     "tengu_lexical_crystal": true,
     "tengu_lexical_glade": true,
+    "tengu_lexical_pony": 0,
     "tengu_lichen_compass": false,
     "tengu_lilac_dune": false,
     "tengu_lilac_loom": null,
     "tengu_linear_quail": 0,
     "tengu_linen_osprey": false,
+    "tengu_lingering_otter": true,
     "tengu_lively_beaver": true,
     "tengu_lively_waffle": true,
     "tengu_log_datadog_events": true,
     "tengu_loggia_carousel": false,
     "tengu_loggia_roster": [],
+    "tengu_logical_snowglobe": false,
     "tengu_long_context_survey_probability": "",
     "tengu_long_context_survey_question_variant": "",
     "tengu_long_context_survey_threshold": "",
@@ -820,6 +834,7 @@
     ],
     "tengu_lucky_garden": false,
     "tengu_lucky_quill": true,
+    "tengu_lucky_widget": false,
     "tengu_lumen_thicket_q7": false,
     "tengu_luminous_seal": true,
     "tengu_luminous_whistle": true,
@@ -896,6 +911,7 @@
     "tengu_mem_push_delete_mode": "corroborate",
     "tengu_memoized_owl": true,
     "tengu_memoized_turtle": 100,
+    "tengu_mended_ribbon": false,
     "tengu_merry_tide": false,
     "tengu_mill_orange": false,
     "tengu_mint_lanes": false,
@@ -908,6 +924,7 @@
     "tengu_mocha_barista": true,
     "tengu_modular_mochi": true,
     "tengu_modular_seal": false,
+    "tengu_modular_sparkle": false,
     "tengu_moonlit_panda": true,
     "tengu_moored_skiff": false,
     "tengu_moss_anchor": false,
@@ -927,6 +944,7 @@
       "version": 0
     },
     "tengu_nimble_amber_prose": false,
+    "tengu_noble_moth": 0,
     "tengu_non_deferrable_builtins": {},
     "tengu_noreread_q7m_velvet": false,
     "tengu_ochre_bittern": false,
@@ -952,7 +970,7 @@
         "team",
         "enterprise"
       ],
-      "percent": 10,
+      "percent": 50,
       "graceTtlHours": 24,
       "budgetMs": 10000,
       "exemptReasons": [
@@ -963,16 +981,19 @@
     },
     "tengu_osprey_lantern": false,
     "tengu_otk_slot_v1": false,
+    "tengu_parallel_lantern": null,
     "tengu_parchment_fern": false,
     "tengu_parsed_eagle": "off",
     "tengu_parting_sparrow": false,
     "tengu_passport_quail": false,
     "tengu_patient_meteor": false,
+    "tengu_peaceful_origami": false,
     "tengu_penguin_mode_promo": {
       "discountPercent": 0,
       "endDate": "Feb 16"
     },
     "tengu_penguins_enabled": true,
+    "tengu_peppy_gosling": 0,
     "tengu_peppy_nest": false,
     "tengu_peppy_riddle": true,
     "tengu_peppy_spindle": false,
@@ -1005,6 +1026,7 @@
     "tengu_plugin_hooks_modules": true,
     "tengu_plugin_official_mkt_git_fallback": true,
     "tengu_plum_vx3": true,
+    "tengu_plumb_marten": false,
     "tengu_polished_dewdrop": "off",
     "tengu_polished_lagoon": true,
     "tengu_polished_salamander": true,
@@ -1036,6 +1058,7 @@
     "tengu_quartz_pipit": true,
     "tengu_quartz_thimble": true,
     "tengu_quartz_vireo": "",
+    "tengu_quiet_badger": false,
     "tengu_quiet_basalt_echo": false,
     "tengu_quiet_dolphin": true,
     "tengu_quiet_ember": false,
@@ -1045,6 +1068,7 @@
     "tengu_quiet_lantern": true,
     "tengu_quiet_larkspur": true,
     "tengu_quiet_locket": true,
+    "tengu_quiet_pike": false,
     "tengu_quiet_reef": false,
     "tengu_quiet_slate_wren": false,
     "tengu_quiet_tarjan": false,
@@ -1079,9 +1103,11 @@
     "tengu_red_coaster": false,
     "tengu_refactored_gadget": true,
     "tengu_reflective_bee": "off",
+    "tengu_reflective_donut": true,
     "tengu_reflective_wolf": true,
     "tengu_remote_auto_mode_include_destructive_mcp": false,
     "tengu_report_findings_tool": true,
+    "tengu_resilient_galaxy": false,
     "tengu_retire_chat_relay_artifact_backstop": true,
     "tengu_review_bughunter_config": {
       "enabled": false
@@ -1092,6 +1118,7 @@
     "tengu_river_kestrel": false,
     "tengu_riverbed_lantern": false,
     "tengu_rosy_finch": false,
+    "tengu_rosy_pebble": false,
     "tengu_russet_plover": true,
     "tengu_russet_whimbrel": 0,
     "tengu_rustling_orbit": false,
@@ -1132,6 +1159,7 @@
     "tengu_sharded_seahorse": false,
     "tengu_sharded_snowflake": false,
     "tengu_shimmying_stardust": false,
+    "tengu_shimmying_willow": 30,
     "tengu_shining_fractals": false,
     "tengu_shiny_stardust": false,
     "tengu_shoji_engine": false,
@@ -1184,6 +1212,8 @@
     "tengu_snappy_plum": false,
     "tengu_snippet_save": false,
     "tengu_snoopy_creek": false,
+    "tengu_snug_mist_enabled": true,
+    "tengu_snug_mitten": true,
     "tengu_snug_platypus": false,
     "tengu_snug_reef": 0,
     "tengu_snug_storm": {
@@ -1193,6 +1223,7 @@
     "tengu_soft_dawn": false,
     "tengu_soft_kurzweil": true,
     "tengu_soft_slate_nudge": "baseline",
+    "tengu_soft_spark": false,
     "tengu_sorrel_avocet": false,
     "tengu_sorrel_trellis": true,
     "tengu_sorrel_trellis_gusset": false,
@@ -1205,9 +1236,9 @@
     "tengu_sparrow_ledger": false,
     "tengu_spicy_pearl": true,
     "tengu_sprightly_lagoon": false,
+    "tengu_starry_balloon": null,
     "tengu_starry_locket": true,
     "tengu_starry_swing": false,
-    "tengu_starry_wall": {},
     "tengu_starry_waterfall": {
       "enabled": true,
       "version": 2,
@@ -1254,18 +1285,21 @@
     "tengu_steady_plum": {},
     "tengu_steady_sunbeam": false,
     "tengu_stellar_drift": true,
+    "tengu_still_harbor": false,
     "tengu_still_kestrel": true,
     "tengu_stone_shell": false,
     "tengu_streaming_tool_execution2": true,
     "tengu_structured_output_strict": false,
     "tengu_sub_nomdrep_q7k": true,
     "tengu_subagent_cache_evict": false,
+    "tengu_sunny_garden": false,
     "tengu_sunny_locket": {
       "mode": "compact"
     },
     "tengu_surreal_dali": true,
     "tengu_swann_brevity": "focused",
     "tengu_swift_lynx": null,
+    "tengu_swift_pelican": null,
     "tengu_swift_whistle": true,
     "tengu_swirling_squid": false,
     "tengu_synchronous_bunny": true,
@@ -1294,6 +1328,7 @@
     "tengu_ticklish_whisper": false,
     "tengu_tide_elm": "off",
     "tengu_tidy_axolotl": false,
+    "tengu_tidy_blanket": false,
     "tengu_tidy_lemon": {
       "mode": "one_step"
     },
@@ -1301,11 +1336,12 @@
     "tengu_tidy_shelf": "off",
     "tengu_timber_lark": "copy_a",
     "tengu_tingly_hopper": true,
-    "tengu_tingly_pike": null,
+    "tengu_toasty_beacon": false,
     "tengu_toasty_breeze": {
       "enabled": false,
       "version": 0
     },
+    "tengu_toasty_planet": false,
     "tengu_tool_cgroup_exclude_classes": {},
     "tengu_tool_memory_cgroup": false,
     "tengu_tool_pear": false,
@@ -1354,6 +1390,7 @@
       "Fable 5.1"
     ],
     "tengu_valiant_crescent": false,
+    "tengu_valiant_goose": false,
     "tengu_valiant_rain": true,
     "tengu_validated_clover": false,
     "tengu_vast_tulip": true,
@@ -1397,6 +1434,8 @@
     "tengu_velvet_marble": 64,
     "tengu_velvet_moth": 0.05,
     "tengu_velvet_panda": true,
+    "tengu_velvet_platypus": false,
+    "tengu_velvet_possum": false,
     "tengu_velvet_static": true,
     "tengu_velvet_tide": false,
     "tengu_velvety_bumblebee": false,
@@ -1458,7 +1497,7 @@
       "askWaitMs": 1800000
     },
     "tengu_violin_stainer": false,
-    "tengu_violin_strad": false,
+    "tengu_violin_strad": true,
     "tengu_violin_table": true,
     "tengu_violin_tailgut": true,
     "tengu_violin_tailpiece": true,
@@ -1470,7 +1509,7 @@
     "tengu_violin_winding": true,
     "tengu_violin_wood": false,
     "tengu_virtual_pancake": true,
-    "tengu_virtual_toast": false,
+    "tengu_virtual_toast": true,
     "tengu_vscode_feedback_survey": true,
     "tengu_vscode_integrated_browser": false,
     "tengu_vscode_onboarding": true,
@@ -1487,6 +1526,7 @@
     "tengu_wiggly_dove": false,
     "tengu_wild_beacon": false,
     "tengu_wild_gosling": false,
+    "tengu_wild_hamster": false,
     "tengu_wild_tome": true,
     "tengu_willow_census_ttl_hours": 24,
     "tengu_willow_crate": false,
@@ -1504,6 +1544,7 @@
     "tengu_wise_comet": false,
     "tengu_wise_star": true,
     "tengu_witty_firefly": true,
+    "tengu_witty_teapot": false,
     "tengu_wobbly_dahl": false,
     "tengu_wobbly_dewdrop": false,
     "tengu_wobbly_petal": {
@@ -1523,6 +1564,7 @@
     "tengu_wondrous_island": false,
     "tengu_woolen_sparrow": false,
     "tengu_woolly_forest": true,
+    "tengu_woolly_pond": false,
     "tengu_workflows_enabled": true,
     "tengu_workout2": true,
     "tengu_worktree_mode": true,
@@ -1538,7 +1580,7 @@
   "sonnet1m45MigrationComplete": true,
   "migrationVersion": 14,
   "userID": "4b7ec9fd101bd9fbad9aa33fc782de385ec82be6d935673163bbebf8b06044e6",
-  "changelogLastFetched": 1793053103189,
+  "changelogLastFetched": 1793330161662,
   "autoUpdatesProtectedForNative": true,
   "claudeCodeFirstTokenDate": "2026-04-20T00:09:29.191806Z",
   "hasCompletedOnboarding": true,
@@ -2280,41 +2322,41 @@
       "lastHintSessionId": "64d212ec-f839-4bf3-a33e-5400d4608a2d",
       "lastSessionFirstPrompt": "why can't cargo find bwrap::wrap_maybrk",
       "lastSessionModified": 1778311390189,
-      "lastCost": 0.6677139999999999,
-      "lastAPIDuration": 87299,
-      "lastAPIDurationWithoutRetries": 87022,
-      "lastToolDuration": 207961,
-      "lastDuration": 1068505,
-      "lastLinesAdded": 2,
-      "lastLinesRemoved": 1,
-      "lastTotalInputTokens": 15821,
-      "lastTotalOutputTokens": 6232,
-      "lastTotalCacheCreationInputTokens": 34029,
-      "lastTotalCacheReadInputTokens": 1091427,
+      "lastCost": 4.293343100000001,
+      "lastAPIDuration": 540335,
+      "lastAPIDurationWithoutRetries": 538598,
+      "lastToolDuration": 139271,
+      "lastDuration": 3051004,
+      "lastLinesAdded": 321,
+      "lastLinesRemoved": 103,
+      "lastTotalInputTokens": 31125,
+      "lastTotalOutputTokens": 53816,
+      "lastTotalCacheCreationInputTokens": 139576,
+      "lastTotalCacheReadInputTokens": 9910312,
       "lastTotalWebSearchRequests": 0,
-      "lastFpsAverage": 6.07,
-      "lastFpsLow1Pct": 466.52,
+      "lastFpsAverage": 5.61,
+      "lastFpsLow1Pct": 189.68,
       "lastModelUsage": {
+        "claude-opus-5-5": {
+          "inputTokens": 29798,
+          "outputTokens": 53788,
+          "thinkingTokens": 15427,
+          "cacheReadInputTokens": 9910312,
+          "cacheCreationInputTokens": 139576,
+          "webSearchRequests": 0,
+          "costUSD": 4.293196400000001
+        },
         "claude-haiku-5-5": {
-          "inputTokens": 1591,
-          "outputTokens": 203,
-          "thinkingTokens": 187,
+          "inputTokens": 1327,
+          "outputTokens": 28,
+          "thinkingTokens": 0,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.00026060000000000005
-        },
-        "claude-opus-5-5": {
-          "inputTokens": 14230,
-          "outputTokens": 6029,
-          "thinkingTokens": 2327,
-          "cacheReadInputTokens": 1091427,
-          "cacheCreationInputTokens": 34029,
-          "webSearchRequests": 0,
-          "costUSD": 0.6674534
+          "costUSD": 0.0001467
         }
       },
-      "lastSessionId": "2d8200a3-5a30-45da-82f2-cc0a2acfbf94",
+      "lastSessionId": "56fc4da7-b586-46b6-8a65-4a55b3b08ea8",
       "lastSessionMetrics": {
         "frame_duration_ms_count": 2384,
         "frame_duration_ms_min": 0.0630830000154674,
@@ -2338,9 +2380,9 @@
         "hook_duration_ms_p95": 0,
         "hook_duration_ms_p99": 0
       },
-      "lastVersionBase": "2.1.310",
+      "lastVersionBase": "2.1.312",
       "hasUnseenTeamArtifacts": false,
-      "lastStartTime": 1792987186143
+      "lastStartTime": 1793154176917
     },
     "/Users/amrk/IdeaProjects/securemx/smx3/smx3.featureset.deploy": {
       "allowedTools": [],
@@ -2718,42 +2760,42 @@
         "MailProductsResourceProvider.java"
       ],
       "lastGracefulShutdown": true,
-      "lastVersionBase": "2.1.311",
+      "lastVersionBase": "2.1.314",
       "hasUnseenTeamArtifacts": false,
       "exampleFilesGeneratedAt": 1793049677834,
-      "lastCost": 7.570995699999999,
-      "lastAPIDuration": 959299,
-      "lastAPIDurationWithoutRetries": 958051,
-      "lastToolDuration": 616701,
-      "lastDuration": 3050856,
-      "lastLinesAdded": 645,
-      "lastLinesRemoved": 200,
-      "lastTotalInputTokens": 158700,
-      "lastTotalOutputTokens": 85180,
-      "lastTotalCacheCreationInputTokens": 196315,
-      "lastTotalCacheReadInputTokens": 18410328,
+      "lastCost": 4.841920100000001,
+      "lastAPIDuration": 568645,
+      "lastAPIDurationWithoutRetries": 566963,
+      "lastToolDuration": 386995,
+      "lastDuration": 3180751,
+      "lastLinesAdded": 16,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 113834,
+      "lastTotalOutputTokens": 52813,
+      "lastTotalCacheCreationInputTokens": 154749,
+      "lastTotalCacheReadInputTokens": 10534898,
       "lastTotalWebSearchRequests": 0,
       "lastModelUsage": {
         "claude-haiku-5-5": {
-          "inputTokens": 1186,
-          "outputTokens": 23,
+          "inputTokens": 1275,
+          "outputTokens": 28,
           "thinkingTokens": 0,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.00013010000000000002
+          "costUSD": 0.0001415
         },
         "claude-opus-5-5": {
-          "inputTokens": 157514,
-          "outputTokens": 85157,
-          "thinkingTokens": 21838,
-          "cacheReadInputTokens": 18410328,
-          "cacheCreationInputTokens": 196315,
+          "inputTokens": 112559,
+          "outputTokens": 52785,
+          "thinkingTokens": 16033,
+          "cacheReadInputTokens": 10534898,
+          "cacheCreationInputTokens": 154749,
           "webSearchRequests": 0,
-          "costUSD": 7.570865599999999
+          "costUSD": 4.841778600000001
         }
       },
-      "lastSessionId": "c653b520-3466-45f8-8b81-984a1d8a0b78",
+      "lastSessionId": "54866435-7a52-4292-bca2-2c1c3ff1eda5",
       "lastSessionMetrics": {
         "frame_duration_ms_count": 19,
         "frame_duration_ms_min": 0.12241699999958655,
@@ -2763,9 +2805,9 @@
         "frame_duration_ms_p95": 1.6070410000000483,
         "frame_duration_ms_p99": 1.9580410000000166
       },
-      "lastStartTime": 1793082370126,
-      "lastFpsAverage": 11.03,
-      "lastFpsLow1Pct": 206.53
+      "lastStartTime": 1793330160817,
+      "lastFpsAverage": 6.48,
+      "lastFpsLow1Pct": 684.72
     },
     "/Users/amrk/IdeaProjects/securemx/eventstore/archiving-delete": {
       "allowedTools": [],
@@ -2947,19 +2989,19 @@
       },
       "enabledMcpjsonServers": [],
       "disabledMcpjsonServers": [],
-      "hasTrustDialogAccepted": false,
+      "hasTrustDialogAccepted": true,
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "exampleFiles": [],
       "lastGracefulShutdown": true,
-      "lastVersionBase": "2.1.220",
+      "lastVersionBase": "2.1.312",
       "hasUnseenTeamArtifacts": false,
       "lastCost": 0,
       "lastAPIDuration": 0,
       "lastAPIDurationWithoutRetries": 0,
       "lastToolDuration": 0,
-      "lastDuration": 12333,
-      "lastStartTime": 1785820621415,
+      "lastDuration": 12577,
+      "lastStartTime": 1793330114634,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
       "lastTotalInputTokens": 0,
@@ -2967,10 +3009,10 @@
       "lastTotalCacheCreationInputTokens": 0,
       "lastTotalCacheReadInputTokens": 0,
       "lastTotalWebSearchRequests": 0,
-      "lastFpsAverage": 1.46,
-      "lastFpsLow1Pct": 110.97,
+      "lastFpsAverage": 4.27,
+      "lastFpsLow1Pct": 371.12,
       "lastModelUsage": {},
-      "lastSessionId": "f281a04b-b563-465b-9df4-50c211285186"
+      "lastSessionId": "799bef15-6002-4b29-bc2a-7543c5c205c8"
     },
     "/Users/amrk/IdeaProjects/upstream/capacities-cli": {
       "allowedTools": [],
@@ -3235,7 +3277,7 @@
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "lastGracefulShutdown": true,
-      "lastVersionBase": "2.1.296",
+      "lastVersionBase": "2.1.312",
       "exampleFiles": [
         "pom.deps",
         "RepositoryResolver.java",
@@ -3243,44 +3285,44 @@
         "RangeResolverStepdefs.java",
         "RangeResolver.g4"
       ],
-      "exampleFilesGeneratedAt": 1791616623427,
+      "exampleFilesGeneratedAt": 1793135842008,
       "hasUnseenTeamArtifacts": false,
-      "lastCost": 0.9486075,
-      "lastAPIDuration": 114283,
-      "lastAPIDurationWithoutRetries": 114074,
-      "lastToolDuration": 77807,
-      "lastDuration": 331040,
-      "lastStartTime": 1791616622130,
-      "lastLinesAdded": 21,
+      "lastCost": 0.5313907000000001,
+      "lastAPIDuration": 48463,
+      "lastAPIDurationWithoutRetries": 48417,
+      "lastToolDuration": 26240,
+      "lastDuration": 110986,
+      "lastStartTime": 1793137443886,
+      "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 3777,
-      "lastTotalOutputTokens": 9992,
-      "lastTotalCacheCreationInputTokens": 46567,
-      "lastTotalCacheReadInputTokens": 1831065,
+      "lastTotalInputTokens": 17543,
+      "lastTotalOutputTokens": 3752,
+      "lastTotalCacheCreationInputTokens": 29800,
+      "lastTotalCacheReadInputTokens": 768190,
       "lastTotalWebSearchRequests": 0,
-      "lastFpsAverage": 6.18,
-      "lastFpsLow1Pct": 635.05,
+      "lastFpsAverage": 15.7,
+      "lastFpsLow1Pct": 159.56,
       "lastModelUsage": {
         "claude-haiku-5-5": {
-          "inputTokens": 1195,
-          "outputTokens": 22,
+          "inputTokens": 1192,
+          "outputTokens": 23,
           "thinkingTokens": 0,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.00013050000000000003
+          "costUSD": 0.0001307
         },
         "claude-opus-5-5": {
-          "inputTokens": 2582,
-          "outputTokens": 9970,
-          "thinkingTokens": 1693,
-          "cacheReadInputTokens": 1831065,
-          "cacheCreationInputTokens": 46567,
+          "inputTokens": 16351,
+          "outputTokens": 3729,
+          "thinkingTokens": 910,
+          "cacheReadInputTokens": 768190,
+          "cacheCreationInputTokens": 29800,
           "webSearchRequests": 0,
-          "costUSD": 0.948477
+          "costUSD": 0.5312600000000002
         }
       },
-      "lastSessionId": "cdd9411b-e60f-4db2-b6f7-50d363c3d1d2"
+      "lastSessionId": "6759fb51-2c6d-4b38-9870-53ef5a389e90"
     },
     "/Users/amrk/IdeaProjects/securemx/smx3/smx3-ui-extjs": {
       "allowedTools": [],
@@ -3659,52 +3701,52 @@
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "lastGracefulShutdown": true,
-      "lastVersionBase": "2.1.278",
+      "lastVersionBase": "2.1.312",
       "hasUnseenTeamArtifacts": false,
       "exampleFiles": [
         "pom.deps",
         "RestRequestFilterTest.java",
         "SentryErrorLogListenerTest.java",
-        "LogUtils.java",
-        "LogUtilsTest.java"
+        "AbstractProblemHandler.java",
+        "Sentry.java"
       ],
-      "exampleFilesGeneratedAt": 1789988168453,
-      "lastCost": 1.5370180000000004,
-      "lastAPIDuration": 174872,
-      "lastAPIDurationWithoutRetries": 174528,
-      "lastToolDuration": 88126,
-      "lastDuration": 669544,
-      "lastStartTime": 1789988167713,
+      "exampleFilesGeneratedAt": 1793223552507,
+      "lastCost": 0.3641888,
+      "lastAPIDuration": 30385,
+      "lastAPIDurationWithoutRetries": 30367,
+      "lastToolDuration": 1431,
+      "lastDuration": 78301,
+      "lastStartTime": 1793223967955,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 3002,
-      "lastTotalOutputTokens": 11570,
-      "lastTotalCacheCreationInputTokens": 40125,
-      "lastTotalCacheReadInputTokens": 1671272,
+      "lastTotalInputTokens": 16063,
+      "lastTotalOutputTokens": 2410,
+      "lastTotalCacheCreationInputTokens": 21822,
+      "lastTotalCacheReadInputTokens": 412666,
       "lastTotalWebSearchRequests": 0,
-      "lastFpsAverage": 4.79,
-      "lastFpsLow1Pct": 402.49,
+      "lastFpsAverage": 8.45,
+      "lastFpsLow1Pct": 337.02,
       "lastModelUsage": {
-        "claude-haiku-4-5-20251001": {
-          "inputTokens": 932,
-          "outputTokens": 20,
+        "claude-haiku-5-5": {
+          "inputTokens": 1186,
+          "outputTokens": 24,
           "thinkingTokens": 0,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.001032
+          "costUSD": 0.0001306
         },
-        "claude-opus-5[1m]": {
-          "inputTokens": 2070,
-          "outputTokens": 11550,
-          "thinkingTokens": 3277,
-          "cacheReadInputTokens": 1671272,
-          "cacheCreationInputTokens": 40125,
+        "claude-opus-5-5": {
+          "inputTokens": 14877,
+          "outputTokens": 2386,
+          "thinkingTokens": 710,
+          "cacheReadInputTokens": 412666,
+          "cacheCreationInputTokens": 21822,
           "webSearchRequests": 0,
-          "costUSD": 1.5359860000000005
+          "costUSD": 0.3640582
         }
       },
-      "lastSessionId": "4101b8b5-ce5d-4b04-9149-7bc8b46e4675"
+      "lastSessionId": "7d369d89-4140-4e2b-9f09-9f95bbe2df4d"
     },
     "/Users/markderricutt/IdeaProjects/upstream/jj": {
       "allowedTools": [],
@@ -5225,44 +5267,44 @@
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "lastGracefulShutdown": true,
-      "lastVersionBase": "2.1.303",
+      "lastVersionBase": "2.1.312",
       "hasUnseenTeamArtifacts": false,
-      "lastCost": 0.2927784,
-      "lastAPIDuration": 35842,
-      "lastAPIDurationWithoutRetries": 35784,
-      "lastToolDuration": 3816,
-      "lastDuration": 111413,
-      "lastStartTime": 1792373988204,
+      "lastCost": 1.9334404999999997,
+      "lastAPIDuration": 329226,
+      "lastAPIDurationWithoutRetries": 328570,
+      "lastToolDuration": 304023,
+      "lastDuration": 1530702,
+      "lastStartTime": 1793146428099,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 2279,
-      "lastTotalOutputTokens": 2964,
-      "lastTotalCacheCreationInputTokens": 27775,
-      "lastTotalCacheReadInputTokens": 475234,
+      "lastTotalInputTokens": 31863,
+      "lastTotalOutputTokens": 24523,
+      "lastTotalCacheCreationInputTokens": 87540,
+      "lastTotalCacheReadInputTokens": 3114741,
       "lastTotalWebSearchRequests": 0,
-      "lastFpsAverage": 8.32,
-      "lastFpsLow1Pct": 310.65,
+      "lastFpsAverage": 9.51,
+      "lastFpsLow1Pct": 177.36,
       "lastModelUsage": {
         "claude-haiku-5-5": {
-          "inputTokens": 1251,
-          "outputTokens": 239,
-          "thinkingTokens": 206,
+          "inputTokens": 1403,
+          "outputTokens": 32,
+          "thinkingTokens": 0,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.0002446
+          "costUSD": 0.0001563
         },
         "claude-opus-5-5": {
-          "inputTokens": 1028,
-          "outputTokens": 2725,
-          "thinkingTokens": 712,
-          "cacheReadInputTokens": 475234,
-          "cacheCreationInputTokens": 27775,
+          "inputTokens": 30460,
+          "outputTokens": 24491,
+          "thinkingTokens": 8243,
+          "cacheReadInputTokens": 3114741,
+          "cacheCreationInputTokens": 87540,
           "webSearchRequests": 0,
-          "costUSD": 0.29253379999999995
+          "costUSD": 1.9332841999999997
         }
       },
-      "lastSessionId": "a77a3e0b-9341-45eb-b330-c9d25f2a0877"
+      "lastSessionId": "13c326f9-dcc6-46f7-923d-2c73e48e1596"
     },
     "/Users/amrk/IdeaProjects/securemx/smx3/smx3-integration": {
       "allowedTools": [],
@@ -5331,43 +5373,43 @@
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "lastGracefulShutdown": true,
-      "lastVersionBase": "2.1.310",
-      "lastCost": 6.782430800000001,
-      "lastAPIDuration": 1213677,
-      "lastAPIDurationWithoutRetries": 1212928,
-      "lastToolDuration": 399640,
-      "lastDuration": 1436816,
-      "lastStartTime": 1793006615818,
-      "lastLinesAdded": 1982,
-      "lastLinesRemoved": 29,
-      "lastTotalInputTokens": 31830,
-      "lastTotalOutputTokens": 115598,
-      "lastTotalCacheCreationInputTokens": 214362,
-      "lastTotalCacheReadInputTokens": 13811438,
+      "lastVersionBase": "2.1.314",
+      "lastCost": 3.401615699999999,
+      "lastAPIDuration": 572062,
+      "lastAPIDurationWithoutRetries": 571635,
+      "lastToolDuration": 193289,
+      "lastDuration": 1472404,
+      "lastStartTime": 1793418799546,
+      "lastLinesAdded": 1177,
+      "lastLinesRemoved": 31,
+      "lastTotalInputTokens": 30087,
+      "lastTotalOutputTokens": 61838,
+      "lastTotalCacheCreationInputTokens": 125886,
+      "lastTotalCacheReadInputTokens": 5222710,
       "lastTotalWebSearchRequests": 0,
-      "lastFpsAverage": 18.59,
-      "lastFpsLow1Pct": 223.81,
+      "lastFpsAverage": 11.03,
+      "lastFpsLow1Pct": 269.54,
       "lastModelUsage": {
         "claude-haiku-5-5": {
-          "inputTokens": 1172,
-          "outputTokens": 20,
+          "inputTokens": 1187,
+          "outputTokens": 22,
           "thinkingTokens": 0,
           "cacheReadInputTokens": 0,
           "cacheCreationInputTokens": 0,
           "webSearchRequests": 0,
-          "costUSD": 0.00012720000000000003
+          "costUSD": 0.0001297
         },
         "claude-opus-5-5": {
-          "inputTokens": 30658,
-          "outputTokens": 115578,
-          "thinkingTokens": 45308,
-          "cacheReadInputTokens": 13811438,
-          "cacheCreationInputTokens": 214362,
+          "inputTokens": 28900,
+          "outputTokens": 61816,
+          "thinkingTokens": 17073,
+          "cacheReadInputTokens": 5222710,
+          "cacheCreationInputTokens": 125886,
           "webSearchRequests": 0,
-          "costUSD": 6.782303600000001
+          "costUSD": 3.401485999999999
         }
       },
-      "lastSessionId": "09422223-0762-47ae-94b9-5a17184b6062",
+      "lastSessionId": "40e27b6b-be68-45e4-8c26-77c39d28212a",
       "hasUnseenTeamArtifacts": false,
       "exampleFiles": [
         "main.rs",
@@ -5685,6 +5727,63 @@
         }
       },
       "lastSessionId": "8c5b3171-0c4c-457b-8131-0fe085be4d8f"
+    },
+    "/Users/amrk/IdeaProjects/securemx/smx3/smx3.synchronisation": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastGracefulShutdown": true,
+      "lastVersionBase": "2.1.312",
+      "hasUnseenTeamArtifacts": false,
+      "exampleFiles": [
+        "pom.deps",
+        "BaseSyncService.java",
+        "SyncResourceProvider.java",
+        "BaseSyncServiceTest.java",
+        "AbstractSyncResource.java"
+      ],
+      "exampleFilesGeneratedAt": 1793143261272,
+      "lastCost": 0.4542217,
+      "lastAPIDuration": 60178,
+      "lastAPIDurationWithoutRetries": 60133,
+      "lastToolDuration": 13331,
+      "lastDuration": 255082,
+      "lastStartTime": 1793143257888,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 16059,
+      "lastTotalOutputTokens": 4254,
+      "lastTotalCacheCreationInputTokens": 26829,
+      "lastTotalCacheReadInputTokens": 480419,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 6.65,
+      "lastFpsLow1Pct": 314.83,
+      "lastModelUsage": {
+        "claude-haiku-5-5": {
+          "inputTokens": 1269,
+          "outputTokens": 26,
+          "thinkingTokens": 0,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.00013989999999999999
+        },
+        "claude-opus-5-5": {
+          "inputTokens": 14790,
+          "outputTokens": 4228,
+          "thinkingTokens": 1452,
+          "cacheReadInputTokens": 480419,
+          "cacheCreationInputTokens": 26829,
+          "webSearchRequests": 0,
+          "costUSD": 0.4540818
+        }
+      },
+      "lastSessionId": "87a00a29-e6e0-4e68-86b4-b6e376d4ff65"
     }
   },
   "deepLinkTerminal": "Ghostty",
@@ -5808,9 +5907,12 @@
     ],
     "smx-ltd/smx3.pricingpatcher": [
       "/Users/amrk/IdeaProjects/securemx/smx3.pricingpatcher"
+    ],
+    "smx-ltd/smx3.synchronisation": [
+      "/Users/amrk/IdeaProjects/securemx/smx3/smx3.synchronisation"
     ]
   },
-  "lastReleaseNotesSeen": "2.1.311",
+  "lastReleaseNotesSeen": "2.1.314",
   "penguinModeOrgEnabled": false,
   "overageCreditGrantCache": {
     "9aa58a62-0a42-4c7a-a92f-bee46ec60f99": {
@@ -5831,7 +5933,7 @@
   "hasIdeOnboardingBeenShown": {
     "intellij": true
   },
-  "closedIssuesLastChecked": 1793096415845,
+  "closedIssuesLastChecked": 1793418800700,
   "skillUsage": {
     "simplify": {
       "usageCount": 2,
@@ -5854,8 +5956,8 @@
       "lastUsedAt": 1787646294297
     },
     "jujutsu": {
-      "usageCount": 95,
-      "lastUsedAt": 1793087118846
+      "usageCount": 101,
+      "lastUsedAt": 1793230396711
     },
     "claude-in-chrome": {
       "usageCount": 1,
@@ -5882,16 +5984,16 @@
       "lastUsedAt": 1791885225754
     },
     "gerrit__comments": {
-      "usageCount": 16,
-      "lastUsedAt": 1793074288449
+      "usageCount": 17,
+      "lastUsedAt": 1793312201238
     },
     "gerrit__reply": {
-      "usageCount": 14,
-      "lastUsedAt": 1793054290490
+      "usageCount": 15,
+      "lastUsedAt": 1793312435699
     },
     "beautiful-rust:rust-review": {
-      "usageCount": 2,
-      "lastUsedAt": 1792985083484
+      "usageCount": 3,
+      "lastUsedAt": 1793154184587
     },
     "beautiful-rust:rust-port": {
       "usageCount": 1,
@@ -5914,7 +6016,6 @@
     "tengu_plank_river_frost",
     "tengu_radiant_fox",
     "tengu_radiant_hare",
-    "tengu_read_dedup_killswitch",
     "tengu_spicy_pearl",
     "tengu_tidy_lemon",
     "tengu_typed_trinket",
@@ -5924,7 +6025,7 @@
   "seenNotifications": {},
   "warmResumeHintShown": true,
   "autoPermissionsNotificationCount": 1,
-  "cachedGrowthBookFeaturesAt": 1793097900710,
+  "cachedGrowthBookFeaturesAt": 1793418800132,
   "pluginUsage": {
     "rust-analyzer-lsp@claude-plugins-official": {
       "usageCount": 0,
@@ -5937,14 +6038,14 @@
       "lastUsedNumStartups": 46
     },
     "security-guidance@claude-plugins-official": {
-      "usageCount": 4221,
-      "lastUsedAt": 1793097929876,
-      "lastUsedNumStartups": 364
+      "usageCount": 4443,
+      "lastUsedAt": 1793419555141,
+      "lastUsedNumStartups": 377
     },
     "jdtls-lsp@claude-plugins-official": {
-      "usageCount": 2937,
-      "lastUsedAt": 1793084920970,
-      "lastUsedNumStartups": 358
+      "usageCount": 2961,
+      "lastUsedAt": 1793136122601,
+      "lastUsedNumStartups": 365
     },
     "agents-md@builtin": {
       "usageCount": 0,
@@ -5997,39 +6098,39 @@
       "lastUsedNumStartups": 247
     },
     "beautiful-rust@beautiful-rust": {
-      "usageCount": 3,
-      "lastUsedAt": 1792985083484,
-      "lastUsedNumStartups": 347
+      "usageCount": 4,
+      "lastUsedAt": 1793154184587,
+      "lastUsedNumStartups": 370
     }
   },
   "tipLifetimeShownCounts": {
     "fotw-campaign-upsell": 1,
-    "enter-to-steer-in-relatime": 16,
+    "enter-to-steer-in-relatime": 17,
     "todo-list": 6,
     "prompt-queue": 3,
-    "permissions": 30,
-    "install-github-app": 30,
-    "voice-mode": 28,
-    "image-paste": 16,
-    "memory-command": 21,
+    "permissions": 31,
+    "install-github-app": 32,
+    "voice-mode": 30,
+    "image-paste": 17,
+    "memory-command": 22,
     "plan-mode-for-complex-tasks": 32,
-    "team-onboarding-share": 50,
-    "git-worktrees": 31,
-    "install-slack-app": 30,
-    "drag-and-drop-images": 30,
-    "paste-images-mac": 30,
+    "team-onboarding-share": 53,
+    "git-worktrees": 32,
+    "install-slack-app": 31,
+    "drag-and-drop-images": 31,
+    "paste-images-mac": 31,
     "status-line": 13,
-    "double-esc-code-restore": 29,
+    "double-esc-code-restore": 31,
     "custom-agents": 4,
-    "continue": 29,
-    "shift-tab": 29,
+    "continue": 30,
+    "shift-tab": 30,
     "ide-upsell-external-terminal": 1,
-    "rename-conversation": 21,
+    "rename-conversation": 22,
     "custom-commands": 7,
-    "desktop-shortcut": 21,
-    "web-app": 20,
+    "desktop-shortcut": 22,
+    "web-app": 21,
     "remote-control": 6,
-    "feedback-command": 20,
+    "feedback-command": 21,
     "plugin-disuse-review": 11,
     "dynamic-workflows": 23,
     "theme-command": 16,
@@ -6037,7 +6138,7 @@
     "no-flicker": 1,
     "artifact-publish-plan": 5,
     "auto-copy-config-hint": 24,
-    "workflow-size-prompting-ambient": 24,
+    "workflow-size-prompting-ambient": 25,
     "color-when-multi-clauding": 11,
     "colorterm-truecolor": 1,
     "artifact-duplicate": 5,
@@ -6046,8 +6147,8 @@
     "c4e-remote-sessions": 1,
     "c4e-ultrareview": 1,
     "subagent-fanout-nudge": 1,
-    "default-permission-mode-config": 21,
-    "focus-view": 15,
+    "default-permission-mode-config": 23,
+    "focus-view": 16,
     "you-should-know-plugin": 3,
     "shift-enter-setup": 1,
     "terminal-setup": 1,
@@ -6105,11 +6206,6 @@
       "variationId": 0,
       "value": false
     },
-    "tengu_read_dedup_killswitch": {
-      "experimentId": "tengu_read_dedup_killswitch",
-      "variationId": 1,
-      "value": true
-    },
     "tengu_spicy_pearl": {
       "experimentId": "tengu_spicy_pearl_team_experiment",
       "variationId": 1,
@@ -6139,17 +6235,17 @@
     }
   },
   "hasSeenAutoDefaultNotice": true,
-  "lastClawdEntranceVersion": "2.1.311",
+  "lastClawdEntranceVersion": "2.1.314",
   "fullscreenUpsellSeenCount": 3,
   "lastPlanModeUse": 1793049708045,
   "tipsHistoryByCommand": {
     "focus": {
       "tipId": "focus-view",
-      "numStartups": 360
+      "numStartups": 376
     },
     "voice": {
       "tipId": "voice-mode",
-      "numStartups": 354
+      "numStartups": 376
     },
     "plugin": {
       "tipId": "plugin-disuse-review",
@@ -6157,15 +6253,15 @@
     },
     "desktop": {
       "tipId": "desktop-shortcut",
-      "numStartups": 361
+      "numStartups": 376
     },
     "config": {
-      "tipId": "workflow-size-prompting-ambient",
-      "numStartups": 363
+      "tipId": "default-permission-mode-config",
+      "numStartups": 376
     },
     "install-github-app": {
       "tipId": "install-github-app",
-      "numStartups": 356
+      "numStartups": 376
     },
     "statusline": {
       "tipId": "status-line",
@@ -6173,19 +6269,19 @@
     },
     "permissions": {
       "tipId": "permissions",
-      "numStartups": 363
+      "numStartups": 373
     },
     "install-slack-app": {
       "tipId": "install-slack-app",
-      "numStartups": 358
+      "numStartups": 368
     },
     "team-onboarding": {
       "tipId": "team-onboarding-share",
-      "numStartups": 360
+      "numStartups": 376
     },
     "memory": {
       "tipId": "memory-command",
-      "numStartups": 352
+      "numStartups": 367
     }
   },
   "claudeAiMcpEverConnected": [
@@ -6240,7 +6336,7 @@
     "seatTier": "team_standard",
     "displayName": "Mark",
     "fullName": "Mark",
-    "profileFetchedAt": 1793096391683,
+    "profileFetchedAt": 1793415744005,
     "organizationRole": "user",
     "workspaceRole": null,
     "organizationName": "SMX",
@@ -6249,6 +6345,48 @@
     "userRateLimitTier": "default_raven"
   },
   "clientDataCacheSlots": {
+    "bi1-8fcc2cfa00d2fdc5": {
+      "data": {
+        "cedar_lagoon": {
+          "claude-fable": true,
+          "claude-mythos": true
+        },
+        "tengu_lapis_anchor": "off",
+        "cedar_basin": "2027-08-31"
+      },
+      "at": 1793418800890,
+      "entrypoint": "cli",
+      "model": "claude-opus-5-5",
+      "org": "9aa58a62-0a42-4c7a-a92f-bee46ec60f99"
+    },
+    "bi1-5adbcdedb509d344": {
+      "data": {
+        "cedar_lagoon": {
+          "claude-fable": true,
+          "claude-mythos": true
+        },
+        "tengu_lapis_anchor": "off",
+        "cedar_basin": "2027-08-31"
+      },
+      "at": 1793312195027,
+      "entrypoint": "cli",
+      "model": "claude-opus-5-5",
+      "org": "9aa58a62-0a42-4c7a-a92f-bee46ec60f99"
+    },
+    "bi1-efd5ae7744e13170": {
+      "data": {
+        "cedar_lagoon": {
+          "claude-fable": true,
+          "claude-mythos": true
+        },
+        "tengu_lapis_anchor": "off",
+        "cedar_basin": "2027-08-31"
+      },
+      "at": 1793154952351,
+      "entrypoint": "sdk-py",
+      "model": "claude-opus-5-5",
+      "org": "9aa58a62-0a42-4c7a-a92f-bee46ec60f99"
+    },
     "bi1-e69435c1723a3eb2": {
       "data": {
         "cedar_lagoon": {
@@ -6284,7 +6422,7 @@
       "description": "Fable 5.1 · Most capable for your hardest and longest-running tasks"
     }
   ],
-  "additionalModelOptionsAnsweredAt": 1793053820282,
+  "additionalModelOptionsAnsweredAt": 1793418800890,
   "additionalModelCostsCache": {},
   "modelAccessCache": [],
   "orgModelDefaultCache": null,
@@ -6292,7 +6430,7 @@
   "cachedArtifactRoster": {
     "accountUuid": "d6b73899-19c0-4435-8a8b-c7a87b2f820a",
     "organizationUuid": "9aa58a62-0a42-4c7a-a92f-bee46ec60f99",
-    "version": "0.2.91",
+    "version": "0.2.94",
     "capabilities": [
       "artifact",
       "assets",
@@ -6307,12 +6445,12 @@
       "self",
       "user"
     ],
-    "fetchedAt": 1793096391645
+    "fetchedAt": 1793418800265
   },
   "metricsStatusCacheByPrincipal": {
     "acct:d6b73899-19c0-4435-8a8b-c7a87b2f820a/9aa58a62-0a42-4c7a-a92f-bee46ec60f99": {
       "enabled": true,
-      "timestamp": 1793096716088
+      "timestamp": 1793419100736
     }
   }
 }
