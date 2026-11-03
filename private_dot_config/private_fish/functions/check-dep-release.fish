@@ -1,7 +1,7 @@
 function check-dep-release
     set artifact $argv[1]
 
-    for pom in (rg --type-add 'deps:*.deps' -t deps $artifact -l | rg -v materials | cut -d '/' -f 1 | sort | uniq)
+    for pom in (rg --no-ignore-vcs --type-add 'deps:*.deps' -t deps $artifact -l | rg -v materials | cut -d '/' -f 1 | sort | uniq)
         test -d $pom; or continue
         if test -d $pom/.jj
             # Non-empty changes on top of develop (or trunk() if there's no develop bookmark)
