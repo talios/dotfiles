@@ -1,8 +1,11 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/config.schema.json
+
 sources:
   skills: /Users/amrk/.config/skillshare/skills
   agents: /Users/amrk/.config/skillshare/agents
+
 mode: merge
+
 targets:
   antigravity:
     skills:
@@ -13,9 +16,80 @@ targets:
   codex:
     skills:
       path: /Users/amrk/.codex/skills
+
+mcp:
+  servers:
+    sentry:
+      transport: streamable-http
+      url: https://mcp.sentry.dev/mcp
+      targets:
+        - codex
+        - antigravity
+        - pi
+    superlogical:
+      transport: streamable-http
+      url: https://www.superlogical.com/rex/community-mcp
+      targets:
+        - codex
+        - antigravity
+        - pi
+
+plugins:
+  version: 2
+  packages:
+    beautiful-rust:
+      bindings:
+        claude:
+          imported: true
+    code-review:
+      bindings:
+        claude:
+          imported: true
+    filetree:
+      bindings:
+        claude:
+          imported: true
+    gopls-lsp:
+      bindings:
+        claude:
+          imported: true
+    jdtls-lsp:
+      bindings:
+        claude:
+          imported: true
+    mattpocock-skills:
+      bindings:
+        claude:
+          imported: true
+    pi-lmstudio:
+      bindings:
+        pi:
+          imported: true
+    plugin-management:
+      bindings:
+        codex:
+          imported: true
+    rust-analyzer-lsp:
+      bindings:
+        claude:
+          imported: true
+    security-guidance:
+      bindings:
+        claude:
+          imported: true
+    skins:
+      bindings:
+        claude:
+          imported: true
+    work-pets:
+      bindings:
+        codex:
+          imported: true
+
 ignore:
   - .DS_Store
   - .git/
   - __pycache__/
+
 audit:
   block_threshold: CRITICAL
