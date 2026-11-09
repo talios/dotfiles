@@ -1,20 +1,25 @@
 {
   "version": 1,
   "entries": {
+    "_golang": {
+      "source": "https://github.com/samber/cc-skills-golang.git",
+      "tracked": true,
+      "branch": "main"
+    },
     "skillshare": {
       "source": "github.com/runkids/skillshare/skills/skillshare",
       "type": "github-subdir",
-      "installed_at": "2026-11-03T21:26:35.040768+13:00",
+      "installed_at": "2026-11-08T19:33:38.808494+13:00",
       "repo_url": "https://github.com/runkids/skillshare.git",
       "subdir": "skills/skillshare",
-      "version": "5f51f95",
-      "tree_hash": "a97d988a1af4e800fe19e328ceb41e2666818e42",
-      "commit": "5f51f9560733dbe62a0efe0ecb5e7189c1f7b08d",
+      "version": "228efb4",
+      "tree_hash": "74814bb76fa0806a67322d902fb95b111c74c999",
+      "commit": "228efb4fcaec37280af1745ebf6e2fd1f86fa515",
       "file_hashes": {
-        "SKILL.md": "sha256:20016cb6fb3287ac9d5d26bd81e20302360d8f3d052cbeeacd429c38b86a56f2",
+        "SKILL.md": "sha256:ec608ffdcc8edd267a05845aa74df29349e4909d584b95282903f6e2d7191f5a",
         "references/TROUBLESHOOTING.md": "sha256:6964001f3f1fcbaadf0daae7478724ffd12196c20c7b3762876385670660cd99",
         "references/audit-review.md": "sha256:8ce54d8440a56078da8d7a1849000ae985346c950de3c49164eab21049ff2924",
-        "references/audit.md": "sha256:224bc405e5ae7778f2bf4e0d86150aef5ac9e47f7d4fb0ab8ac58755916db341",
+        "references/audit.md": "sha256:eba9fefa8c8cc69e4f82d8126bea33f01303bf55e8b99fcb88c4789452eddce8",
         "references/backup.md": "sha256:d794b66b18120cfaae0dcb3773031a08426895fd618d02393337a1eb57f98f6f",
         "references/extras.md": "sha256:0845bb01f48b1ee6c91eee756319e301b224cec0f944b90dbee370934d0dbb57",
         "references/hooks.md": "sha256:de0f7c4261adfc9cd1aaa409ff484676c694e45011458d5885afb9108619e07d",
@@ -24,10 +29,10 @@
         "references/mcp.md": "sha256:baa59365b244c2bc2fa6a693d5e87b0a57698846d6cf2be21081b3a4e498bfd4",
         "references/memory-review.md": "sha256:e9fabed005f282c6702788bfe1a01aeca986184d48eadccf3ef0e9f4e465f5e3",
         "references/native-agents.md": "sha256:352d78cb64722717b5660655978afcef3d18638669ab96e0f2325f28d563576e",
-        "references/plugins.md": "sha256:57edec10b29561ff1e8e4822a26d37940be57bf14f9eb75a1d9c520964875fd9",
-        "references/status.md": "sha256:fce04dff6e5f613aa47f1c1da8b688ac673c0af46c346ba79bc2b7e45a1cdf3e",
+        "references/plugins.md": "sha256:6029edc99ec75b34a8c669d5af86c80ad90a08683a90d4271620438c8bb00bb7",
+        "references/status.md": "sha256:f4eb90d8034cff3394d27dd46d5df976e98ec47e08b8e83efd1bdc10e24b19b1",
         "references/sync.md": "sha256:aa2740ae9f92181e318f077ae85250cc8041914dfea67123975de30730276511",
-        "references/targets.md": "sha256:c58ccaf726e8a5448a3da952fc3101923e05e48d93d0ba9f9e39fe160a3f0680",
+        "references/targets.md": "sha256:336a1e874696111c27102f07d9c0f5299d0856fc47707f49c4d355383c12f822",
         "references/trash.md": "sha256:e53ddc74ccf633d1c67481e616df584542dd882bac3a10e0857459628322f219",
         "scripts/run.sh": "sha256:e434ebdb7d3ae0b37c00ddc36687bc975da9e766b8cb863f9aed9a624ebbdfa9"
       }
