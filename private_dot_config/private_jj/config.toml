@@ -40,9 +40,7 @@ revsets-use-glob-by-default=true
 log-word-wrap = false
 log-synthetic-elided-nodes = true
 #graph.style = "square"
-#diff.tool = ["delta", "--dark", "--diff-stat-align-width=80"]
-diff-formatter = "difft"
-diff-args = ["--tab-width=2", "--color=always", "$left", "$right"]
+diff-formatter = ["difft", "--width=$width", "--color=always", "$left", "$right"]
 
 pager = { command = ["less", "-FRX"], env = { LESSCHARSET = "utf-8" } }
 

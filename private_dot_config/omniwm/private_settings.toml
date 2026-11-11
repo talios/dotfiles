@@ -10,9 +10,9 @@ width = 5.0
 
 [borders.color]
 alpha = 1.0
-blue = 1.0
-green = 0.8283905386924744
-red = 0.6287501454353333
+blue = 0.0
+green = 0.26143762469291687
+red = 1.0
 
 [borders.glow]
 enabled = true
@@ -26,7 +26,7 @@ enabled = true
 [borders.gradient.end]
 alpha = 1.0
 blue = 0.0
-green = 0.8257035613059998
+green = 0.4537440538406372
 red = 1.0
 
 [borders.gradient.start]

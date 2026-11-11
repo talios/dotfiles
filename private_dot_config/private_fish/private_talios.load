@@ -102,6 +102,9 @@ function daily-routine
   daily_task_label "Updating homebrew"
   daily_task brew update
 
+  daily_task_label "Updated nvim"
+  daily_task nvim --headless "+Lazy! sync" +qa
+
 #  daily_task_label "Updating lightjj"
 #  daily_task curl -fsSL https://raw.githubusercontent.com/chronologos/lightjj/main/install.sh | sh
 
