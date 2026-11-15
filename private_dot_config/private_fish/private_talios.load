@@ -354,7 +354,7 @@ dagger completion fish | source
 #jj util completion fish | source
 COMPLETE=fish jj | source
 
-set -gx LS_COLORS (vivid generate one-dark)
+#set -gx LS_COLORS (vivid generate one-dark)
 
 #status is-login; and pyenv init --path | source
 #status is-interactive; and pyenv init - | source
@@ -372,6 +372,11 @@ set -x JAVA_HOME $HOME/.sdkman/candidates/java/current/
 set -x ZVM_INSTALL $HOME/.zvm/self
 set -x PATH $HOME/.zvm/bin $ZVM_INSTALL $PATH
 #set -x XDG_CONFIG_HOME ~/.config
+
+# Gerrit Auth for tuicr
+set -x GERRIT_USERNAME markd
+set -x GERRIT_PASSWORD yYC5NMLzkEGDVCiczzl7RsW+8TAA7N4SZfS7yd5o3w
+set -x GERRIT_URL https://gerrit.smxemail.com
 
 # Capacities API
 set -x CAPACITIES_API_TOKEN cap-api-IMRTqGSBLqfubCmP0z_2TD8LIWKyFeIHINWMAM7W
@@ -397,9 +402,7 @@ set -x TIDAL_CLIENT_SECRET JS8J4Z83nrUVxGW3iY6gywSSgoqCRbE8shhySDZvuv0=
 #fish_config theme choose "Snow Day"
 #fish_config theme choose "Lava"
 #fish_config theme choose "ayu Dark"
-fish_config theme choose "Bay Cruise"
-
-set -x LS_COLORS $(vivid generate gruvbox-dark-hard)
+#fish_config theme choose "Bay Cruise"
 
 # Determinate Nix
 fish_add_path /nix/var/nix/profiles/default/bin

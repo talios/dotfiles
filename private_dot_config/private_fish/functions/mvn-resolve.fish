@@ -1,13 +1,13 @@
 function mvn-resolve
     set opts $argv[1]
-    set RANGERESOLVER 1.0.1
+    set RANGERESOLVER 1.1.0
     if test -f pom.deps
         if test -f release.properties
             echo "Found release.properties, aborting..."
         else
             mvn -q clean io.repaint:rangeresolver-maven-plugin:$RANGERESOLVER:resolve-deps \
                 io.repaint:rangeresolver-maven-plugin:$RANGERESOLVER:update-lower-bounds $opts
-            mvn -q com.github.ekryd.sortpom:sortpom-maven-plugin:4.0.0:sort org.codehaus.mojo:tidy-maven-plugin:1.4.0:pom
+            mvn -q com.github.ekryd.sortpom:sortpom-maven-plugin:4.0.0:sort org.codehaus.mojo:tidy-maven-plugin:1.5.0:pom
         end
     else
         echo "Missing pom.deps file in working directory.."

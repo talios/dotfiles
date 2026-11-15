@@ -15,6 +15,7 @@ or additional work (run `jj new`).
 
 ## Commit Descriptions
 
+- Summaries should follow Scoped Commits: https://scopedcommits.com
 - Summaries should be 50 characters, or as close to it as possible.
 - Body text should be wrapped at 70 characters.
 - Don't directly reference method or class names, and keep the message to a description of changes to behaviour and any issues found.
