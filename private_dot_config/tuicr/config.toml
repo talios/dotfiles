@@ -1,4 +1,4 @@
-theme = "tokyo-night-day"
+theme = "everforest-dark"
 diff_view = "side-by-side"   # or "unified"
 ignore_whitespace = false    # ignore all whitespace in local VCS diffs
 #appearance = "system"        # or "dark" / "light"
