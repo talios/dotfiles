@@ -3,15 +3,13 @@ function git-commit-deps
         if test -f release.properties
             echo "Found release.properties, aborting..."
         else
+            if not ensure-develop-current
+                echo "ensure-develop-current failed, aborting..." >&2
+                return 1
+            end
             mvn-resolve-locked
             git clean -fd
-            # echo "build(deps): Synced bill-of-materials" >/tmp/COMMIT_MSG.txt
-            # echo "" >>/tmp/COMMIT_MSG.txt
-            # grep resolved pom.deps >>/tmp/COMMIT_MSG.txt
-            # mvn com.smxemail:rangeresolver-maven-plugin:lock-deps
             if test -d .jj
-                # jj desc --stdin </tmp/COMMIT_MSG.txt
-                # jj split (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
                 jj commit -m "build(deps): Synced bill-of-materials" (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")
             else
                 git commit -m "build(deps): Synced bill-of-materials" (fd "pom.*") (fd "tile.xml") (fd "Dockerfile")

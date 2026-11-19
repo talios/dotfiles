@@ -53,7 +53,7 @@ enabled-branches = ["glob:*"]
 disabled-branches = ["main", "master", "develop", "tip", "glob:change-*"]
 
 [git]
-private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
+private-commits = "description(glob:'wip:*') | description(glob:'private:*') | description(glob:'megamerge')"
 
 [snapshot]
 auto-update-stale = true
