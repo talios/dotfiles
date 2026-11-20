@@ -1,0 +1,2 @@
+# Trust the macOS keychain (internal SMX Root CA 2 used by Nexus)
+MAVEN_OPTS="$MAVEN_OPTS -Djavax.net.ssl.trustStoreType=KeychainStore"
