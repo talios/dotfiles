@@ -1,2 +1,3 @@
-# Trust the macOS keychain (internal SMX Root CA 2 used by Nexus)
-MAVEN_OPTS="$MAVEN_OPTS -Djavax.net.ssl.trustStoreType=KeychainStore"
+# JDK public roots + internal SMX Root CAs (exported from the macOS keychain).
+# Rebuild with `java-truststore-sync` after a JDK upgrade or CA change.
+MAVEN_OPTS="$MAVEN_OPTS -Djavax.net.ssl.trustStore=$HOME/.local/share/java/truststore.p12 -Djavax.net.ssl.trustStoreType=PKCS12 -Djavax.net.ssl.trustStorePassword=changeit"
