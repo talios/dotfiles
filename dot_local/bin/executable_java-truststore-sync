@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# Build a Java truststore = the JDK's public CA roots (cacerts) + internal CAs exported from the macOS keychain.
+#
+# Why: -Djavax.net.ssl.trustStoreType=KeychainStore *replaces* cacerts with only the keychain's explicitly
+# trusted certs, so Maven Central etc. fail PKIX. KeychainStore-ROOT has the public roots but not ours.
+# The keychain stays the source of truth; rerun this after a JDK upgrade or when the CA certs change.
+#
+# Usage: java-truststore-sync ["Cert name prefix" ...]   (default: "SMX Root CA" → SMX Root CA + SMX Root CA 2)
+# Env:   OUT (default ~/.local/share/java/truststore.p12), STOREPASS (default changeit), JAVA_HOME
+set -euo pipefail
+
+OUT="${OUT:-$HOME/.local/share/java/truststore.p12}"
+STOREPASS="${STOREPASS:-changeit}"
+NAMES=("$@")
+[[ ${#NAMES[@]} -gt 0 ]] || NAMES=("SMX Root CA")
+
+if [[ -z "${JAVA_HOME:-}" ]]; then
+  JAVA_HOME="$(java -XshowSettings:properties -version 2>&1 | awk -F' = ' '/java.home/ {print $2}')"
+fi
+CACERTS="$JAVA_HOME/lib/security/cacerts"
+[[ -f "$CACERTS" ]] || { echo "No cacerts at $CACERTS" >&2; exit 1; }
+
+WORK="$(mktemp -d)"
+trap 'rm -rf "$WORK"' EXIT
+
+# Export matching certs from every keychain in the search list, one PEM per SHA-1 (dedupes repeats).
+for name in "${NAMES[@]}"; do
+  security find-certificate -a -Z -p -c "$name" \
+    | awk -v dir="$WORK" '
+        /^SHA-1 hash:/            { h = $3 }
+        /BEGIN CERTIFICATE/       { f = dir "/" h ".pem"; inpem = 1 }
+        inpem                     { print > f }
+        /END CERTIFICATE/         { inpem = 0; close(f) }'
+done
+
+shopt -s nullglob
+pems=("$WORK"/*.pem)
+[[ ${#pems[@]} -gt 0 ]] || { echo "No certificates matching: ${NAMES[*]}" >&2; exit 1; }
+
+TMP_OUT="$WORK/truststore.p12"
+keytool -importkeystore -noprompt \
+  -srckeystore "$CACERTS" -srcstorepass changeit \
+  -destkeystore "$TMP_OUT" -deststoretype PKCS12 -deststorepass "$STOREPASS" >/dev/null 2>&1
+
+for pem in "${pems[@]}"; do
+  sha="$(basename "$pem" .pem)"
+  subject="$(openssl x509 -in "$pem" -noout -subject -nameopt multiline | awk -F' = ' '/commonName/ {print $2}')"
+  alias="keychain-$(tr '[:upper:] ' '[:lower:]-' <<<"${subject:-$sha}")"
+  keytool -importcert -noprompt -trustcacerts \
+    -alias "$alias" -file "$pem" \
+    -keystore "$TMP_OUT" -storetype PKCS12 -storepass "$STOREPASS" >/dev/null 2>&1
+  echo "added $alias ($sha)"
+done
+
+mkdir -p "$(dirname "$OUT")"
+mv "$TMP_OUT" "$OUT"
+echo "wrote $OUT from $CACERTS ($(keytool -list -keystore "$OUT" -storepass "$STOREPASS" 2>/dev/null | grep -c trustedCertEntry) certs)"
