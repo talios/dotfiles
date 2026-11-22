@@ -90,6 +90,9 @@ function daily-routine
   echo "Running daily tasks..."
   daily-cleanup-routine
 
+  daily_task_label "Syncing Java Trust Stores"
+  daily_task java-truststore-sync
+   
   daily_task_label "Cleaning syncthing log"
   daily_task rm /opt/homebrew/var/log/syncthing.log
 

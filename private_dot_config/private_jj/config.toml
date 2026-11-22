@@ -15,7 +15,7 @@ email = "mark@talios.com"
 #diff-editor = "diffpatch"
 #diff-editor = "diffedit3"
 #diff-editor = "ksdiff"
-default-command = "lt"
+default-command = "lm"
 #editor = "hx"
 editor = "nvim"
 #editor = "fresh -w"
@@ -207,8 +207,9 @@ release-abandon = ["abandon", "files(glob:'release.properties') & mutable()"]
 lc = ["log", "-G", "-T", "change_log_summary", "-r", "trunk()::@-"]
 ls = ["log", "-T", "custom_log_summary"]
 ll = ["log", "-T", "builtin_log_detailed"]
-ld = ["log", "-T", "custom_log_summary", "-r", "develop::"]
 lm = ["log", "-T", "custom_log_summary", "-r", "master::"]
+ltg = ["log", "-T", "custom_log_summary", "-r", "lasttag()"]
+ld = ["log", "-T", "custom_log_summary", "-r", "develop::"]
 lt = ["log", "-T", "custom_log_summary", "-r", "trunk()::"]
 lr = ["log", "-T", "custom_log_summary", "-r", "root()::"]
 le = ["log", "-T", "custom_log_summary", "-r", "undescribed()"]
@@ -372,6 +373,8 @@ bookmark = "develop"
 #
 # From: https://github.com/thoughtpolice/a/blob/canon/tilde/aseipp/dotfiles/jj/config.toml
 'megamerge()' = 'coalesce(present(megamerge), reachable(stack(), merges()))'
+
+'lasttag()' = 'latest(tags())..@'
 
 'trunk()' = '''
 latest(
