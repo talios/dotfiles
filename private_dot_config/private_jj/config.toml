@@ -15,7 +15,7 @@ email = "mark@talios.com"
 #diff-editor = "diffpatch"
 #diff-editor = "diffedit3"
 #diff-editor = "ksdiff"
-default-command = "lm"
+default-command = "ltg"
 #editor = "hx"
 editor = "nvim"
 #editor = "fresh -w"
@@ -374,7 +374,8 @@ bookmark = "develop"
 # From: https://github.com/thoughtpolice/a/blob/canon/tilde/aseipp/dotfiles/jj/config.toml
 'megamerge()' = 'coalesce(present(megamerge), reachable(stack(), merges()))'
 
-'lasttag()' = 'latest(tags())..@'
+# Everything descending from the latest tag, or from trunk() when there are no tags.
+'lasttag()' = 'coalesce(latest(tags()), trunk())::'
 
 'trunk()' = '''
 latest(
