@@ -1,0 +1,15 @@
+profile = "wayline"
+
+[profiles]
+
+[profiles.default]
+theme = "wallpaper"
+
+[profiles.default.hiddenBar]
+enabled = false
+
+[profiles.matrix]
+theme = "rose-pine"
+
+[profiles.matrix.hiddenBar]
+enabled = true
