@@ -1,0 +1,14 @@
+[colors]
+"graph line0" = "red"
+"graph line1" = "green"
+"graph line2" = "yellow"
+"graph line3" = "blue"
+"graph line4" = "magenta"
+"graph line5" = "cyan"
+"graph line6" = { fg = "red", bold = true }
+"graph line7" = { fg = "green", bold = true }
+"graph line8" = { fg = "yellow", bold = true }
+"graph line9" = { fg = "blue", bold = true }
+"graph line10" = { fg = "magenta", bold = true }
+"graph line11" = { fg = "cyan", bold = true }
+
